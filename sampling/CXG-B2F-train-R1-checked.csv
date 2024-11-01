@@ -1,0 +1,2925 @@
+id,buggy_source_code,fixed_source_code,check1,check2
+3068,"public void setQueries(java.util.List<io.transwarp.generate.config.stmt.QueryConfig> queries) {
+    for (io.transwarp.generate.config.stmt.QueryConfig query : queries) {
+        this.queries.add(io.transwarp.generate.config.stmt.QueryConfig.deepCopy(query));
+    }
+}","public void setQueries(java.util.List<io.transwarp.generate.config.stmt.QueryConfig> queries) {
+    this.queries = queries;
+}",-2,-2
+44489,"public void leftclick(util.Vector2D clickPos) {
+    java.lang.System.out.println(f.tileIndexAt(clickPos));
+    java.lang.System.out.println(f.tileValueAt(clickPos));
+    u.moveTo(clickPos);
+}","public void leftclick(util.Vector2D clickPos) {
+    u.moveTo(clickPos);
+}",-2,-2
+44432,"public static void main(java.lang.String[] args) throws java.lang.Exception {
+    model.UserAccess ua = new model.UserAccess();
+    model.User user = ua.getUserByEmail(""test"");
+    ua.deleteUser(user);
+}","public static void main(java.lang.String[] args) throws java.lang.Exception {
+}",-2,-2
+24251,"public java.lang.String getCreated() {
+    java.text.SimpleDateFormat simpleDateFormat = new java.text.SimpleDateFormat(""dd.MM.yyyy"");
+    return simpleDateFormat.format(created);
+}","public java.util.Date getCreated() {
+    return created;
+}",-2,-2
+33145,"public static boolean isThemePlaying() {
+    return (itdelatrisu.opsu.audio.MusicController.themePlaying) && (itdelatrisu.opsu.audio.MusicController.trackExists());
+}","public static boolean isThemePlaying() {
+    return itdelatrisu.opsu.audio.MusicController.themePlaying;
+}",-2,-2
+28274,"@java.lang.Override
+public void handle(javafx.event.ActionEvent a) {
+    makeNewLayer(AddLayerPopup.display());
+}","@java.lang.Override
+public void handle(javafx.event.ActionEvent a) {
+    java.lang.String name = AddLayerPopup.display();
+    if (!(name.isEmpty())) {
+        makeNewLayer(name);
+    }
+}",2,2
+23919,"public void driveCenter(double leftSpeed, double rightSpeed) {
+    centerLeft.set(leftSpeed);
+    centerRight.set((-rightSpeed));
+}","public void driveCenter(double leftSpeed, double rightSpeed) {
+    centerLeft.set((-leftSpeed));
+    centerRight.set(rightSpeed);
+}",-2,-2
+27293,"@java.lang.Override
+public int getOrdinal() {
+    return (ordinal) == null ? 0 : ordinal.intValue();
+}","@java.lang.Override
+public int getOrdinal() {
+    return ordinal;
+}",-2,-2
+26278,"public static synchronized cec.run.CECExecutor getInstance() {
+    if ((cec.run.CECExecutor.singleton) == null) {
+        cec.run.CECExecutor.singleton = new cec.run.CECExecutor();
+    }
+    return cec.run.CECExecutor.singleton;
+}","public static cec.run.CECExecutor getInstance() {
+    return cec.run.CECExecutor.singleton;
+}",-2,-2
+35296,"@java.lang.Override
+public void onPostExecute(java.util.List<org.ei.opensrp.path.domain.MonthlyTally> monthlyTallies) {
+    if ((monthlyTallies != null) && (!(monthlyTallies.isEmpty()))) {
+        noDraftsText.setVisibility(View.GONE);
+        updateDraftsReportListView(listView, monthlyTallies);
+    }
+}","@java.lang.Override
+public void onPostExecute(java.util.List<org.ei.opensrp.path.domain.MonthlyTally> monthlyTallies) {
+    updateDraftsReportListView(monthlyTallies);
+}",-2,-2
+41650,"public void setAuthorities(java.util.Collection<? extends org.springframework.security.core.GrantedAuthority> authorities) {
+    if (authorities != null) {
+        this.authorities = new java.util.HashSet<>(authorities);
+    }else {
+        this.authorities = null;
+    }
+}","public void setAuthorities(java.util.Collection<org.springframework.security.core.GrantedAuthority> authorities) {
+    this.authorities = authorities;
+}",-2,-2
+9809,"@java.lang.Override
+public void onFailure(java.lang.Throwable caught) {
+    org.roda.wui.common.client.widgets.Toast.showInfo(org.roda.wui.client.ingest.transfer.IngestTransfer.messages.dialogFailure(), org.roda.wui.client.ingest.transfer.IngestTransfer.messages.renameSIPFailed());
+}","@java.lang.Override
+public void onFailure(java.lang.Throwable caught) {
+}",-2,-2
+30148,"public boolean rebuild(com.intellij.openapi.project.Project project) {
+    return (cleanAll(project)) && (executeTask(project));
+}","public boolean rebuild(com.intellij.openapi.project.Project project) {
+    return executeTask(project, true);
+}",-2,-2
+3166,"@java.lang.Override
+public void onClick(android.view.View v) {
+    int position = ((java.lang.Integer) (v.getTag()));
+    java.lang.Object object = getItem(position);
+    com.acfreeman.socialmediascanner.DataModel dataModel = ((com.acfreeman.socialmediascanner.DataModel) (object));
+}","@java.lang.Override
+public void onClick(android.view.View v) {
+}",-2,-2
+39283,"@java.lang.Override
+public void fling(int velocityY) {
+    super.fling(velocityY);
+    handler.removeCallbacks(mSnapRunner);
+    android.util.Log.d(""SCROLLVIEW"", ""Fling"");
+    mIsFling = true;
+}","@java.lang.Override
+public void fling(int velocityY) {
+}",-2,-2
+24074,"public void setConfigJson(java.lang.String configJson) {
+    this.mConfigJson = configJson;
+    try {
+        mMenus.clear();
+        parseJson();
+        m1LevelMenuAdapter.notifyDataSetChanged();
+    } catch (org.json.JSONException e) {
+        e.printStackTrace();
+    }
+}","public void setConfigJson(java.lang.String configJson) {
+    this.mConfigJson = configJson;
+}",-2,-2
+2677,"@org.junit.Test
+public void setgetGame() {
+    bustamove.game.Game game = new bustamove.game.Game();
+    assertNull(app.getGame());
+    app.setGame(game);
+    assertEquals(game, app.getGame());
+}","@org.junit.Test
+public void setgetGame() {
+    assertNull(app.getGame());
+}",-2,-2
+23269,"public void setRenderLayer(com.almasb.fxgl.entity.RenderLayer renderLayer) {
+    this.renderLayer.set(renderLayer);
+    getView().setRenderLayer(renderLayer);
+}","public void setRenderLayer(com.almasb.fxgl.entity.RenderLayer renderLayer) {
+    view.setRenderLayer(renderLayer);
+}",-2,-2
+4753,"@java.lang.Override
+public void resetNativeObject() throws java.lang.Exception {
+    setNativeObject(nativeClass.newInstance());
+    if ((jsonMap) != null) {
+        jsonMap.clear();
+    }
+    if ((nativeObjectMap) != null) {
+        nativeObjectMap.clear();
+    }
+}","@java.lang.Override
+public void resetNativeObject() throws java.lang.Exception {
+    setNativeObject(nativeClass.newInstance());
+}",-2,-2
+7877,"@java.lang.Override
+public void onLoadError() {
+    super.onLoadError();
+    if ((mImageView) != null) {
+        mImageView.setBackgroundColor(android.support.v4.content.ContextCompat.getColor(getContext(), R.color.light_gray));
+    }
+}","@java.lang.Override
+public void onLoadError() {
+    super.onLoadError();
+}",-2,-2
+42062,"@java.lang.Override
+public void onDestroy() {
+    super.onDestroy();
+    android.widget.Toast.makeText(this, ((""Service is stopped "" + (timeInMilliseconds)) + "" miliseconds""), Toast.LENGTH_LONG).show();
+}","@java.lang.Override
+public void onDestroy() {
+    super.onDestroy();
+}",-2,-2
+35475,"@java.lang.Override
+public void onTopViewSlide(float scroll) {
+    java.lang.System.out.println((""scroll: "" + scroll));
+}","@java.lang.Override
+public void onTopViewSlide(float scroll) {
+}",-2,-2
+15372,"@org.junit.After
+public void tearDown() throws java.lang.Exception {
+    m_server.stopServer();
+    java.io.File dbFile = new java.io.File(m_config.getProperty(BrokerConstants.PERSISTENT_STORE_PROPERTY_NAME));
+    if (dbFile.exists()) {
+        dbFile.delete();
+    }
+}","@org.junit.After
+public void tearDown() throws java.lang.Exception {
+    m_server.stopServer();
+}",-2,-2
+20050,"@java.lang.Override
+public void onClick(android.view.View v) {
+    int position = getAdapterPosition();
+    android.support.design.widget.Snackbar.make(v, (""Click detected on item "" + position), Snackbar.LENGTH_LONG).setAction(""Action"", null).show();
+}","@java.lang.Override
+public void onClick(android.view.View v) {
+    int position = getAdapterPosition();
+}",-2,-2
+41927,"public void draw(com.badlogic.gdx.graphics.g2d.Batch batch) {
+    if ((!(destroyed)) || ((stateTime) < 50)) {
+        super.draw(batch);
+    }else
+        if (isSpawned) {
+            this.setIsSpawned(false);
+        }
+    
+}","public void draw(com.badlogic.gdx.graphics.g2d.Batch batch) {
+    super.draw(batch);
+}",-2,-2
+41171,"@java.lang.Override
+public void release() {
+    try {
+        reOpen(metadata);
+    } catch (java.io.IOException e) {
+        com.orientechnologies.common.log.OLogManager.instance().error(this, ""Error on releasing Lucene index"", e);
+    }
+}","@java.lang.Override
+public void release() {
+}",-2,-2
+7996,"public void stopConThread() {
+    runcon = false;
+    try {
+        socket.close();
+    } catch (java.io.IOException e) {
+        e.printStackTrace();
+        error = ""Exception: "" + (e.toString());
+    }
+}","public void stopConThread() {
+    runcon = false;
+}",-2,-2
+45888,"@org.junit.Test
+public void testExists_whenDoesNotExist() {
+    boolean expected = false;
+    boolean actual = service.exists(""somekey"");
+    org.hamcrest.MatcherAssert.assertThat(actual, org.hamcrest.CoreMatchers.is(expected));
+}","@org.junit.Test
+public void testExists_whenDoesNotExist() {
+}",-2,-2
+26957,"@java.lang.Override
+public boolean isEnd() {
+    java.lang.System.out.println((((""end pos and limit --> "" + (pos)) + ""|"") + (limit)));
+    return (pos) >= (limit);
+}","@java.lang.Override
+public boolean isEnd() {
+    return (pos) >= (limit);
+}",-2,-2
+24693,"@java.lang.Override
+protected org.eclipse.core.runtime.jobs.ISchedulingRule getRule(org.eclipse.debug.internal.ui.viewers.model.provisional.ILabelUpdate update) {
+    org.switchyard.tools.ui.debug.structure.JavaInterfaceVariable element = ((org.switchyard.tools.ui.debug.structure.JavaInterfaceVariable) (update.getElement()));
+    if (element.hasGetterExpression()) {
+        return null;
+    }
+    return super.getRule(update);
+}","@java.lang.Override
+protected org.eclipse.core.runtime.jobs.ISchedulingRule getRule(org.eclipse.debug.internal.ui.viewers.model.provisional.ILabelUpdate update) {
+    return null;
+}",-2,-2
+22874,"@java.lang.Override
+public void openInputFormat() {
+    super.openInputFormat();
+    try {
+        this.splitProcessor.open();
+    } catch (java.io.IOException e) {
+        e.printStackTrace();
+    }
+}","@java.lang.Override
+public void openInputFormat() {
+    super.openInputFormat();
+}",-2,-2
+33546,"public static void removeView() {
+    com.idoideas.xoutof10.OverlayService.windowManager.removeView(com.idoideas.xoutof10.OverlayService.view);
+}","public static void removeView() {
+    if (((com.idoideas.xoutof10.OverlayService.view) != null) && ((com.idoideas.xoutof10.OverlayService.windowManager) != null)) {
+        com.idoideas.xoutof10.OverlayService.windowManager.removeView(com.idoideas.xoutof10.OverlayService.view);
+    }
+}",2,2
+38923,"public void addPoints(int points) {
+    if (((this.points) + points) < (this.pointsForKraken))
+        this.points += points;
+    else
+        this.points = this.pointsForKraken;
+    
+}","public void addPoints(int points) {
+    this.points += points;
+}",-2,-2
+14144,"@java.lang.Override
+public void onEndOfSpeech() {
+    logd(""callback: onEndOfSpeech"");
+    showTip(""½áÊøËµ»°"");
+}","@java.lang.Override
+public void onEndOfSpeech() {
+}",-2,-2
+46079,"private void connect() {
+    com.microsoft.graph.connect.AuthenticationManager mgr = com.microsoft.graph.connect.AuthenticationManager.getInstance();
+    mgr.setContextActivity(this);
+    mgr.startAuthorizationFlow();
+}","private void connect() {
+    com.microsoft.graph.connect.AuthenticationManager.getInstance().startAuthorizationFlow();
+}",-2,-2
+2244,"@java.lang.Override
+public void onClick(android.view.View view) {
+    switch (view.getId()) {
+        case R.id.button :
+            break;
+        case R.id.send :
+            byte[] message = ""this is a test"".getBytes();
+            mChatService.write(message);
+            break;
+    }
+}","@java.lang.Override
+public void onClick(android.view.View view) {
+    switch (view.getId()) {
+    }
+}",-2,-2
+6622,"@java.lang.Override
+public java.util.Collection<org.aperteworkflow.editor.domain.Permission> getPermissions() {
+    org.aperteworkflow.editor.stepeditor.user.UserStepEditorWindow.logger.info(""getPermissions: "");
+    for (org.aperteworkflow.editor.domain.Permission pp : permissions) {
+        org.aperteworkflow.editor.stepeditor.user.UserStepEditorWindow.logger.info(pp.toString());
+    }
+    org.aperteworkflow.editor.stepeditor.user.UserStepEditorWindow.logger.info(""getPermissions: finished"");
+    return permissions;
+}","@java.lang.Override
+public java.util.Collection<org.aperteworkflow.editor.domain.Permission> getPermissions() {
+    return permissions;
+}",-2,-2
+24049,"@java.lang.Override
+public com.kryptnostic.conductor.rpc.QueryResult getAllEntitiesOfType(org.apache.olingo.commons.api.edm.FullQualifiedName entityTypeFqn, java.util.List<com.dataloom.edm.type.PropertyType> authorizedProperties) {
+    throw new org.apache.commons.lang3.NotImplementedException(""You are trying to invoke ConductorSparkApi from somehwere else other than conductor."");
+}","@java.lang.Override
+public com.kryptnostic.conductor.rpc.QueryResult getAllEntitiesOfType(org.apache.olingo.commons.api.edm.FullQualifiedName entityTypeFqn) {
+    return getAllEntitiesOfType(entityTypeFqn, null);
+}",-2,-1
+4657,"@java.lang.Override
+public java.lang.String createKey(long seed) {
+    return new java.lang.String(("""" + seed));
+}","@java.lang.Override
+public java.lang.String createKey(long seed) {
+    return java.lang.Long.toString(seed);
+}",-2,-2
+44347,"public java.lang.String complete() {
+    data.clear();
+    for (pt.uc.dei.aor.paj.ExperimentalPoint p : points) {
+        data.add(p.getX(), p.getY());
+    }
+    data.complete();
+    return ""/graph"";
+}","public java.lang.String complete() {
+    return ""/graph"";
+}",-2,-2
+44884,"@java.lang.Override
+public void onFailed() {
+    android.widget.Toast.makeText(this, ""There was a problem while syncing the data"", Toast.LENGTH_SHORT).show();
+    onComplete();
+}","@java.lang.Override
+public void onFailed() {
+    onComplete(false);
+}",-2,-2
+1559,"@java.lang.Override
+public int index() {
+    try {
+        return java.util.Arrays.asList(this.recordGroup.getLocations()).hashCode();
+    } catch (org.wso2.carbon.analytics.datasource.core.AnalyticsException e) {
+        throw new java.lang.RuntimeException(e.getMessage(), e);
+    }
+}","@java.lang.Override
+public int index() {
+    return this.index;
+}",-2,-2
+4430,"@org.springframework.data.jpa.repository.Query(value = ""select max(t.id)  from Tweet as t"")
+long selectMaxId();","@org.springframework.data.jpa.repository.Query(value = ""select max(t.id) from Tweet as t"")
+java.lang.Long selectMaxId();",-2,-2
+1713,"@java.lang.Override
+public void onStart() {
+    super.onStart();
+    mediaBrowser.connect();
+    if (!(android.support.v17.leanback.app.BackgroundManager.getInstance(getActivity()).isAttached())) {
+        prepareBackgroundManager();
+    }
+}","@java.lang.Override
+public void onStart() {
+    super.onStart();
+    mediaBrowser.connect();
+}",-2,-2
+10764,"private void commit() {
+    super.addAll(com.sjgilbert.unanimus.VotesList.VOTES_LIST, votes);
+}","private void commit() {
+    put(com.sjgilbert.unanimus.VotesList.VOTES_LIST, votes);
+}",-2,-2
+22103,"public void forDriver(final org.openqa.selenium.WebDriver driver) {
+    driverMap.put(normalized(driverName), driver);
+}","public void forDriver(final org.openqa.selenium.WebDriver driver) {
+    if (!(driverMap.values().contains(driver))) {
+        driverMap.put(driverName, driver);
+    }
+}",1,1
+27532,"@java.lang.Deprecated
+public java.util.List<org.joda.time.ReadableDateTime> getDates() {
+    org.elasticsearch.index.fielddata.ScriptDocValues.Longs.deprecationLogger.deprecated(""getDates on numeric fields is deprecated. Use a date field to get dates."");
+    if ((dates) == null) {
+        dates = new org.elasticsearch.index.fielddata.ScriptDocValues.Dates(values);
+        dates.refreshArray();
+    }
+    return dates;
+}","public long getValue() {
+    if ((count) == 0) {
+        return 0L;
+    }
+    return values[0];
+}",-2,-1
+27482,"@java.lang.Override
+public void onItemMove(int fromPosition, int toPosition) {
+    java.util.Collections.swap(categoryList, fromPosition, toPosition);
+    android.util.Log.d(""ZHAP"", (((""2 moved from "" + fromPosition) + "" to "") + toPosition));
+}","@java.lang.Override
+public void onItemMove(int fromPosition, int toPosition) {
+}",-2,-2
+12828,"@java.lang.Override
+protected java.lang.Object calculate() {
+    return beanConfigUtil.getAttributeValue(selectedElement, GlobalBeanEIP.PROP_CLASS);
+}","@java.lang.Override
+protected java.lang.String calculate() {
+    java.lang.Object value = beanConfigUtil.getAttributeValue(selectedElement, GlobalBeanEIP.PROP_CLASS);
+    if (value instanceof java.lang.String) {
+        return ((java.lang.String) (value));
+    }
+    return null;
+}",-2,-1
+17816,"private void bCancelActionPerformed(java.awt.event.ActionEvent evt) {
+    searchPanel.dispose();
+    m_frame.removeAll();
+    m_frame.dispose();
+}","private void bCancelActionPerformed(java.awt.event.ActionEvent evt) {
+    this.dispose();
+}",-2,-2
+14243,"@java.lang.Override
+public void onBackPressed() {
+    if (mScreenStack.isEmpty()) {
+        com.reactnativenavigation.controllers.ModalController.getInstance().remove();
+        super.onBackPressed();
+    }else {
+        mScreenStack.pop();
+    }
+}","@java.lang.Override
+public void onBackPressed() {
+    pop();
+}",-2,-2
+28189,"public void modifyOdds(combatSystem.CombatObj combat) {
+    if ((combat.isWithEngineer()) && (combat.isCloseAssault())) {
+        moveOddsUp();
+    }
+    if (combat.isOverRun()) {
+        moveOddsUp();
+    }
+}","public void modifyOdds(combatSystem.CombatObj combat) {
+}",-2,-2
+43647,"public void onClick(android.content.DialogInterface dialog, int whichButton) {
+    com.bas.tagger.Node node = nodes.get(position);
+    android.widget.Toast.makeText(context, (""adding use to "" + (node.uuid)), Toast.LENGTH_SHORT).show();
+}","public void onClick(android.content.DialogInterface dialog, int whichButton) {
+}",-2,-2
+8369,"@java.lang.Override
+public void onClick(android.view.View v) {
+    AnimationSupport.Reveal.closeToLeft(LLcontainerSBvolume, new com.android.simplemusic.Support.AnimationSupport.Reveal.AnimationAction() {
+        @java.lang.Override
+        public void onPrepare() {
+        }
+
+        @java.lang.Override
+        public void onStart() {
+            RFLcontainerSBvolume.setVisibility(View.GONE);
+        }
+    });
+}","@java.lang.Override
+public void onClick(android.view.View v) {
+    RFLcontainerSBvolume.setVisibility(View.GONE);
+}",-2,-2
+32979,"private int closestIndex(int index) {
+    return index <= ((size) / 2) ? index : ((size) - 1) - index;
+}","public int closestIndex(int index) {
+    return index <= ((size()) / 2) ? index : ((size()) - 1) - index;
+}",-2,-1
+16770,"public static java.sql.Connection getConnection() {
+    if ((com.kpi.magazines.database.ConnectionManager.pool.size()) != 0) {
+        return com.kpi.magazines.database.ConnectionManager.pool.poll();
+    }
+    synchronized(com.kpi.magazines.database.ConnectionManager.class) {
+        return com.kpi.magazines.database.ConnectionManager.createConnection();
+    }
+}","public static synchronized java.sql.Connection getConnection() {
+    if ((com.kpi.magazines.database.ConnectionManager.pool.size()) != 0) {
+        return com.kpi.magazines.database.ConnectionManager.pool.poll();
+    }
+    return com.kpi.magazines.database.ConnectionManager.createConnection();
+}",-2,-2
+45841,"@org.springframework.web.bind.annotation.RequestMapping(value = ""/"", method = org.springframework.web.bind.annotation.RequestMethod.GET)
+public org.springframework.web.servlet.view.RedirectView redirectMain() {
+    org.springframework.web.servlet.view.RedirectView redirectView = new org.springframework.web.servlet.view.RedirectView();
+    redirectView.setUrl(""/welcome"");
+    return redirectView;
+}","@org.springframework.web.bind.annotation.RequestMapping(value = ""/"", method = org.springframework.web.bind.annotation.RequestMethod.GET)
+public org.springframework.web.servlet.view.RedirectView redirectMain() {
+    return new org.springframework.web.servlet.view.RedirectView(""/welcome"");
+}",-2,-2
+34609,"@java.lang.Override
+public boolean isEmpty() {
+    if ((this.modules) != null) {
+        for (final vswe.stevescarts.modules.ModuleBase module : this.modules) {
+        }
+    }
+    return false;
+}","@java.lang.Override
+public boolean isEmpty() {
+    return false;
+}",-2,-2
+31988,"public beaver.Symbol remove(int index) {
+    return null;
+}","public void add(int index, beaver.Symbol element) {
+    list.add(index, element);
+}",-2,-2
+43474,"public final void setRipple(final com.github.ilyes4j.gwt.mdl.components.ripples.Ripple inputRipple) {
+    ripple = inputRipple;
+    com.github.ilyes4j.gwt.mdl.components.MdlGwtUtils.addClass(target, ripple);
+}","public final void setRipple(final com.github.ilyes4j.gwt.mdl.components.ripples.Ripple inputRipple) {
+    ripple.setValue(inputRipple);
+}",-2,-1
+8240,"@java.lang.Override
+public boolean isComplete() {
+    return ((name) != null) && (java.util.Arrays.asList(net.minecraftforge.oredict.OreDictionary.getOreNames()).contains(name));
+}","@java.lang.Override
+public boolean isComplete() {
+    return (name) != null;
+}",-2,-2
+30561,"public void applyChangesToModel(minechem.apparatus.tier1.electrolysis.ElectrolysisTileEntity tileEntity) {
+    if (tileEntity != null) {
+        model.setLeftTube(tileEntity.hasLeftTube());
+        model.setRightTube(tileEntity.hasRightTube());
+    }
+}","public void applyChangesToModel(minechem.apparatus.tier1.electrolysis.ElectrolysisTileEntity tileEntity) {
+    model.setLeftTube(true);
+    model.setRightTube(true);
+}",-2,-2
+43780,"@java.lang.Override
+public boolean isMinimized() {
+    return (com.codename1.impl.ios.IOSImplementation.minimized) || (com.codename1.impl.ios.IOSImplementation.nativeInstance.isMinimized());
+}","@java.lang.Override
+public boolean isMinimized() {
+    return com.codename1.impl.ios.IOSImplementation.minimized;
+}",-2,-2
+17824,"public static void main(java.lang.String[] args) {
+    java.awt.EventQueue.invokeLater(new java.lang.Runnable() {
+        @java.lang.Override
+        public void run() {
+            gui.MainWin gui = gui.MainWin.getInstance();
+            gui.setVisible(true);
+        }
+    });
+}","public static void main(java.lang.String[] args) {
+    java.awt.EventQueue.invokeLater(() -> {
+        gui.MainWin gui = gui.MainWin.getInstance();
+        gui.setVisible(true);
+    });
+}",-2,-2
+35840,"public void updateHrs(int hours) {
+    if (hours < 10)
+        hr_field.setText((""  0"" + hours));
+    else
+        hr_field.setText((""  "" + hours));
+    
+}","public void updateHrs(int hours) {
+    if (hours < 10)
+        hr_field.setText((""0"" + hours));
+    else
+        hr_field.setText(java.lang.Integer.toString(hours));
+    
+}",0,0
+46354,"private void setRoute(java.util.ArrayList<com.dus.taxe.Node> newNodes) {
+    listOfNodes = newNodes;
+    java.lang.System.out.println(listOfNodes.size());
+}","public java.lang.String toString() {
+    return listOfNodes.toString();
+}",-2,-2
+26811,"public java.lang.String getSalt() {
+    return com.todocycle.todocycle.api.User.ENCODER.encodeToString(salt);
+}","public byte[] getSalt() {
+    return salt;
+}",-2,-2
+41698,"void loadMoreData(int initialItem, int totalItems, int visibleItem);",void loadMoreData();,-2,-2
+42586,"@java.lang.Override
+public int getItemCount() {
+    return ((descriptionData.length) + ((descriptionData.length) / 4)) + 1;
+}","@java.lang.Override
+public int getItemCount() {
+    return descriptionData.length;
+}",-2,-2
+31464,"public static int secondsToTicks(int seconds) {
+    return ((int) (com.darkona.adventurebackpack.util.Utils.secondsToTicks(20)));
+}","public static int secondsToTicks(int seconds) {
+    return seconds * 20;
+}",-2,-1
+33164,"@java.lang.Override
+protected void onStop() {
+    core.util.Utils.nullViewDrawablesRecursive(findViewById(android.R.id.content).getRootView());
+    core.util.Utils.unbindDrawables(findViewById(android.R.id.content).getRootView());
+    super.onStop();
+}","@java.lang.Override
+protected void onStop() {
+    super.onStop();
+}",-2,-2
+15654,"@java.lang.Override
+public void onSlotChanged() {
+    com.auramcraft.util.LogHelper.info((""Output changed: "" + ((getStack()) == null ? ""null"" : getStack().getDisplayName())));
+    super.onSlotChanged();
+}","@java.lang.Override
+public void onSlotChanged() {
+    super.onSlotChanged();
+}",-2,-2
+23003,"private void setScaleType(com.malmstein.fenster.view.FensterVideoView.ScaleType scaleType) {
+    switch (scaleType) {
+        case SCALE_TO_FIT :
+            mMediaPlayer.setVideoScalingMode(MediaPlayer.VIDEO_SCALING_MODE_SCALE_TO_FIT);
+            break;
+        case CROP :
+            mMediaPlayer.setVideoScalingMode(MediaPlayer.VIDEO_SCALING_MODE_SCALE_TO_FIT_WITH_CROPPING);
+            break;
+    }
+}","private void setScaleType(com.malmstein.fenster.view.FensterVideoView.ScaleType scaleType) {
+}",-2,-2
+17201,"public static void kickoffDeleteRun(final java.lang.Long run_id) {
+    new java.lang.Thread(new java.lang.Runnable() {
+        @java.lang.Override
+        public void run() {
+            master.AbstractMaster.singleton.deleteRun(run_id);
+        }
+    }).start();
+}",public abstract void deleteRun(final java.lang.Long run_id);,-2,-2
+1681,"public void onScan() {
+    requestLocationPermissionIfNeeded(new java.lang.Runnable() {
+        public void run() {
+            scanLeDevice(true);
+        }
+    });
+}","public void run() {
+    scanLeDevice(true);
+}",-2,-2
+35523,"private double penalty(int pointsCount) {
+    return (pointsCount * pointsCount) / 1.0E10;
+}","private double penalty(int pointsCount) {
+    return (((double) (pointsCount)) * ((double) (pointsCount))) / ((double) (1.0E10));
+}",1,1
+14694,"private void setStartTime(java.lang.Double startTime) {
+    this.startTime = (java.lang.Math.floor((startTime * 10))) / 10;
+}","void setStartTime(double startTime) {
+    this.startTime = startTime;
+}",0,0
+16547,"public void updateSalvageWords() {
+    salvageWords = regex.replaceREmoveWords(importantWords, postReplace, postRemove);
+}","public void updateSalvageWords() {
+}",-2,-2
+21874,"@java.lang.Override
+public void run() {
+    try {
+        java.lang.Thread.sleep(mTimer);
+    } catch (java.lang.InterruptedException e) {
+        e.printStackTrace();
+    }
+    handler.sendMessage(new android.os.Message());
+}","@java.lang.Override
+public void run() {
+    handler.sendMessage(new android.os.Message());
+}",-2,-2
+8807,"private void shutDownTerminals() {
+    if (uiPrefs_.showTerminalTab().getValue()) {
+        uiPrefs_.showTerminalTab().setGlobalValue(false);
+        uiPrefs_.writeUIPrefs();
+    }
+    view_.terminateAllTerminals();
+}","private void shutDownTerminals() {
+    view_.terminateAllTerminals();
+}",-2,-2
+29191,"public void addItems(int amount) {
+    for (int i = 0; i < amount; i++) {
+        items.add(new com.rupik.newstoday.FlipAdapter.Item());
+    }
+    notifyDataSetChanged();
+}","public void addItems(int amount) {
+    notifyDataSetChanged();
+}",-2,-2
+6037,"public boolean fight(java.lang.String enemy) {
+    if (((getEnergy()) < 70) && ((getEnergy()) > 30)) {
+        run(dir);
+        return false;
+    }else {
+        return true;
+    }
+}","public boolean fight(java.lang.String enemy) {
+    return true;
+}",-2,-2
+19836,"@org.springframework.web.bind.annotation.RequestMapping(value = ""/greeting"")
+public hello.Greeting greeting(@org.springframework.web.bind.annotation.RequestParam(value = ""name"", defaultValue = ""World"")
+java.lang.String name) {
+    return new hello.Greeting(counter.incrementAndGet(), java.lang.String.format(hello.GreetingController.template, name));
+}","@org.springframework.web.bind.annotation.RequestMapping(value = ""/greeting"")
+public hello.Greeting greeting() {
+    return new hello.Greeting();
+}",-2,-2
+31870,"@java.lang.Override
+public java.util.Iterator<Item> iterator() {
+    return null;
+}","@java.lang.Override
+public void remove() {
+}",-2,-2
+22959,"@java.lang.Override
+public boolean close() {
+    if (!(org.talend.registration.license.LicenseManagement.isLicenseValidated())) {
+        java.lang.System.exit(0);
+    }
+    return super.close();
+}","@java.lang.Override
+public boolean close() {
+    return super.close();
+}",-2,-2
+7898,"public void add(java.lang.String neta) {
+    this.netas = new java.lang.String[1];
+    this.netas[0] = neta;
+}","public void add(java.lang.String neta) {
+    (this.count)++;
+}",-2,-2
+46374,"@java.lang.Override
+public void onPause() {
+    super.onPause();
+    android.util.Log.d(com.udacity.bakappies.fragment.FragmentStepDetail.TAG, (""onPause "" + (step.getShortDescription())));
+}","@java.lang.Override
+public void onPause() {
+    super.onPause();
+}",-2,-2
+1552,"@org.junit.Test
+public void testCreatePuzzle() {
+    com.glroland.sudoku.game.PuzzleFactory pz = new com.glroland.sudoku.game.PuzzleFactory();
+    com.glroland.sudoku.game.Puzzle puzzle = pz.createPuzzle();
+    assertNotNull(puzzle);
+}","@org.junit.Test
+public void testCreatePuzzle() {
+}",-2,-2
+9573,"public long calculateTotalEffortFromSubTasks(net.sf.memoranda.Task t) {
+    if ((t.getSubTasks().size()) > 0) {
+        return t.recursivelyModifyEffortFromSubTasks();
+    }else {
+        return t.getEffort();
+    }
+}","public long calculateTotalEffortFromSubTasks(net.sf.memoranda.Task t) {
+    return t.recursivelyModifyEffortFromSubTasks();
+}",-2,-2
+4656,"@java.lang.Override
+public boolean visit(java.lang.CharSequence name) throws java.lang.Exception {
+    headerMap.put(name.toString(), httpRequest.headers().getAllAndConvert(name));
+    return true;
+}","@java.lang.Override
+public boolean visit(java.lang.CharSequence name) throws java.lang.Exception {
+    return true;
+}",-2,-2
+10140,"@java.lang.Override
+public void run() {
+    try {
+        org.micromanager.internal.MMStudio.getInstance().data().loadData(dir, false);
+    } catch (java.io.IOException e) {
+        org.micromanager.internal.utils.ReportingUtils.showError(e, (""There was an error when opening the file at "" + dir));
+    }
+}","@java.lang.Override
+public void run() {
+    loadData(dir);
+}",-2,-2
+620,"public int getRandomX() {
+    return randomBetween(minX, maxX);
+}","public int getRandomX() {
+    return randomBetween(java.lang.Math.abs(minX), java.lang.Math.abs(maxX));
+}",1,0
+24819,"@java.lang.Override
+public void onSuccess(org.parallax3d.parallax.files.FileHandle result) {
+    org.parallax3d.parallax.Log.info((""Loaded file: "" + (file.path())));
+    parse(result);
+    onReady();
+}","@java.lang.Override
+public void onSuccess(org.parallax3d.parallax.files.FileHandle result) {
+    org.parallax3d.parallax.Log.info((""Loaded file: "" + url));
+    this.file = result;
+    parse(result);
+    onReady();
+}",-1,-1
+31243,"protected void onUpdateError(org.apache.wicket.ajax.AjaxRequestTarget target, java.lang.Exception ex) {
+    java.lang.String message = ""Error occurred while fetching data: "" + (ex.getMessage());
+    org.apache.wicket.markup.html.basic.Label errorLabel = new org.apache.wicket.markup.html.basic.Label(com.evolveum.midpoint.web.component.AsyncUpdatePanel.ID_BODY, message);
+    replace(errorLabel);
+    target.add(this);
+}","protected abstract void onUpdateError(org.apache.wicket.ajax.AjaxRequestTarget target, java.lang.Exception ex);",-2,-2
+23124,"@org.junit.Test
+public void shouldSendMetric() throws java.lang.Exception {
+    com.codahale.metrics.graphite.GraphiteSender delegate = mock(com.codahale.metrics.graphite.GraphiteSender.class);
+    java.lang.String name = ""metrics.anothermetric.min"";
+    sendValue(name, delegate);
+    verify(delegate).send(name, value, timestamp);
+    verifyNoMoreInteractions(delegate);
+}","@org.junit.Test
+public void shouldSendMetric() throws java.lang.Exception {
+    java.lang.String name = ""metrics.anothermetric.min"";
+    sendValue(name, delegate);
+    verify(delegate).send(name, value, timestamp);
+    verifyNoMoreInteractions(delegate);
+}",-2,-1
+40406,"public static void init() {
+    org.usfirst.frc3617.WifiSense.RobotMap.driveStick = new edu.wpi.first.wpilibj.Joystick(0);
+    org.usfirst.frc3617.WifiSense.RobotMap.gunnerStick = new edu.wpi.first.wpilibj.Joystick(1);
+}","public static void init() {
+}",-2,-2
+10550,"@java.lang.Override
+public boolean hasNext() {
+    return (!((row) >= (row1))) && (!((col) < (col2)));
+}","@java.lang.Override
+public boolean hasNext() {
+    return (row) >= (row1);
+}",-1,-2
+29959,"private void initRetrofit() {
+    new braincollaboration.wordus.api.JsonResponseNodeTypeDecryption().parse(Constants.RESPONSE);
+}","private void initRetrofit() {
+}",-2,-2
+1805,"@java.lang.Override
+public void check(dyvil.tools.parsing.marker.MarkerList markers, dyvil.tools.compiler.ast.context.IContext context) {
+    if (!(this.getType().isResolved())) {
+        markers.add(dyvil.tools.compiler.util.Markers.semanticError(this.getPosition(), ""wildcard.type.unresolved""));
+    }
+}","@java.lang.Override
+public void check(dyvil.tools.parsing.marker.MarkerList markers, dyvil.tools.compiler.ast.context.IContext context) {
+}",-2,-2
+18208,"public void selectPointFromInput(int index) {
+    for (java.awt.Point point : grid) {
+        if ((point.getIndex()) == index) {
+            point.setStatus(""SELECTED"");
+            break;
+        }
+    }
+    repaint();
+}","public void selectPointFromInput(int index) {
+    grid.get(index).setStatus(""SELECTED"");
+    repaint();
+}",-2,-2
+33230,"public static java.lang.String byteToDecimalString(byte value) {
+    java.lang.String decimalString = java.lang.String.valueOf((value & 255));
+    return decimalString;
+}","public static java.lang.String byteToDecimalString(byte value) {
+    return java.lang.String.valueOf(value);
+}",-2,-2
+30913,"@java.lang.Override
+public void run() {
+    prepareData();
+    listAdapter = new com.example.mitsichury.firstwebservicegetinformation.ExpandableListAdapter(getApplicationContext(), listData);
+    expLv.setAdapter(listAdapter);
+    imgV.setVisibility(View.GONE);
+    progressBar.setVisibility(View.GONE);
+}","@java.lang.Override
+public void run() {
+    prepareData();
+}",-2,-2
+3497,"@javax.xml.bind.annotation.XmlElement(name = ""range"")
+public void setRanges(java.util.List<controller.channel.map.ChannelRange> ranges) {
+    mRanges.clear();
+    for (controller.channel.map.ChannelRange range : ranges) {
+        mRanges.add(range);
+    }
+    validate();
+}","public void setRanges(java.util.List<controller.channel.map.ChannelRange> ranges) {
+    mRanges = ranges;
+    validate();
+}",-2,-2
+438,"protected void initialize() {
+    edu.wpi.first.wpilibj.smartdashboard.SmartDashboard.putNumber(""Recovery Time"", 0.0);
+    timer.reset();
+    jetsonPwr.disablePWM();
+    jetsonPwr.set(false);
+    jetsonTimer.reset();
+    jetsonTimer.start();
+}","protected void initialize() {
+    timer.reset();
+}",-2,-2
+8437,"@java.lang.Override
+public void run() {
+    android.view.inputmethod.InputMethodManager inputManager = ((android.view.inputmethod.InputMethodManager) (this.getSystemService(Context.INPUT_METHOD_SERVICE)));
+    inputManager.showSoftInput(mActivityPlanDetailBinding.etPlanTitle, 0);
+}","private void init() {
+    getData();
+}",-2,-2
+23750,"public int getProxyPort() {
+    try {
+        return java.lang.Integer.parseInt(getString(prefApp, R.string.pref_key__http_proxy_port, ""0""));
+    } catch (java.lang.Exception e) {
+        setString(prefApp, R.string.pref_key__http_proxy_port, ""0"");
+        return 0;
+    }
+}","public int getProxyPort() {
+    return getInt(prefApp, R.string.pref_key__http_proxy_port, 0);
+}",-2,-2
+34232,"@java.lang.Override
+public java.util.Map<hudson.triggers.TriggerDescriptor, hudson.triggers.Trigger<?>> getTriggers() {
+    org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty triggerProp = getTriggersJobProperty();
+    if (triggerProp != null) {
+        return triggerProp.getTriggersMap();
+    }else {
+        return new java.util.HashMap<>();
+    }
+}","@java.lang.Override
+public java.util.Map<hudson.triggers.TriggerDescriptor, hudson.triggers.Trigger<?>> getTriggers() {
+    return getTriggersJobProperty().getTriggersMap();
+}",-2,-2
+6788,"@org.junit.Before
+public void setUp() throws java.lang.Exception {
+    server = new org.springframework.security.ldap.server.ApacheDSContainer(org.springframework.security.ldap.server.ApacheDSEmbeddedLdifTests.LDAP_ROOT, ""classpath:test-server-custom-attribute-types.ldif"");
+    server.setPort(org.springframework.security.ldap.server.ApacheDSEmbeddedLdifTests.LDAP_PORT);
+    server.afterPropertiesSet();
+    ldapTemplate = new org.springframework.security.ldap.SpringSecurityLdapTemplate(createLdapContextSource());
+}","@org.junit.Before
+public void setUp() throws java.lang.Exception {
+    this.server = new org.springframework.security.ldap.server.ApacheDSContainer(org.springframework.security.ldap.server.ApacheDSEmbeddedLdifTests.LDAP_ROOT, ""classpath:test-server-custom-attribute-types.ldif"");
+    this.server.setPort(org.springframework.security.ldap.server.ApacheDSEmbeddedLdifTests.LDAP_PORT);
+    this.server.afterPropertiesSet();
+    this.ldapTemplate = new org.springframework.security.ldap.SpringSecurityLdapTemplate(createLdapContextSource());
+}",1,1
+2736,"public static boolean isEmptyString(int x, int left, int right, int n) {
+    return false;
+}","public static boolean isEmptyString(java.lang.String str) {
+    return false;
+}",-2,1
+22558,"@java.lang.Override
+public boolean isLeaf() {
+    if (!(directoryListLoaded)) {
+        loadChildren();
+    }
+    return getChildren().isEmpty();
+}","@java.lang.Override
+public boolean isLeaf() {
+    return false;
+}",-2,-2
+38798,"@java.lang.Override
+public void evaluate() throws java.lang.Throwable {
+    this.storeDirectory = testDirectory.directory(description.getMethodName());
+    org.neo4j.test.ha.ClusterRule.super.apply(base, description);
+}","@java.lang.Override
+public void evaluate() throws java.lang.Throwable {
+    storeDirectory = testDirectory.directory(description.getMethodName());
+    base.evaluate();
+}",-2,-2
+44399,"public static void main(java.lang.String[] args) {
+    for (int c = 32; c < 128; c++) {
+        java.lang.System.out.print(((char) (c)));
+    }
+}","public static void main(java.lang.String[] args) {
+}",-2,-2
+24897,"public boolean isAnswer() {
+    java.lang.System.out.println((""INPUT: "" + (input)));
+    java.lang.System.out.println((""ANSWER: "" + (answer)));
+    return input.equals(answer);
+}","public boolean isAnswer() {
+    return input.equals(answer);
+}",-2,-2
+24377,"private void checkForPlaceTokenAnimation() {
+    if (tokenPlaceAnimationIsNotRunning()) {
+        if (playFieldHandler.isPlayFieldFull()) {
+            playFieldHandler.resetTokenList();
+            playFieldHandler.resetColumns();
+            playFieldHandler.disablePlayFieldIsFull();
+        }
+        placeToken();
+    }
+}","private void checkForPlaceTokenAnimation() {
+    if ((tokenPlaceAnimationIsNotRunning()) && (!(playFieldHandler.isPlayFieldFull()))) {
+        placeToken();
+    }
+}",-2,-2
+40760,"@java.lang.Override
+public void markDirty() {
+    if (!(Proxies.common.isSimulating(player.worldObj))) {
+        return ;
+    }
+    tryImprint();
+}","@java.lang.Override
+public void markDirty() {
+    tryImprint();
+}",-2,-2
+22087,"public void setNode(byte[] nodeId) {
+    node = new org.ethereum.net.server.Node(nodeId, inetSocketAddress.getHostString(), inetSocketAddress.getPort());
+    nodeStatistics = nodeManager.getNodeStatistics(node);
+}","public void setNode(byte[] nodeId) {
+    setNode(nodeId, inetSocketAddress.getPort());
+}",-2,-2
+39903,"@java.lang.Override
+public boolean reset() {
+    if ((level) == 10)
+        game.getPlayer().addEvil();
+    
+    return false;
+}","@java.lang.Override
+public boolean reset() {
+    return false;
+}",-2,-2
+7850,"public static com.codahale.metrics.health.HealthCheck.Result unhealthy(java.lang.String message) {
+    return new com.codahale.metrics.health.HealthCheck.ResultBuilder(false).withMessage(message).build();
+}","public static com.codahale.metrics.health.HealthCheck.Result unhealthy(java.lang.String message) {
+    return new com.codahale.metrics.health.HealthCheck.Result(false, message, null);
+}",-2,-1
+41146,"public final void algorithmChanged(final boolean setTitle, final boolean reloadTree, final javax.swing.tree.DefaultMutableTreeNode node) {
+    algorithmChanged(setTitle, reloadTree, node, ((javax.swing.tree.TreePath[]) (null)));
+}","public final void algorithmChanged(final boolean setTitle) {
+    algorithmChanged(setTitle, false, false, null);
+}",-2,-2
+1660,"@java.lang.Override
+public void checkName(java.lang.String origName) throws hudson.model.Failure {
+    if ((org.apache.commons.lang.StringUtils.isNotBlank(origName)) && (!(java.util.regex.Pattern.matches(jenkins.model.ProjectNamingStrategy.DEFAULT_PATTERN, origName)))) {
+        throw new hudson.model.Failure(jenkins.model.Messages.Hudson_JobSinglesQuotesAreProhibited());
+    }
+}","@java.lang.Override
+public void checkName(java.lang.String origName) throws hudson.model.Failure {
+}",-2,-2
+211,"@java.lang.Override
+public int getCount() {
+    android.util.Log.d(Constant.TAG, (""mList.size:"" + (mList.size())));
+    return mList.size();
+}","@java.lang.Override
+public int getCount() {
+    return mList.size();
+}",-2,-2
+18354,"@java.lang.Override
+public char charAt(int index) {
+    if (index != 0) {
+        throw new java.lang.StringIndexOutOfBoundsException(index);
+    }
+    return toCharacter();
+}","@java.lang.Override
+public char charAt(int index) {
+    return toString().charAt(index);
+}",-2,-1
+8690,"public java.lang.String getNextId() {
+    java.lang.String next = java.lang.Integer.toString(this.nextId);
+    do {
+        this.nextId += 1;
+    } while (!(isIdFree(java.lang.Integer.toString(this.nextId))) );
+    return next;
+}","public java.lang.String getNextId() {
+    while (!(isIdFree(this.nextId))) {
+        this.nextId += 1;
+    } 
+    return java.lang.Integer.toString(this.nextId);
+}",0,1
+31745,"public void driveRight(double speed) {
+    right1.set(speed);
+    right2.set(speed);
+    right3.set(speed);
+}","public void driveRight(double speed) {
+    right1.set((-speed));
+    right2.set((-speed));
+    right3.set((-speed));
+}",-1,-1
+7817,"@java.lang.Override
+public void visitFile(org.gradle.api.file.FileVisitDetails visitDetails) {
+    try {
+    } catch (java.io.IOException e) {
+        throw new java.lang.RuntimeException(e);
+    }
+}","@java.lang.Override
+public void visitFile(org.gradle.api.file.FileVisitDetails visitDetails) {
+}",-2,-2
+36752,"public static com.patrickcorriganjr.boardgameapp.UI.GameListFragment newInstance(int sectionNumber) {
+    com.patrickcorriganjr.boardgameapp.UI.GameListFragment fragment = new com.patrickcorriganjr.boardgameapp.UI.GameListFragment();
+    android.os.Bundle args = new android.os.Bundle();
+    args.putInt(com.patrickcorriganjr.boardgameapp.UI.GameListFragment.ARG_SECTION_NUMBER, sectionNumber);
+    fragment.setArguments(args);
+    return fragment;
+}","public static com.patrickcorriganjr.boardgameapp.UI.GameListFragment newInstance() {
+    com.patrickcorriganjr.boardgameapp.UI.GameListFragment fragment = new com.patrickcorriganjr.boardgameapp.UI.GameListFragment();
+    return fragment;
+}",-2,-2
+40921,"@java.lang.Override
+public org.gradle.incap.PostBuildResult postBuild() throws java.io.IOException {
+}","@java.lang.Override
+public java.lang.String message() {
+    return null;
+}",-2,-2
+45883,"public void refresh() throws java.lang.Exception {
+    org.osgi.service.repository.Repository repository = readRepository();
+    save(repository);
+    this.bridge = new aQute.bnd.osgi.repository.BridgeRepository(repository);
+}","public void refresh() throws java.lang.Exception {
+    bridge = new aQute.bnd.osgi.repository.BridgeRepository(save(readRepository()));
+}",-2,-2
+25863,"public void hideEventMessage() {
+    eventMessageOverlayVisible = false;
+    if (upgradeOverlayVisible) {
+        Gdx.input.setInputProcessor(upgradeOverlay);
+    }else {
+        Gdx.input.setInputProcessor(gameStage);
+    }
+}","public void hideEventMessage() {
+    eventMessageOverlayVisible = false;
+}",-2,-2
+5737,"public boolean isEmpty() {
+    return ((first) == null) && ((last) == null);
+}","public boolean isEmpty() {
+    return (size) == 0;
+}",-2,-1
+24591,"@java.lang.Override
+public void networkAvailable() {
+    if ((runAfterLoad) == null)
+        new me.ccrama.redditslide.Authentication(this);
+    
+}","@java.lang.Override
+public void networkAvailable() {
+}",-2,-2
+32923,"public cz.matejkripner.core.Point addY(int y) {
+}","public cz.matejkripner.core.Point addY(int y) {
+    return new cz.matejkripner.core.Point(x, ((this.y) + y));
+}",-2,-2
+27080,"@java.lang.Override
+public void onDestroy() {
+    for (int i = 0; i < (alarmsActivated.size()); i++) {
+        alarmsActivated.set(i, false);
+    }
+    super.onDestroy();
+}","@java.lang.Override
+public void onDestroy() {
+    super.onDestroy();
+}",-2,-2
+44427,"@java.lang.Override
+public int compare(int i1, int i2) {
+    return (vars[sortedidx[i1]].getDomainSize()) - (vars[sortedidx[i2]].getDomainSize());
+}","@java.lang.Override
+public int compare(int i1, int i2) {
+    return (vars[i1].getDomainSize()) - (vars[i2].getDomainSize());
+}",-1,0
+24582,"public boolean hasActiveTransactionInterceptor() {
+    if ((com.oneandone.ejbcdiunit.persistence.SimulatedTransactionManager.activeTransactionInterceptor.get()) == null) {
+        com.oneandone.ejbcdiunit.persistence.SimulatedTransactionManager.activeTransactionInterceptor.set(true);
+    }
+    return com.oneandone.ejbcdiunit.persistence.SimulatedTransactionManager.activeTransactionInterceptor.get();
+}","public boolean hasActiveTransactionInterceptor() {
+    return com.oneandone.ejbcdiunit.persistence.SimulatedTransactionManager.activeTransactionInterceptor.get();
+}",-2,-2
+44480,"@java.lang.Override
+public void onDestroy() {
+    try {
+        super.onDestroy();
+        mapFragment.removeOnTouchListeners();
+    } catch (java.lang.Exception e) {
+        android.util.Log.e(com.platypii.baseline.MapActivity.TAG, ""Exception in onDestroy"", e);
+    }
+}","@java.lang.Override
+public void onDestroy() {
+    super.onDestroy();
+    mapFragment.removeOnTouchListeners();
+}",-2,-2
+30431,"public static java.nio.file.attribute.BasicFileAttributes getBasicFileAttributes(java.nio.file.Path path, java.nio.file.LinkOption... followLinks) {
+    return org.xmlsh.util.FileUtils.getFileAttributes(path, java.nio.file.attribute.BasicFileAttributes.class, java.nio.file.attribute.BasicFileAttributeView.class, followLinks);
+}","public long size() {
+    return file.length();
+}",-2,-2
+23322,"@java.lang.Override
+protected void onPreExecute() {
+    loading = android.app.ProgressDialog.show(context, ""Loading"", ""Please Wait..."");
+}","@java.lang.Override
+protected void onPreExecute() {
+}",-2,-2
+26270,"@java.lang.Override
+public void onDisable() {
+    org.bukkit.plugin.PluginDescriptionFile pdfFile = this.getDescription();
+    logger.info(((""["" + (pdfFile.getName())) + ""] is now disabled.""));
+}","@java.lang.Override
+public void onDisable() {
+}",-2,-2
+28069,"private void out(java.lang.String msg) {
+    ctx.getStdOut().println(((spaces()) + (msg.replace(""\n"", (""\n"" + (spaces()))))));
+}","private void out(java.lang.String msg) {
+}",-2,-2
+42751,"public static java.math.BigInteger hexagonal(long N) {
+    return hackerrank.euler.Euler045.big(N).multiply(hackerrank.euler.Euler045.big(N).multiply(hackerrank.euler.Euler045.big(2)).subtract(hackerrank.euler.Euler045.big(1)));
+}","public static long hexagonal(long N) {
+    return N * ((2 * N) - 1);
+}",-2,-2
+17820,"@android.support.annotation.Nullable
+@java.lang.Override
+public android.view.View onCreateView(android.view.LayoutInflater inflater, android.view.ViewGroup container, android.os.Bundle savedInstanceState) {
+    android.view.View mainView = inflater.inflate(getLayoutResId(), container, false);
+    butterknife.ButterKnife.bind(this, mainView);
+    return mainView;
+}","@android.support.annotation.Nullable
+@java.lang.Override
+public android.view.View onCreateView(android.view.LayoutInflater inflater, android.view.ViewGroup container, android.os.Bundle savedInstanceState) {
+    return super.onCreateView(inflater, container, savedInstanceState);
+}",-2,-2
+28495,"public boolean onCreateOptionsMenu(android.view.Menu menu2) {
+    android.view.MenuInflater inflater = getMenuInflater();
+    inflater.inflate(R.menu.actionbar, menu2);
+    return true;
+}","public boolean onCreateOptionsMenu(android.view.Menu menu2) {
+    return true;
+}",-2,-2
+38833,"@java.lang.Override
+protected void doSetValue(java.lang.String s) {
+    if (s == null) {
+        s = """";
+    }
+    value = s;
+    requestRepaint();
+    textIsDirty = true;
+}","@java.lang.Override
+protected void doSetValue(java.lang.String s) {
+    value = (s == null) ? """" : s;
+    textIsDirty = true;
+}",-2,-1
+25144,"private void drawList() {
+    this.adapter = new android.widget.ArrayAdapter<ch.hgdev.toposuite.points.Point>(this, R.layout.history_list_item, new java.util.ArrayList(this.orthoImpl.getMeasures()));
+    this.measuresListView.setAdapter(this.adapter);
+}","private void drawList() {
+    this.measuresListView.setAdapter(this.adapter);
+}",-2,-2
+33347,"@java.lang.Override
+public void onDetach() {
+    super.onDetach();
+    initialized = false;
+    destroy(getElement());
+}","@java.lang.Override
+public void onDetach() {
+    super.onDetach();
+}",-2,-2
+8227,"public java.lang.Boolean isEmpty() {
+    if (!(isDir())) {
+        return false;
+    }
+    return isEmpty;
+}","public java.lang.Boolean isEmpty() {
+    return isDir() ? isEmpty : false;
+}",-2,-2
+19488,"@org.nlpcn.jcoder.run.annotation.DefaultExecute
+public java.lang.Object execute() {
+    return org.nlpcn.jcoder.util.StaticValue.getUserIoc().getNames();
+}","@org.nlpcn.jcoder.run.annotation.DefaultExecute
+public java.lang.Object execute() {
+    return (i)++;
+}",-2,-2
+9642,"@java.lang.Override
+public boolean keyDown(int keycode) {
+    if (keycode == (Input.Keys.ENTER)) {
+        if (AssetLoader.bgm.isPlaying()) {
+            AssetLoader.bgm.pause();
+        }else {
+            AssetLoader.bgm.play();
+        }
+    }
+    return false;
+}","@java.lang.Override
+public boolean keyDown(int keycode) {
+    return false;
+}",-2,-2
+41594,"@java.lang.Override
+protected void onProgressUpdate(java.lang.Object... object) {
+    super.onProgressUpdate(object);
+    android.util.Log.d(""progressUpdate"", ((""progress: "" + (((java.lang.Integer) (object[0])) * 2)) + ""%""));
+}","@java.lang.Override
+protected void onProgressUpdate(java.lang.Object... object) {
+    super.onProgressUpdate(object);
+}",-2,-2
+20695,"public void setup(java.lang.String version) {
+    try {
+        this.getClass().newInstance().manage(io.github.bonigarcia.wdm.BrowserManager.DEFAULT_ARCH, version);
+    } catch (java.lang.InstantiationException | java.lang.IllegalAccessException e) {
+        throw new java.lang.RuntimeException(e);
+    }
+}","public void setup(java.lang.String version) {
+    setup(io.github.bonigarcia.wdm.BrowserManager.DEFAULT_ARCH, version);
+}",-2,-2
+36635,"public boolean hasChanges() {
+    return !(((this.offset) == (-1)) & ((this.delta) == null));
+}","public boolean hasChanges() {
+    if ((this.delta) != null) {
+        if ((this.delta.length) > 0) {
+            return true;
+        }
+    }
+    return false;
+}",0,-1
+21988,"private void verifySelectedItems(int position) {
+    checkedItems[position] = false;
+    for (boolean checked : checkedItems) {
+        if (checked)
+            return ;
+        
+    }
+    activityCallback.hideContent();
+}","private void verifySelectedItems() {
+    if (checkedItems.isEmpty()) {
+        activityCallback.hideContent();
+    }
+}",-2,-2
+17133,"public void playInterstitial2(android.view.View v) {
+    if (tv.superawesome.sdk.views.SAInterstitialAd.hasAdAvailable(418)) {
+        tv.superawesome.sdk.views.SAInterstitialAd.play(418, this);
+    }
+}","public void playInterstitial2(android.view.View v) {
+}",-2,-2
+42052,"public void setAntInclude(java.lang.String antInclude) {
+    this.antInclude = antInclude;
+    if ((this.antFilter) == null) {
+        this.antFilter = new org.apache.camel.component.file.AntPathMatcherGenericFileFilter<T>();
+    }
+    this.antFilter.setIncludes(antInclude);
+}","public void setAntInclude(java.lang.String antInclude) {
+    this.antInclude = antInclude;
+}",-2,-2
+32058,"public boolean hasEdge(int edgeNum) {
+    try {
+        return edgeList[edgeNum];
+    } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+        e.printStackTrace();
+        return false;
+    }
+}","public boolean hasEdge(int edgeNum) {
+    return edgeList[edgeNum];
+}",-2,-2
+18009,"@java.lang.Override
+protected void generate() {
+    super.generate();
+    bitmap(bitmap, premultiplied);
+    super.filter(fModeMin, fModeMax);
+    super.wrap(wModeH, wModeV);
+}","@java.lang.Override
+protected void generate() {
+    super.generate();
+    bitmap(bitmap, premultiplied);
+    filter(fModeMin, fModeMax);
+    wrap(wModeH, wModeV);
+}",-2,-2
+43055,"@java.lang.Override
+protected void addPostClonePages() {
+    addPage(this.selectRootPage);
+    this.nestedProjectsPage = new org.eclipse.ui.internal.wizards.datatransfer.NestedProjectsWizardPage(this, this.selectRootPage);
+    addPage(this.nestedProjectsPage);
+}","@java.lang.Override
+protected void addPostClonePages() {
+    addPage(this.selectRootPage);
+}",-2,-2
+30901,"public Task getTask(int i) {
+    if (i < (taskBatch.length))
+        return taskBatch[i];
+    
+    return null;
+}","public Task getTask(long i) {
+    for (Task t : taskBatch)
+        if ((t.getId()) == i)
+            return t;
+        
+    
+    return null;
+}",-2,-2
+32258,"@java.lang.Override
+public long getNativeFinalizer() {
+    if ((io.realm.internal.LinkView.nativeFinalizerPointer) == 0) {
+        io.realm.internal.LinkView.nativeFinalizerPointer = io.realm.internal.LinkView.nativeGetFinalizer();
+    }
+    return io.realm.internal.LinkView.nativeFinalizerPointer;
+}","@java.lang.Override
+public long getNativeFinalizer() {
+    return io.realm.internal.LinkView.nativeFinalizerPointer;
+}",-2,-2
+41444,"@java.lang.Override
+public int getValue() {
+    throw new java.lang.UnsupportedOperationException(""Not supported yet."");
+}","@java.lang.Override
+public int getValue() {
+    return 0;
+}",-2,-2
+11726,"@java.lang.Override
+public void onBackPressed() {
+    brightcoveVideoView.stopPlayback();
+    brightcoveVideoView.removeListeners();
+    brightcoveVideoView = null;
+    _plugin = null;
+    super.onBackPressed();
+}","@java.lang.Override
+public void onBackPressed() {
+    super.onBackPressed();
+}",-2,-2
+18306,"private void randomImg(android.widget.ImageView imageView) {
+    int num = mRandom.nextInt(6);
+    if (num == 0) {
+        num = 1;
+    }
+    mCount += num;
+    imageView.setImageResource(mImgs[(num - 1)]);
+}","private void randomImg(android.widget.ImageView imageView) {
+    int num = mRandom.nextInt(6);
+    mCount += num + 1;
+    imageView.setImageResource(mImgs[num]);
+}",-2,-1
+37635,"@java.lang.Override
+public java.lang.String searchTag() {
+    java.lang.String tag = inner.searchTag();
+    if (tag != null) {
+        return tag;
+    }
+    return null;
+}","@java.lang.Override
+public int searchTag() {
+    return inner.searchTag();
+}",-2,-2
+39158,"@java.lang.Override
+public void onPrepareLoad(android.graphics.drawable.Drawable placeHolderDrawable) {
+    profilePic.setImageDrawable(android.support.v4.content.ContextCompat.getDrawable(profilePic.getContext(), R.drawable.contact_icon));
+    smallProfilePic.setImageDrawable(android.support.v4.content.ContextCompat.getDrawable(smallProfilePic.getContext(), R.drawable.contact_icon));
+}","@java.lang.Override
+public void onPrepareLoad(android.graphics.drawable.Drawable placeHolderDrawable) {
+}",-2,-2
+35628,"private void init() {
+    progressBar = ((android.widget.ProgressBar) (findViewById(R.id.loading_progressBar)));
+    tipTxt = ((android.widget.TextView) (findViewById(R.id.tip_txt)));
+    setOnClickListener(this);
+    eventBus = new org.greenrobot.eventbus.EventBus();
+}","private void init() {
+    setOnClickListener(this);
+    eventBus = new org.greenrobot.eventbus.EventBus();
+}",-2,-2
+22496,"@java.lang.Override
+public void testPeriodic() {
+    edu.wpi.first.wpilibj.livewindow.LiveWindow.run();
+    testingGroup.start();
+    java.lang.System.out.println((""Drive stick magnitude: "" + (RobotMap.driverController.getMagnitude())));
+    java.lang.System.out.println((""Drive direction in degrees: "" + (RobotMap.driverController.getDirectionDegrees())));
+}","@java.lang.Override
+public void testPeriodic() {
+    edu.wpi.first.wpilibj.livewindow.LiveWindow.run();
+}",-2,-2
+56,"public void setAddMode() {
+    isRemoving = false;
+    isAdding = true;
+}","public void setAddMode(boolean status) {
+    isAdding = status;
+}",-2,-2
+33593,"public static void setUsersFollowed(long followerId, long followedId, boolean isFollowed) {
+    fr.ecp.sio.twitterAppEngine.model.User follower = fr.ecp.sio.twitterAppEngine.data.UsersRepository.getUser(followerId);
+    fr.ecp.sio.twitterAppEngine.model.User followed = fr.ecp.sio.twitterAppEngine.data.UsersRepository.getUser(followedId);
+}","public static void setUsersFollowed(long followerId, long followedId, boolean isFollowed) {
+}",-2,-2
+26215,"public static by.istin.android.xcore.source.DataSourceRequest fromBundle(android.os.Bundle bundle) {
+    by.istin.android.xcore.source.DataSourceRequest data = new by.istin.android.xcore.source.DataSourceRequest();
+    android.os.Bundle dataSourceFromBundle = by.istin.android.xcore.provider.ModelContract.getDataSourceFromBundle(bundle);
+    if (dataSourceFromBundle != null) {
+        data.mBundle = dataSourceFromBundle;
+    }
+    return data;
+}","public static by.istin.android.xcore.source.DataSourceRequest fromBundle(android.os.Bundle bundle) {
+    return by.istin.android.xcore.provider.ModelContract.getDataSourceFromBundle(bundle);
+}",-2,-2
+4134,"@java.lang.Override
+public void onPaused() {
+    messageType = VIDEO_PAUSE;
+    isPaused = true;
+    messageService.sendMessage(com.gmail.markdevw.wetube.WeTubeApplication.getSharedDataSource().getCurrentRecipient().getId(), ""/pause$"");
+}","@java.lang.Override
+public void onPaused() {
+}",-2,-2
+45513,"@java.lang.Override
+public void inValidateToken(net.respectnetwork.sdk.csp.notification.TokenKey tokenKey) throws net.respectnetwork.sdk.csp.notification.TokenException {
+    net.respectnetwork.sdk.csp.notification.AnotherBasicTokenManager.tokenCache.remove(tokenKey);
+}","@java.lang.Override
+public void inValidateToken(net.respectnetwork.sdk.csp.notification.TokenKey tokenKey) throws net.respectnetwork.sdk.csp.notification.TokenException {
+    if (tokenKey != null) {
+        net.respectnetwork.sdk.csp.notification.AnotherBasicTokenManager.tokenCache.remove(tokenKey.toString());
+    }
+}",2,2
+27126,"public java.lang.String getTitle() {
+    return ((java.lang.String) (json.get(""title"")));
+}","public java.lang.String getTitle() {
+    return this.title;
+}",-2,-2
+46005,"public com.wireless.pojo.promotion.Coupon.IssueBuilder addPromotion(int promotionId) {
+    if (!(promotions.containsElement(promotionId))) {
+        promotions.add(promotionId);
+    }
+    return this;
+}","public com.wireless.pojo.promotion.Coupon.IssueBuilder addPromotion(int promotionId) {
+    return addPromotion(promotionId, 1);
+}",-2,-2
+24207,"public java.lang.String getEstimationModeAsString() {
+    switch (estimationMode) {
+        case user :
+            return ""user"";
+        case mean :
+            return ""mean"";
+        case best :
+            return ""best"";
+        case worst :
+            return ""worst"";
+        default :
+        case undefined :
+            throw new java.lang.AssertionError(""undefined estimation mode!"");
+    }
+}","public java.lang.String getEstimationModeAsString() {
+    return estimationMode.name();
+}",-2,-2
+22350,"@java.lang.Override
+public void onBackPressed() {
+    if ((getSupportFragmentManager().getBackStackEntryCount()) < 2) {
+        finish();
+    }
+    super.onBackPressed();
+}","@java.lang.Override
+public void onBackPressed() {
+    super.onBackPressed();
+}",-2,-2
+26761,"public boolean isEmpty() {
+    return (autoMark) == (teamthree.twodo.commons.core.options.AutoMark.EMPTY_AUTOMARK);
+}","public boolean isEmpty() {
+    return autoMark.equals(teamthree.twodo.commons.core.options.AutoMark.EMPTY_AUTOMARK);
+}",2,2
+35262,"public static int rotate(int x) {
+    return (x / 10) + (((int) (java.lang.Math.pow(10, ((net.n1da.dev.euler.helper.Mathe.getLength(x)) - 1)))) * (x % 10));
+}","public static int rotate(int x) {
+    return net.n1da.dev.euler.helper.Mathe.rotate(x, net.n1da.dev.euler.helper.Mathe.getLength(x));
+}",-2,-2
+36188,"public void addLocationHandler(final de.master.kd.epic.view.map.EpicMap epicMap, final de.master.kd.epic.view.map.interfaces.LocationHandler locationHandler) {
+    if (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
+        doNetworkRequest(epicMap, locationHandler);
+    }else
+        if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            doGpsRequest(epicMap);
+        }
+    
+}","public void addLocationHandler(de.master.kd.epic.view.map.EpicMap epicMap, final de.master.kd.epic.view.map.interfaces.LocationHandler locationHandler) {
+    doNetworkRequest(locationHandler);
+}",-2,-2
+9271,"@java.lang.Override
+public java.lang.String toString() {
+    return java.lang.String.valueOf(value);
+}","@java.lang.Override
+public java.lang.String toString() {
+    if ((value) == ((int) (value))) {
+        return java.lang.String.valueOf(((int) (value)));
+    }
+    return java.lang.String.valueOf(value);
+}",1,1
+15456,"@consulo.annotations.RequiredReadAction
+@org.jetbrains.annotations.Nullable
+@java.lang.Override
+public com.intellij.psi.PsiElement findExecutableElementFromDebugInfo(@org.jetbrains.annotations.NotNull
+com.intellij.openapi.project.Project project, int executableChildrenAtLineIndex) {
+    return consulo.dotnet.mono.debugger.breakpoint.MonoBreakpointUtil.findExecutableElementFromDebugInfo(project, myMethodMirror.debugInfo(), executableChildrenAtLineIndex);
+}","@org.jetbrains.annotations.NotNull
+@java.lang.Override
+public java.lang.String getName() {
+    return myMethodMirror.name();
+}",-2,-2
+3147,"@java.lang.Override
+public boolean isViewFromObject(android.view.View view, java.lang.Object o) {
+    return view == ((android.view.View) (o));
+}","@java.lang.Override
+public boolean isEmpty() {
+    return false;
+}",-2,-2
+44614,"@org.junit.Test
+public void testtoDot() {
+    org.thegalactic.lattice.Concept c = new org.thegalactic.lattice.Concept(true, true);
+}","@org.junit.Test
+public void testtoDot() {
+}",-2,-2
+33538,"private void addXMLDate() {
+    java.lang.System.out.println((""before xml"" + (input)));
+    input = dateParser.xmlDate(input);
+    java.lang.System.out.println((""after xml2"" + (input)));
+}","private void addXMLDate() {
+    input = dateParser.xmlDate(input);
+}",-2,-2
+23802,"public void setStudentDetails(int number, java.lang.String name) {
+    studentName = name;
+    studentNumber = number;
+}","public void setStudentDetails(int studentNumber, java.lang.String studentName) {
+    this.studentName = studentName;
+    this.studentNumber = studentNumber;
+}",-2,-1
+13616,"@java.lang.Override
+protected void onDestroy() {
+    super.onDestroy();
+    if (audioPlayer.equals(null))
+        audioPlayer.release();
+    
+}","@java.lang.Override
+protected void onDestroy() {
+    super.onDestroy();
+}",-2,-2
+18087,"public void dismissDialog() {
+    getActivity().startActivityForResult(getActivity().getIntent(), 10);
+    dismiss();
+}","public void dismissDialog() {
+    dismiss();
+}",-2,-2
+41265,"@java.lang.Override
+protected void onPause() {
+    super.onPause();
+    com.example.wsmm.util.SPManager.setDay(this, (-1));
+    com.example.wsmm.util.SPManager.setMonth(this, (-1));
+    com.example.wsmm.util.SPManager.setYear(this, (-1));
+}","@java.lang.Override
+protected void onPause() {
+    super.onPause();
+}",-2,-2
+462,"public descarteinterpreter.ProgNode buildTestTree1() {
+    new descarteinterpreter.TokenPair(""."", 0);
+    descarteinterpreter.ProgNode prog = new descarteinterpreter.ProgNode(30);
+    prog.addChild(31);
+    prog.addChild(0);
+    return prog;
+}","public descarteinterpreter.ProgNode buildTestTree1() {
+    descarteinterpreter.ProgNode prog = new descarteinterpreter.ProgNode();
+    prog.addChild(31, (-1));
+    prog.addChild(0, (-1));
+    return prog;
+}",1,0
+29906,"@java.lang.Override
+protected void onResume() {
+    super.onResume();
+    presenter.setList();
+    pl.edu.pwr.zpi.autoasystent.presenters.TransferPresenter.saveFile(this, false, ""lel.csv"");
+    pl.edu.pwr.zpi.autoasystent.presenters.TransferPresenter.saveFile(this, true, ""lel.csv"");
+}","@java.lang.Override
+protected void onResume() {
+    super.onResume();
+    presenter.setList();
+}",-2,-2
+25430,"public void removeOnSongChangeListener(github.daneren2005.dsub.service.DownloadService.OnSongChangedListener listener) {
+    synchronized(onSongChangedListeners) {
+        int index = onSongChangedListeners.indexOf(listener);
+        if (index != (-1)) {
+            onSongChangedListeners.remove(index);
+        }
+    }
+}","public void removeOnSongChangeListener(github.daneren2005.dsub.service.DownloadService.OnSongChangedListener listener) {
+    onSongChangedListeners.remove(listener);
+}",-2,-2
+6845,"public void printErrorsAndCount(java.io.Writer out) throws java.io.IOException {
+    int count = printErrors(out);
+    out.write(java.lang.String.format(""%d %s.%n"", count, (count == 1 ? ""error"" : ""errors"")));
+}","public int printErrorsAndCount(java.io.Writer out) throws java.io.IOException {
+    return printErrors(out, true);
+}",-2,-2
+6392,"public void unmapButton() {
+    inputManager.deleteMapping(maud.tools.CameraTool.moveForwardEvent);
+    inputManager.deleteMapping(maud.tools.CameraTool.moveBackwardEvent);
+    inputManager.deleteMapping(maud.tools.CameraTool.moveDownEvent);
+    inputManager.deleteMapping(maud.tools.CameraTool.moveRightEvent);
+    inputManager.deleteMapping(maud.tools.CameraTool.moveLeftEvent);
+    inputManager.deleteMapping(maud.tools.CameraTool.moveUpEvent);
+}","public void unmapButton() {
+    inputManager.deleteMapping(maud.tools.CameraTool.moveForwardEvent);
+    inputManager.deleteMapping(maud.tools.CameraTool.moveBackwardEvent);
+}",-2,-2
+34255,"public java.lang.String name() {
+    boolean flag = false;
+    while (flag) {
+        java.lang.System.out.println(""hello"");
+    } 
+    return ""name"";
+}","public java.lang.String name() {
+    return ""name"";
+}",-2,-2
+29670,"public int getShotCost() {
+    return isForNextPlayer() ? (shotCost) * 2 : shotCost;
+}","public int getShotCost() {
+    return shotCost;
+}",-2,-2
+12131,"@java.lang.Override
+public void notify(java.lang.Object o) {
+    if ((o.getClass()) == (common.IAttribute.class)) {
+        common.IAttribute attr = ((common.IAttribute) (o));
+        addNewTask(attr);
+    }
+}","@java.lang.Override
+public void notify(java.lang.Object o) {
+    if (o instanceof common.IAttribute) {
+        common.IAttribute attr = ((common.IAttribute) (o));
+        addNewTask(attr);
+    }
+}",0,0
+13414,"private void log(java.lang.String msg) {
+    java.lang.String format = ""pos[%s], pages[%s] %s"";
+    java.lang.String text = java.lang.String.format(format, mPosition, com.shopgun.android.sdk.pageflip.utils.PageflipUtils.join("","", mPages), msg);
+    com.shopgun.android.sdk.log.SgnLog.d(com.shopgun.android.sdk.pageflip.CatalogPageFragment.TAG, text);
+}","private void log(java.lang.String msg) {
+}",-2,-2
+13339,"@java.lang.Override
+protected void onResume() {
+    super.onResume();
+    if ((com.example.seagerdevelopments.bpmessengerapp.MainActivity.analytics) != null) {
+        com.example.seagerdevelopments.bpmessengerapp.MainActivity.analytics.getSessionClient().resumeSession();
+    }
+}","@java.lang.Override
+protected void onResume() {
+    super.onResume();
+}",-2,-2
+43767,"@java.lang.Override
+public void onCreate(android.database.sqlite.SQLiteDatabase database) {
+    database.execSQL((((((com.fyp.n3015509.db.MySQLiteHelper.CREATE_BOOK_TABLE) + (com.fyp.n3015509.db.MySQLiteHelper.CREATE_AUTHOR_TABLE)) + (com.fyp.n3015509.db.MySQLiteHelper.CREATE_BUZZLIST_TABLE)) + (com.fyp.n3015509.db.MySQLiteHelper.CREATE_BOOK_INTERIM_TABLE)) + (com.fyp.n3015509.db.MySQLiteHelper.CREATE_BUZZLIST_INTERIM_TABLE)));
+}","@java.lang.Override
+public void onCreate(android.database.sqlite.SQLiteDatabase database) {
+    database.execSQL(com.fyp.n3015509.db.MySQLiteHelper.CREATE_BOOK_TABLE);
+    database.execSQL(com.fyp.n3015509.db.MySQLiteHelper.CREATE_AUTHOR_TABLE);
+    database.execSQL(com.fyp.n3015509.db.MySQLiteHelper.CREATE_BUZZLIST_TABLE);
+    database.execSQL(com.fyp.n3015509.db.MySQLiteHelper.CREATE_BOOK_INTERIM_TABLE);
+    database.execSQL(com.fyp.n3015509.db.MySQLiteHelper.CREATE_BUZZLIST_INTERIM_TABLE);
+}",-2,-2
+5166,"public static void main(java.lang.String[] args) {
+    int message = 16;
+    int encryptedMessage = Hash.hash(message);
+    java.lang.System.out.println(encryptedMessage);
+}","public static void main(java.lang.String[] args) {
+}",-2,-2
+33513,"@org.springframework.transaction.annotation.Transactional(value = ""singleTransactionManager"", rollbackFor = java.lang.Exception.class)
+public void createNewCatAndSendMsg(com.ly.gproject.example.dao.model.Cat catObject) throws java.lang.Exception {
+    java.lang.String key = ""catTable-name-"" + (catObject.getName());
+    catMapper.insert(catObject);
+    MQUtils.INSTANCE.sendMq(topic, com.ly.gproject.example.common.utils.GsonUtil.toJson(catObject), key);
+}","@org.springframework.transaction.annotation.Transactional(value = ""singleTransactionManager"", rollbackFor = java.lang.Exception.class)
+public void createNewCatAndSendMsg(com.ly.gproject.example.dao.model.Cat catObject) throws java.lang.Exception {
+    catMapper.insert(catObject);
+}",-2,-2
+25288,"public void onReceiving(java.io.File f) {
+    java.lang.String fileName = (f.getPath()) + "".jpg"";
+    f.renameTo(new java.io.File(fileName));
+    org.cocos2dx.cpp.jniFacade.JniCppFacade.onReceivingPhoto(((f.getPath()) + "".jpg""));
+}","public void onReceiving(java.io.File f) {
+    org.cocos2dx.cpp.jniFacade.JniCppFacade.onReceivingPhoto(f.getPath());
+}",-2,-2
+23571,"@java.lang.Override
+protected void instantiate() {
+    if (instantiated)
+        return ;
+    
+    if (infinite())
+        throw new suneido.SuException(""can't instantiate infinite sequence"");
+    
+    addAll(iterable);
+    instantiated = true;
+}","@java.lang.Override
+protected void instantiate() {
+    addAll(iterable);
+}",-2,-2
+44040,"@java.lang.Override
+public boolean isHighlightable() {
+    return ((this.team) == (com.mojang.mojam.MojamComponent.localTeam)) || ((this.team) == (com.mojang.mojam.entity.mob.Team.Neutral));
+}","@java.lang.Override
+public boolean isHighlightable() {
+    return true;
+}",-2,-2
+45665,"void setTitle(java.lang.String title) {
+    if ((title != null) && ((title.length()) != 0)) {
+        mTitle = title;
+    }else {
+        mTitle = generateGenericTitle();
+    }
+}","public void setTitle(java.lang.String title) {
+    mTitle = title;
+}",-2,-2
+15022,"public java.lang.String getDatasetsJson() {
+    try {
+        return de.jwic.controls.chart.impl.util.DataConverter.convertToJson(datasets);
+    } catch (java.lang.Exception e) {
+        de.jwic.controls.chart.api.ChartModel.LOG.error(e.getMessage());
+    }
+    return ""{}"";
+}","public java.lang.String getDatasetsJson() {
+    return de.jwic.controls.chart.impl.util.DataConverter.convertToJson(datasets);
+}",-2,-2
+30709,"public double getSize() {
+    return java.lang.Double.parseDouble(new java.text.DecimalFormat(""##.##"").format(((size) / 1024)));
+}","public int getSize() {
+    return (size) / 1024;
+}",-2,-1
+44499,"@org.testng.annotations.BeforeClass(alwaysRun = true)
+public void startRecord() throws java.io.IOException, java.lang.InterruptedException {
+    java.lang.Runtime rt = java.lang.Runtime.getRuntime();
+    rt.exec(""cmd.exe /C adb shell screenrecord /sdcard/runCase.mp4"");
+}","@org.testng.annotations.BeforeClass(alwaysRun = true)
+public void startRecord() throws java.io.IOException, java.lang.InterruptedException {
+}",-2,-2
+7375,"public java.lang.Object getItem(int position) {
+    android.util.Log.i(""POSITION"", (""GETITEM: "" + (java.lang.String.valueOf(position))));
+    return null;
+}","public java.lang.Object getItem(int position) {
+    return null;
+}",-2,-2
+33727,"public int getEndPosition() {
+    if ((namespace) == null) {
+        return position;
+    }else {
+        return ((position) + (namespace.length())) + 1;
+    }
+}","public int getEndPosition() {
+    return position;
+}",-2,-2
+24470,"@java.lang.Override
+public boolean accept(java.io.File pathname) {
+    if (pathname.isHidden())
+        return false;
+    
+    if (!(pathname.canRead()))
+        return false;
+    
+    return true;
+}","@java.lang.Override
+public boolean accept(java.io.File pathname) {
+    return ((pathname != null) && (pathname.canRead())) && (!(pathname.isHidden()));
+}",-2,-2
+35530,"@java.lang.Override
+public void onConnectionFailed(@android.support.annotation.NonNull
+com.google.android.gms.common.ConnectionResult connectionResult) {
+    android.widget.Toast.makeText(com.rohan.callnote.BaseCallNoteActivity.instance, (""Connection Failed "" + (connectionResult.getErrorMessage())), Toast.LENGTH_SHORT).show();
+}","@java.lang.Override
+public void onConnectionFailed(@android.support.annotation.NonNull
+com.google.android.gms.common.ConnectionResult connectionResult) {
+}",-2,-2
+30703,"public void setStatus(confluence.chat.actions.ChatStatus status) {
+    this.preferences.setChatStatus(status);
+}","public void setStatus(confluence.chat.actions.ChatStatus status) {
+    this.status = status;
+}",-2,-1
+40663,"@java.lang.Override
+public java.lang.String toString() {
+    return (((""func_"" + (label)) + ""("") + (prettylist(exprs))) + "")"";
+}","@java.lang.Override
+public java.lang.String toString() {
+    return (((""func_"" + (this.label)) + ""("") + (prettylist(this.exprs))) + "")"";
+}",1,1
+10907,"public static boolean isI18nImplemented() {
+    return (com.home.builderforms.LanguageUtil.i18n) && (""on"".equals(com.appnetix.app.control.web.multitenancy.util.MultiTenancyUtil.getTenantContext().getAttribute(""internationalization"")));
+}","public static boolean isI18nImplemented() {
+    return false;
+}",-2,-2
+23547,"public void setWaitUntil(final long val) {
+    (retries)++;
+    waitUntil = (java.lang.System.currentTimeMillis()) + 1000;
+}","public void setWaitUntil(final long val) {
+    waitUntil = val;
+}",-2,-2
+41828,"public void visit(com.github.davityle.ngprocessor.attrcompiler.node.Identifier node) {
+    java.lang.System.out.println(node.getToken().getScript());
+}","public void visit(com.github.davityle.ngprocessor.attrcompiler.node.Identifier node) {
+}",-2,-2
+12084,"public void testApp() {
+    nl.blueside.sp_api.App app = new nl.blueside.sp_api.App();
+    java.lang.String str = app.prepareString(""omg"");
+    java.lang.String str = app.prepareString(1);
+    assertEquals(""_omg"", str);
+}","public void testApp() {
+}",-2,-2
+1159,"public void enqueue(com.example.brianchan.ripple_android.Song song) {
+    songs.add(song);
+    java.lang.String songName = song.getTitle();
+}","public void enqueue(com.example.brianchan.ripple_android.Song song) {
+    if ((songs) == null) {
+        songs = new java.util.LinkedList<com.example.brianchan.ripple_android.Song>();
+    }
+    songs.add(song);
+}",1,1
+43538,"@java.lang.Override
+public boolean hasNavigationBar() {
+    return mOverWriteHasNavigationBar ? mHasNavigationBar : mContext.getResources().getBoolean(com.android.internal.R.bool.config_showNavigationBar);
+}","@java.lang.Override
+public boolean hasNavigationBar() {
+    return mHasNavigationBar;
+}",-2,-3
+8738,"public static void main() {
+    baodavi.AddBinary.s = ""abc"";
+    final java.lang.String sb;
+    sb = ""abc"";
+    sb = ""cde"";
+}","public static void main() {
+}",-2,-2
+5240,"@javafx.fxml.FXML
+void upPressed() {
+    i = java.lang.Integer.parseInt(units.getText());
+    (i)++;
+    units.setText(((i) + """"));
+}","@javafx.fxml.FXML
+void upPressed() {
+    i = (i) + 1;
+    units.setText(((i) + """"));
+}",-1,0
+27118,"public java.util.ArrayList getDBCursorArray(java.lang.String request, com.example.seth.scorekeeper.ScoreDBAdapter dbHelper) {
+    int index = dbHelper.getNewestGame(request).getColumnIndex(request);
+    java.lang.String value = dbHelper.getNewestGame(request).getString(index);
+    return convertToArray(value);
+}","public java.util.ArrayList getDBCursorArray(java.lang.String request, com.example.seth.scorekeeper.ScoreDBAdapter dbHelper) {
+    return convertToArray(dbHelper.getNewestGame());
+}",-2,-2
+10253,"private void appendAll(com.google.gwt.dom.client.Node node, emoji.gwt.emoji.res.Emojis theme) {
+    append(node, theme, "":poultry_leg:"");
+    append(node, theme, "":eggplant:"");
+    append(node, theme, "":birthday:"");
+    append(node, theme, "":moneybag:"");
+}","private void appendAll(com.google.gwt.dom.client.Node node, emoji.gwt.emoji.res.Emojis theme) {
+    append(node, theme, "":poultry_leg:"", "":eggplant:"", "":birthday:"", "":moneybag:"");
+}",-2,-2
+22121,"public void EndTurn() {
+    targetList.removeAll(targetList);
+    turn += 1;
+}","public void EndTurn() {
+    targetList.remove(0);
+    targetList.remove(0);
+    targetList.remove(0);
+}",-2,-2
+23291,"@java.lang.Override
+public void onSuccess(com.amazonaws.services.sqs.model.ReceiveMessageRequest request, com.amazonaws.services.sqs.model.ReceiveMessageResult result) {
+    process(result.getMessages());
+    status.lazySet(CheckResult.OK);
+    run();
+}","@java.lang.Override
+public void onSuccess(@zipkin.internal.Nullable
+java.lang.Void value) {
+    delete(message);
+}",-2,-2
+13028,"public boolean canUpdate() {
+    try {
+        java.lang.Object data = getToPoints().get(0).fetchData();
+        if (data instanceof java.lang.String) {
+            return true;
+        }
+    } catch (java.lang.Exception e) {
+        return false;
+    }
+    return false;
+}","public boolean canUpdate() {
+    return true;
+}",-2,-2
+36545,"@java.lang.Override
+public void onClick(android.view.View v) {
+    checkBox.performClick();
+    if (!(mSelectFiles.contains(file))) {
+        mSelectFiles.add(file);
+    }else
+        mSelectFiles.remove(file);
+    
+}","@java.lang.Override
+public void onClick(android.view.View v) {
+    checkBox.performClick();
+}",-2,-2
+38189,"@java.lang.Override
+public void onMainViewAppeared(com.innovativetech.audio.audiobookmaster.fabreveallayout.FABRevealLayout fabRevealLayout, android.view.View mainView) {
+    if (((mMediaPlayer) == null) || (!(mMediaPlayer.isPlaying()))) {
+        showMainViewItems();
+    }else {
+        showSecondaryViewItems();
+    }
+}","@java.lang.Override
+public void onMainViewAppeared(com.innovativetech.audio.audiobookmaster.fabreveallayout.FABRevealLayout fabRevealLayout, android.view.View mainView) {
+    showMainViewItems();
+}",-2,-2
+34823,"public void istouched() {
+    if ((grandtheftroster.elements.Key.F) == true) {
+        body.setActive(true);
+    }else {
+        body.setActive(false);
+    }
+}","public void istouched() {
+    if ((grandtheftroster.elements.Key.F) == true) {
+    }else {
+    }
+}",-2,-2
+14513,"@java.lang.Override
+protected void onSaveInstanceState(android.os.Bundle outState) {
+    if ((mItemAdapter) != null) {
+        outState.putString(com.muqdd.iuob2.features.schedule_builder.SectionsFilterActivity.SECTIONS_LIST, new com.google.gson.Gson().toJson(mItemAdapter.getAdapterItems(), com.muqdd.iuob2.features.schedule_builder.SectionsFilterActivity.SECTIONS_LIST_TYPE));
+    }
+    super.onSaveInstanceState(outState);
+}","@java.lang.Override
+protected void onSaveInstanceState(android.os.Bundle outState) {
+    super.onSaveInstanceState(outState);
+}",-2,-2
+1144,"@java.lang.Override
+public int hashCode() {
+    return java.util.Arrays.hashCode(content);
+}","@java.lang.Override
+public int hashCode() {
+    return (content) != null ? content.hashCode() : 0;
+}",1,0
+3997,"@java.lang.Override
+public java.lang.String extractMainClassSegments() {
+    org.eclipse.core.runtime.IPath classPath = getCodePath().removeFirstSegments(1);
+    java.lang.String className = classPath.toString().replace('/', '.');
+    return className;
+}","@java.lang.Override
+public java.lang.String extractMainClassSegments() {
+    return super.extractMainClassSegments();
+}",-2,-2
+42838,"@java.lang.Override
+public java.lang.String getUrlName() {
+    if (getReportUrl().contains(jenkins.model.Jenkins.getInstance().getRootUrl())) {
+        return AllureReportPlugin.URL_PATH;
+    }else {
+        return getReportUrl();
+    }
+}","@java.lang.Override
+public java.lang.String getUrlName() {
+    if (((getReportUrl()) == null) || (getReportUrl().contains(getRootUrl()))) {
+        return AllureReportPlugin.URL_PATH;
+    }else {
+        return getReportUrl();
+    }
+}",1,1
+30114,"public void removeListeners(T... listener) {
+    listeners.removeAll(listeners);
+}","public void removeListeners(T... listeners) {
+    for (T listener : listeners) {
+        this.listeners.remove(listener);
+    }
+}",0,0
+32285,"private void initImageGetter() {
+    mImageGetter = new com.heaven7.android.util2.ImageHelper(getExternalFilesDir(Environment.DIRECTORY_PICTURES).getAbsolutePath(), this, new com.heaven7.android.util2.demo.sample.TestGetImageInN.ImageCallbackImpl()) {    };
+}","private void initImageGetter() {
+}",-2,-2
+38004,"private void moveToMain() {
+    if (bredesh.medico.MainActivity.active)
+        finish();
+    else {
+        startActivity(toMain);
+        finish();
+    }
+}","private void moveToMain() {
+    finish();
+}",-2,-2
+2668,"@java.lang.Override
+public ai.subut.kurjun.model.identity.UserSession extract(ninja.Context context) {
+    java.lang.String uSessionStr = context.getSession().get(SecurityFilter.USER_SESSION);
+    ai.subut.kurjun.model.identity.UserSession userSession = new com.google.gson.Gson().fromJson(uSessionStr, ai.subut.kurjun.identity.DefaultUserSession.class);
+    return userSession;
+}","@java.lang.Override
+public java.lang.String extract(ninja.Context context) {
+    java.lang.String uSessionStr = context.getSession().get(SecurityFilter.USER_SESSION);
+    return uSessionStr;
+}",-2,-2
+855,"public void setMoinsPV(int nbPV) {
+    PVlost += nbPV;
+    PV -= nbPV;
+}","public void setMoinsPV(int nbPV) {
+    PVlost += nbPV;
+    int a = (PV) - nbPV;
+    if (a > 0) {
+        PV -= nbPV;
+    }else {
+        PV = 0;
+    }
+}",-2,-2
+27938,"@java.lang.Override
+public void onCreate(android.os.Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    lazaro.dam.gabriel.starwarsencyclopedia.ListItem deathstar = new lazaro.dam.gabriel.starwarsencyclopedia.ListItem(""Estrella de la Muerte"");
+    lazaro.dam.gabriel.starwarsencyclopedia.ListItem millenniumfalcon = new lazaro.dam.gabriel.starwarsencyclopedia.ListItem(""Halc¨®n Milenario"");
+    data.add(deathstar);
+    data.add(millenniumfalcon);
+}","@java.lang.Override
+public void onCreate(android.os.Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+}",-2,-2
+35132,"public net.minecraft.entity.player.EntityPlayer getAdmin(int gameID) {
+    if ((39 < gameID) || (gameID < 0))
+        return null;
+    
+    if ((gameList[gameID]) == null)
+        return null;
+    
+    return gameList[gameID].getAdmin();
+}","public net.minecraft.entity.player.EntityPlayer getAdmin(final int gameID) {
+    return gameList.get(gameID).getAdmin();
+}",-2,-2
+32841,"public java.lang.String toString() {
+    return ((((this.appName) + ""|"") + (this.appInstance)) + ""|"") + (this.streamName);
+}","@java.lang.Override
+public java.lang.String toString() {
+    return ((((appName) + ""|"") + (appInstance)) + ""|"") + (streamName);
+}",1,0
+38255,"public void createKelas(java.lang.String namaKelas) {
+    (this.listKelas)++;
+    tubes.kelas k = new tubes.kelas(namaKelas);
+    this.daftarkelas[listKelas] = k;
+}","public void createKelas(java.lang.String namaKelas) {
+    daftarkelas.add(new tubes.kelas(namaKelas));
+}",-2,-2
+28570,"@javafx.fxml.FXML
+public void onFleetSetupButtonClicked() {
+    this.game.placePlayersShips();
+    this.sendToServerButton.setVisible(true);
+}","@javafx.fxml.FXML
+public void onFleetSetupButtonClicked() {
+    game.placePlayersShips();
+    sendToServerButton.setVisible(true);
+}",1,1
+40836,"public java.lang.String getCategory() {
+    return (this.category.substring(0, 1).toUpperCase()) + (this.category.substring(1));
+}","public java.lang.String getCategory() {
+    return this.category;
+}",-2,-2
+28727,"@java.lang.Override
+public java.util.List<edu.nju.express.po.OrderPO> getOrders() {
+    java.util.List<edu.nju.express.po.OrderPO> other = new java.util.ArrayList(orders.size());
+    java.util.Collections.copy(other, orders);
+    return other;
+}","@java.lang.Override
+public java.util.List<edu.nju.express.po.OrderPO> getOrders() {
+    return new java.util.ArrayList(orders);
+}",-2,-2
+7580,"@java.lang.Override
+public void onClick(android.view.View v) {
+    switch (v.getId()) {
+        case R.id.home_page_searchcompany_button :
+            switchToSearchCompany();
+            break;
+        case R.id.home_page_company_profile_button :
+            switchToCompanyProfile();
+            break;
+    }
+}","@java.lang.Override
+public void onClick(android.view.View v) {
+}",-2,-2
+2945,"@org.junit.Test
+public void subtracts2Numbers() {
+    int result = calc.subtract(2, 2);
+    org.junit.Assert.assertEquals(0, result);
+}","@org.junit.Test
+public void subtracts2Numbers() {
+    org.junit.Assert.assertEquals(0, calc.subtract(2, 2));
+    org.junit.Assert.assertEquals(1, calc.subtract(2, 1));
+}",-2,1
+4304,"public void setLocalDateTime(java.lang.String time) {
+    localDateTime = ((java.time.LocalDateTime) (dateTimeFormatter.parse(time)));
+}","public void setLocalDateTime(java.lang.String time) {
+    localDateTime = java.time.LocalDateTime.parse(time, dateTimeFormatter);
+}",-1,0
+43174,"@org.jbehave.core.annotations.BeforeStory
+public void setup() {
+    if ((com.qait.automation.jbehavedemo.stepdefs.SetupTearDownStepDef.test) == null) {
+        com.qait.automation.jbehavedemo.stepdefs.SetupTearDownStepDef.test = new com.qait.automation.TestSessionInitiator();
+        com.qait.automation.jbehavedemo.stepdefs.SetupTearDownStepDef.test.launchApplication(com.qait.automation.utils.YamlReader.getData(""app_url""));
+    }
+}","@org.jbehave.core.annotations.BeforeStory
+public void setup() {
+    if ((com.qait.automation.jbehavedemo.stepdefs.SetupTearDownStepDef.test) == null) {
+    }
+}",-2,-2
+38373,"private void addCharacter(java.lang.String name) {
+    gameState.updateClientPlayer(gameState.getClientPlayer());
+    gameState.generateCharacters(gameState.getClientPlayer(), name, manager);
+}","private void addCharacter(java.lang.String name) {
+    gameState.updateClientPlayer();
+    gameState.generateCharacters(name, manager);
+}",-2,-2
+31806,"public void itemClicked() {
+    fragmentNavigator.navigateTo(fragmentProvider.newStoreFragment(comment.getUser().getId(), ""DEFAULT"", StoreFragment.OpenType.GetHome));
+}","public void itemClicked() {
+}",-2,-2
+18997,"@java.lang.Override
+public void onClick(android.view.View v) {
+    if (establishConnection()) {
+        toast(R.string.successful_connection);
+        mMessageView.setText(connection.getReply());
+        writeHistory();
+    }else {
+        toast(R.string.failed_connection);
+    }
+}","@java.lang.Override
+public void onClick(android.view.View v) {
+    establishConnection();
+}",-2,-2
+46577,"void p1(int x) {
+    if (x == ((a) + (a))) {
+        x = (a) + (b);
+    }
+}","void p1(int x) {
+    x = (b) + (b);
+    x = (a) + (b);
+}",-1,-2
+12045,"@java.lang.Override
+public void uiFeedbackAfterRun() {
+    if ((indx) >= (tasks.size())) {
+        startStop(false);
+    }
+    tasksComposite.update(tasks);
+    tasksComposite.redraw();
+}","@java.lang.Override
+public void uiFeedbackAfterRun() {
+}",-2,-2
+13826,"@java.lang.Override
+protected void execute() {
+    if (((this.timer.getFPGATimestamp()) - (this.initialTime)) < (org.usfirst.frc.team4611.robot.RobotMap.soleTime)) {
+        Robot.feedSolenoid.feed(Value.kReverse);
+    }else {
+        Robot.feedSolenoid.feed(Value.kOff);
+    }
+}","@java.lang.Override
+protected void execute() {
+    Robot.feedSolenoid.feed(Value.kReverse);
+}",-2,-2
+12434,"public void rewind() throws java.util.NoSuchElementException, simpledb.DbException, simpledb.TransactionAbortedException {
+    it.close();
+    it.open();
+}","public void rewind() throws java.util.NoSuchElementException, simpledb.DbException, simpledb.TransactionAbortedException {
+    this.it.close();
+    this.it.open();
+}",1,1
+13123,"@java.lang.Override
+protected void onStart() {
+    super.onStart();
+    com.parse.Parse.enableLocalDatastore(this);
+    com.parse.Parse.initialize(this, ""Lg41go4Abua0UIYThLXKHcsgWbWpuVbVehru45xP"", ""hUsTpwaIAyzYtroir8y4XR5SXPz3NpJmHi0FbwUs"");
+}","@java.lang.Override
+protected void onStart() {
+    super.onStart();
+}",-2,-2
+41539,"public void initializeCoMPositionToActual(us.ihmc.robotics.geometry.FramePoint initialCoMPosition) {
+    initializeToActual = true;
+    centerOfMassPosition.set(initialCoMPosition);
+    yoCenterOfMassPosition.set(initialCoMPosition);
+}","public void initializeCoMPositionToActual(us.ihmc.robotics.geometry.FramePoint initialCoMPosition) {
+}",-2,-2
+22258,"@org.junit.Test
+public void MybatisTest() throws java.lang.Exception {
+    junstech.model.User user = userService.getUser(588884563);
+    java.lang.System.out.println(user.getNickname());
+}","@org.junit.Test
+public void MybatisTest() throws java.lang.Exception {
+}",-2,-2
+45816,"public java.lang.Double getClock() {
+    return (java.lang.Math.floor(((clock) * 10))) / 10;
+}","double getClock() {
+    return clock;
+}",-2,-2
+25114,"public void showPopup() {
+    if (!(layoutWindow.getChildren().contains(qrcode))) {
+        layoutWindow.getChildren().add(qrcode);
+    }
+    setIdentity();
+    qrcode.setVisible(true);
+}","public void showPopup() {
+    setIdentity();
+    qrcode.setVisible(true);
+}",-2,-2
+7617,"private void configureSolver() {
+    this.setSearchListener(new org.sat4j.tools.SearchListenerAdapter<org.sat4j.pb.IPBSolverService>() {
+        private static final long serialVersionUID = 1L;
+
+        @java.lang.Override
+        public void conflictFound(org.sat4j.specs.IConstr confl, int dlevel, int trailLevel) {
+            handleConflict(confl);
+        }
+    });
+}","@java.lang.Override
+public void conflictFound(int p) {
+}",-2,-2
+2433,"@java.lang.Override
+public void showNotificationCallback(org.adblockplus.libadblockplus.Notification notification) {
+    android.util.Log.d(org.adblockplus.libadblockplus.tests.NotificationTest.TAG, ((((this) + "" received ["") + notification) + ""]""));
+    retValue = notification;
+}","@java.lang.Override
+public void showNotificationCallback(org.adblockplus.libadblockplus.Notification notification) {
+    retValue = notification;
+}",-2,-2
+30355,"@java.lang.Override
+public void onAttach(android.content.Context context) {
+    if (iFragment.useEventBus())
+        org.simple.eventbus.EventBus.getDefault().register(mFragment);
+    
+    this.iPresenter = iFragment.obtainPresenter();
+    iFragment.setPresenter(iPresenter);
+}","@java.lang.Override
+public void onAttach(android.content.Context context) {
+}",-2,-2
+2092,"@java.lang.Override
+public javax.persistence.Query createNativeQuery(java.lang.String string) {
+    em = emFactory.createEntityManager();
+    return em.createNamedQuery(string);
+}","@javax.annotation.PostConstruct
+public void init() {
+    if ((emFactory) != null) {
+        em = emFactory.createEntityManager();
+    }
+}",-2,-2
+25051,"@java.lang.Override
+public void onResume() {
+    super.onResume();
+    mScrollView.setFocusable(true);
+    mScrollView.setFocusableInTouchMode(true);
+    mScrollView.requestFocus();
+}","@java.lang.Override
+public void onResume() {
+    super.onResume();
+}",-2,-2
+25556,"public void onIRCEvent(int what, java.lang.Object o) {
+    com.irccloud.android.IRCCloudJSONObject obj;
+    switch (what) {
+        case com.irccloud.android.NetworkConnection.EVENT_USERINFO :
+            try {
+                dismiss();
+            } catch (java.lang.Exception e) {
+            }
+            break;
+        default :
+            break;
+    }
+}","public void onIRCEvent(int what, java.lang.Object o) {
+}",-2,-2
+10107,"private void incScore() {
+    int score = java.lang.Integer.parseInt(this.score);
+    score++;
+    this.score = java.lang.Integer.toString(score);
+}","private void incScore() {
+    (score)++;
+}",-2,-2
+15066,"@java.lang.Override
+public com.vaadin.ui.Layout getNavigationContainer(com.github.appreciated.quickstart.base.navigation.interfaces.base.ContainerSubpage page) {
+    com.github.appreciated.quickstart.material.components.MaterialNavigationContainerView container = new com.github.appreciated.quickstart.material.components.MaterialNavigationContainerView();
+    if (page.hasPadding()) {
+        container.addStyleName(""container-padding"");
+    }
+    return container;
+}","@java.lang.Override
+public com.vaadin.ui.Layout getNavigationContainer(com.github.appreciated.quickstart.base.navigation.interfaces.base.ContainerSubpage page) {
+    return new com.github.appreciated.quickstart.material.components.MaterialNavigationContainerView(page);
+}",-2,-2
+3513,"public void onClick(android.content.DialogInterface dialog, int i) {
+    dialog.cancel();
+    android.widget.Toast.makeText(getApplicationContext(), ((claim.getStatus()) + "" claims cannot be edited.""), Toast.LENGTH_SHORT).show();
+}","public void onClick(android.content.DialogInterface dialog, int i) {
+}",-2,-2
+39761,"@java.lang.Override
+public boolean isValid() {
+    final java.lang.String value = getValue();
+    return !((org.apache.commons.lang.StringUtils.isEmpty(value)) || (org.apache.commons.lang.StringUtils.isBlank(value)));
+}","@java.lang.Override
+public boolean isValid() {
+    return true;
+}",-2,-2
+11039,"@org.junit.Test
+public void ensureLdapAttributeShouldDoSpnego() {
+    final org.jasig.cas.support.spnego.web.flow.client.LdapSpnegoKnownClientSystemsFilterAction action = new org.jasig.cas.support.spnego.web.flow.client.LdapSpnegoKnownClientSystemsFilterAction();
+}","@org.junit.Test
+public void ensureLdapAttributeShouldDoSpnego() {
+}",-2,-2
+31116,"@org.junit.Test(expected = java.lang.IllegalArgumentException.class)
+public void shouldThrowIllegalArgumentExceptionBecauseClientNameIsNull() {
+    tds.session.ExternalSessionConfiguration externalSessionConfiguration = new tds.session.ExternalSessionConfiguration(null, ""Production"", 0, 0);
+}","@org.junit.Test(expected = java.lang.IllegalArgumentException.class)
+public void shouldThrowIllegalArgumentExceptionBecauseClientNameIsNull() {
+    new tds.session.ExternalSessionConfiguration(null, ""Production"", 0, 0, 0, 0);
+}",-2,-2
+1841,"public float getCurrentPlaybackTime() {
+    if ((player) != null) {
+        return (player.getCurrentPlaybackTime()) / 1000.0F;
+    }
+    return 0.0F;
+}","public float getCurrentPlaybackTime() {
+    return (this.player.getCurrentPlaybackTime()) / 1000.0F;
+}",-2,-2
+13914,"@java.lang.Override
+public void followMiner() {
+    this.closeView = new java.awt.Rectangle(this.getMap().getMiner().getX(), this.getMap().getMiner().getY());
+}","@java.lang.Override
+public void followMiner() {
+}",-2,-2
+24695,"public void executeSPICommand() {
+    java.lang.System.out.printf(cc2520.info());
+    spiData.outputSPI(cc2520.getStatus());
+    cc2520.rxtxoff();
+}","public void executeSPICommand() {
+    cc2520.rxtxoff();
+}",-2,-2
+14433,"public java.lang.String getNewStorageAccountName() {
+    if (((org.apache.commons.lang.StringUtils.isBlank(newStorageAccountName)) && (org.apache.commons.lang.StringUtils.isBlank(existStorageAccountName))) && (org.apache.commons.lang.StringUtils.isNotBlank(storageAccountName))) {
+        newStorageAccountName = storageAccountName;
+    }
+    return newStorageAccountName;
+}","public java.lang.String getNewStorageAccountName() {
+    return newStorageAccountName;
+}",-2,-2
+25671,"@java.lang.Override
+public void onNewFrame(com.google.vr.sdk.base.HeadTransform headTransform) {
+    mDirectVideo = new com.diligimus.glcam.DirectVideo(texture);
+    android.opengl.GLES20.glClearColor(1.0F, 0.0F, 0.0F, 0.0F);
+}","@java.lang.Override
+public void onNewFrame(com.google.vr.sdk.base.HeadTransform headTransform) {
+}",-2,-2
+45596,"@org.testng.annotations.AfterClass(alwaysRun = true)
+public void destroy() throws java.lang.Exception {
+    super.cleanUp();
+    apiIdentifier = new org.wso2.carbon.apimgt.api.model.APIIdentifier(providerName, API_NAME, org.wso2.am.integration.tests.api.lifecycle.RegistryLifeCycleInclusionTest.API_VERSION_2_0_0);
+    deleteAPI(apiIdentifier, apiPublisherClientUser1);
+}","@org.testng.annotations.AfterClass(alwaysRun = true)
+public void destroy() throws java.lang.Exception {
+    super.cleanUp();
+}",-2,-2
+33380,"@org.junit.BeforeClass
+public static void setUp() {
+    org.ros2.rcljava.examples.test.SimpleTest.logger.setLevel(java.util.logging.Level.ALL);
+    java.util.logging.ConsoleHandler handler = new java.util.logging.ConsoleHandler();
+    handler.setFormatter(new java.util.logging.SimpleFormatter());
+    org.ros2.rcljava.examples.test.SimpleTest.logger.addHandler(handler);
+    handler.setLevel(java.util.logging.Level.ALL);
+}","@org.junit.BeforeClass
+public static void setUp() {
+}",-2,-2
+14994,"@java.lang.Override
+public double logPdf(java.lang.Object x) {
+    if (x instanceof dr.inference.distribution.Parameter)
+        return logPdf(((dr.inference.distribution.Parameter) (x)).getParameterValues());
+    else
+        return 0;
+    
+}","@java.lang.Override
+public double logPdf(double[] x) {
+    return 0;
+}",-2,-2
+29671,"protected boolean isFilterable(java.lang.String statement) {
+    return ((statement.indexOf(""xwikidocument as doc"")) > (-1)) || ((statement.indexOf(""xwikidocument doc"")) > (-1));
+}",protected abstract boolean isFilterable(java.lang.String statement);,-2,-2
+10085,"public void setModDefesa(int armadura) {
+    this.modDefesa = java.lang.Math.max(100, (armadura + (this.modAtaque)));
+}","public void setModDefesa(int armadura) {
+    if (armadura < 0) {
+        this.modDefesa = 0;
+    }else
+        if (armadura > 100) {
+            this.modDefesa = 100;
+        }else {
+            this.modDefesa = armadura;
+        }
+    
+}",-2,-2
+17476,"private void importExpenseEventData(java.lang.String filename) {
+    com.mweser.affordabilitytracker.model.java_app.utils.structures.Data expenseEventData;
+    for (com.mweser.affordabilitytracker.model.java_app.utils.structures.DataRow row : expenseEventData) {
+        expenseEventList.add(new com.mweser.affordabilitytracker.model.java_app.projection.recurring_events.ExpenseEvent(row, globalStartDate, globalEndDate, CREDIT_ALIGNED, bankAccountList));
+    }
+}","private void importExpenseEventData(java.lang.String filename) {
+    com.mweser.affordabilitytracker.model.java_app.utils.structures.Data expenseEventData;
+}",-2,-2
+39308,"@java.lang.Override
+public void onPageSelected(int position) {
+    android.widget.Toast.makeText(getApplicationContext(), (""Trip "" + (position + 1)), Toast.LENGTH_SHORT).show();
+}","@java.lang.Override
+public void onPageSelected(int position) {
+}",-2,-2
+34768,"@java.lang.Override
+public void run() {
+    tv.setText(""start"");
+    setNotification(downloadTask.getFileName(), (""Will start to download counter "" + (counter)), java.lang.Integer.parseInt(downloadTask.getId()));
+}","@java.lang.Override
+public void run() {
+    tv.setText(""start"");
+}",-2,-2
+36885,"@java.lang.Override
+public void onDestroy() {
+    org.wizbots.labtab.LabTabApplication.getInstance().removeUIListener(org.wizbots.labtab.interfaces.requesters.GetProgramOrLabListener.class, this);
+    progressDialog.dismiss();
+    super.onDestroy();
+}","@java.lang.Override
+public void onDestroy() {
+    progressDialog.dismiss();
+    super.onDestroy();
+}",-2,-2
+271,"private boolean isTestingPhase() {
+    java.lang.String phase = execution.getLifecyclePhase();
+    return (phase != null) && ((phase.equals(""test"")) || (phase.equals(""integration-test"")));
+}","private boolean isTestingPhase() {
+    java.lang.String phase = execution.getLifecyclePhase();
+    return (""test"".equals(phase)) || (""integration-test"".equals(phase));
+}",-1,-2
+4285,"public void ecrireEnt() {
+    compiler.Ecriture.ecrireStringln(flux, "";ecrireEnt"", ((indent) + 1));
+    compiler.Ecriture.ecrireStringln(flux, ""call ecrent"", ((indent) + 1));
+}","public void ecrireEnt() {
+    compiler.Ecriture.ecrireStringln(flux, "";ecrireEnt"");
+    compiler.Ecriture.ecrireStringln(flux, ""call ecrent"");
+}",-2,-2
+19313,"@java.lang.Override
+public void afterTextChanged(android.text.Editable s) {
+    java.lang.System.out.println(""Value changed"");
+    aparato.setNetid(etNetID.getText().toString());
+}","@java.lang.Override
+public void afterTextChanged(android.text.Editable s) {
+}",-2,-2
+10428,"public void addHeaderView(android.view.View view) {
+    mListView.addHeaderView(view);
+    mHeaderViews.add(view);
+}","public void addHeaderView(android.view.View view) {
+    addHeaderView(view, null, true);
+}",-2,-2
+46428,"private void makeRequest() {
+    java.lang.ref.ReferenceQueue requestQueue = br.com.nannygo.app.Volley.newRequestQueue(this);
+    br.com.nannygo.app.StringRequest request = new br.com.nannygo.app.StringRequest(DownloadManager.Request.Method.POST, ""localhost"");
+}","private void makeRequest() {
+}",-2,-2
+27520,"@java.lang.Override
+public void run() {
+    final android.widget.TextView textView3 = ((android.widget.TextView) (findViewById(R.id.textView3)));
+    textView3.setText(""Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed."");
+}","@java.lang.Override
+public void run() {
+}",-2,-2
+30059,"private int eval(int[] p) {
+    int mod_Minfilled = commandParser.getMinfilled();
+    int mod_Pref = commandParser.getPref();
+    int mod_Pair = commandParser.getPair();
+    int mod_SecDiff = commandParser.getSecDiff();
+}","private int eval(int[] p) {
+    return 0;
+}",-2,-2
+8931,"@org.junit.Test
+public void testRunTaskMonitor() {
+    final org.cytoscape.model.NetworkTestSupport nts = new org.cytoscape.model.NetworkTestSupport();
+    final org.cytoscape.model.CyNetwork network = nts.getNetwork();
+    java.lang.System.out.println(""Network test created"");
+}","@org.junit.Test
+public void testRunTaskMonitor() {
+}",-2,-2
+30414,"@java.lang.Override
+public void onLocationChanged(android.location.Location location) {
+    if (location != null) {
+        java.lang.Double lon = location.getLongitude();
+        java.lang.Double lat = location.getLatitude();
+    }
+}","@java.lang.Override
+public void onLocationChanged(android.location.Location location) {
+}",-2,-2
+34252,"private void addRegistration(java.lang.String endpoint) {
+    if (endpoint.startsWith(net.openright.mobile.server.SubscriberServlet.ENDPOINT_PREFIX)) {
+        this.registrations.add(endpoint.substring(net.openright.mobile.server.SubscriberServlet.ENDPOINT_PREFIX.length()));
+    }else {
+        this.registrations.add(endpoint);
+    }
+}","private void addRegistration(java.lang.String endpoint) {
+    this.registrations.add(endpoint);
+}",-2,-2
+40051,"@java.lang.Override
+public void update(org.newdawn.slick.GameContainer gc, int delta) {
+    org.newdawn.slick.geom.Vector2f shipPos = this.spacyClient.getShip().position;
+    de.kryptondev.spacy.screen.Rect shipBound = this.spacyClient.getShip().bounds;
+}","@java.lang.Override
+public void update(org.newdawn.slick.GameContainer gc, int delta) {
+}",-2,-2
+9214,"public static com.example.booker.MyBook newInstance(int page) {
+    android.os.Bundle args = new android.os.Bundle();
+    args.putInt(com.example.booker.MyBook.ARG_PAGE, page);
+    com.example.booker.MyBook myBook = new com.example.booker.MyBook();
+    myBook.setArguments(args);
+    return myBook;
+}","public static com.example.booker.MyBook newInstance() {
+    com.example.booker.MyBook myBook = new com.example.booker.MyBook();
+    return myBook;
+}",-2,-2
+23506,"public final void stop() {
+    if (isPlaying()) {
+        try {
+            clip.stop();
+        } catch (java.lang.IllegalArgumentException e) {
+            device = false;
+            java.lang.System.out.println(""no device to play audio from"");
+        }
+        playing = false;
+    }
+}","public final void stop() {
+    if ((isPlaying()) && (device)) {
+        clip.stop();
+    }
+    playing = false;
+}",-2,-2
+5526,"public void nextSong() {
+    startSong(currentListSongs.get(((currentSongPosition) + 1)).getSongUri(), currentListSongs.get(((currentSongPosition) + 1)).getSongName());
+    (currentSongPosition)++;
+}","public void nextSong() {
+    (currentSongPosition)++;
+    startSong(currentListSongs.get(currentSongPosition).getSongUri(), currentListSongs.get(currentSongPosition).getSongName());
+}",2,2
+19036,"public boolean hasRef() {
+    return (constraint.refs.size()) > 0;
+}",public abstract boolean hasRef();,-2,-2
+36373,"@java.lang.Override
+public void onResume() {
+    super.onResume();
+    android.util.Log.e(getClass().toString(), ""OnResume"");
+}","@java.lang.Override
+public void onResume() {
+    super.onResume();
+}",-2,-2
+29283,"private boolean isLeaf(int pos) {
+    if ((pos >= ((this.size) / 2)) && (pos <= (this.size))) {
+        return true;
+    }
+    return false;
+}","private boolean isLeaf(int pos) {
+    if ((pos >= ((size) / 2)) && (pos <= (size))) {
+        return true;
+    }
+    return false;
+}",1,0
+37120,"public double drink(double toDrink) {
+    return ((this.amount) - toDrink) > (ph.edu.mobapde.meditake.meditake.beans.Medicine.NOT_ENOUGH) ? (this.amount) - toDrink : ph.edu.mobapde.meditake.meditake.beans.Medicine.NOT_ENOUGH;
+}","public double drink(double toDrink) {
+    this.amount = (amount) - toDrink;
+    this.amount = ((amount) < 0) ? 0 : amount;
+    return 0;
+}",-2,-2
+9060,"@java.lang.Override
+protected void onStop() {
+    super.onStop();
+    int result;
+    result = ResourceHostingTerminate();
+    android.util.Log.d(TAG, (""ResourceHostingTerminate : "" + result));
+}","@java.lang.Override
+protected void onStop() {
+    super.onStop();
+}",-2,-2
+14128,"private void sendToScroll() {
+    mHandler.removeMessages(0);
+    isManual = false;
+    if (isAutoScroll)
+        startAutoScroll(mBannerInterval);
+    
+}","private void sendToScroll() {
+    sendToScroll(mBannerInterval);
+}",-2,-2
+19628,"@java.lang.Override
+protected byte[] getVelocityRequested() {
+    java.lang.String velocityRequested = ""0"";
+    byte[] velReq = velocityRequested.getBytes();
+    return velReq;
+}","@java.lang.Override
+protected int getVelocityRequested() {
+    int velocityRequested = 0;
+    return velocityRequested;
+}",-2,-2
+30087,"public org.openmrs.Patient convert(org.openmrs.module.registrationcore.api.mpi.openempi.OpenEmpiPatientQuery patientQuery) {
+    org.openmrs.module.registrationcore.api.mpi.common.MpiPatient patient = new org.openmrs.module.registrationcore.api.mpi.common.MpiPatient();
+    patient = ((org.openmrs.module.registrationcore.api.mpi.common.MpiPatient) (convertPatient(patient, patientQuery)));
+    patient.setMpiPatient(true);
+    return patient;
+}","public org.openmrs.Patient convert(org.openmrs.module.registrationcore.api.mpi.openempi.OpenEmpiPatientQuery patientQuery) {
+    return convertPatient(new org.openmrs.module.registrationcore.api.mpi.common.MpiPatient(), patientQuery);
+}",-2,-2
+18153,"private boolean isLeoEligible(io.github.theangrydev.opper.recogniser.DottedRule dottedRule) {
+    return (rightRecursion.isRightRecursive(dottedRule.rule())) && (currentEarlySet().isLeoUnique(dottedRule));
+}","private boolean isLeoEligible(io.github.theangrydev.opper.recogniser.DottedRule dottedRule) {
+    return false;
+}",-2,-2
+14270,"public boolean isFull() {
+    for (int i = 0; i < (array.length); i++) {
+        if ((array[i]) == (DEFAULT_VALUE)) {
+            return false;
+        }
+    }
+    return true;
+}","public boolean isEmpty() {
+    for (int item : array) {
+        if (item != (DEFAULT_VALUE)) {
+            return false;
+        }
+    }
+    return true;
+}",-1,-2
+45323,"private void execute(int newBufferSize, java.util.concurrent.ExecutorService executor, java.util.concurrent.CountDownLatch latch) {
+    for (int i = 0; i < newBufferSize; i++) {
+        executor.execute(new com.navercorp.pinpoint.common.server.util.DisruptorExecutorTest.LatchAwaitRunnable(latch));
+    }
+}","private void execute(int newBufferSize, java.util.concurrent.ExecutorService executor, java.util.concurrent.CountDownLatch latch) {
+    execute(newBufferSize, executor, null, latch);
+}",-2,-2
+8552,"@de.greenrobot.event.Subscribe
+public void onGetProductDTOEvent(com.example.winify.cvsi.dto.ListDto<com.example.winify.cvsi.dto.templates.ProductTemplate> event) {
+    android.widget.Toast.makeText(this, (""ceva"" + (event.getList().get(0).getTitle())), Toast.LENGTH_SHORT).show();
+    java.lang.System.out.println();
+}","@de.greenrobot.event.Subscribe
+public void onGetProductDTOEvent(com.example.winify.cvsi.dto.ListDto<com.example.winify.cvsi.dto.templates.ProductTemplate> event) {
+}",-2,-2
+16253,"@java.lang.Override
+public void handlePost(net.minecraft.item.ItemStack bookStack) {
+    net.minecraftforge.fml.common.registry.GameRegistry.addShapedRecipe(new net.minecraft.util.ResourceLocation(""guideapi"", ""testbook1""), bookStack, ""X X"", "" X "", ""X X"", 'X', ""ingotIron"");
+}","@java.lang.Override
+public void handlePost(net.minecraft.item.ItemStack bookStack) {
+}",-2,-2
+26201,"public org.renjin.sexp.SEXP findVariableOrThrow(java.lang.String name) {
+    org.renjin.sexp.SEXP value = findVariable(org.renjin.sexp.Symbol.get(name));
+    if (value == (Symbol.UNBOUND_VALUE)) {
+        throw new org.renjin.eval.EvalException(((""object '"" + name) + ""' not found""));
+    }
+    return value;
+}","public org.renjin.sexp.SEXP findVariableOrThrow(java.lang.String name) {
+    return findVariableOrThrow(org.renjin.sexp.Symbol.get(name));
+}",-2,-2
+23365,"@java.lang.Override
+public void recycle() {
+    if (!(mContentBitmap.isRecycled())) {
+        mContentBitmap.recycle();
+    }
+    super.recycle();
+}","@java.lang.Override
+public void recycle() {
+    super.recycle();
+}",-2,-2
+28435,"@java.lang.Override
+protected void onPreExecute() {
+    super.onPreExecute();
+    loading = android.app.ProgressDialog.show(this, ""Fetching..."", ""Wait..."", false, false);
+}","@java.lang.Override
+protected void onPreExecute() {
+    super.onPreExecute();
+}",-2,-2
+12776,"public static java.lang.String getRandomStr(int length) {
+    int[] randoms = org.fczm.common.util.MathTool.getRandom(length, 9);
+    java.lang.String str = """";
+    for (int i : randoms)
+        str += i;
+    
+    return str;
+}","public static java.lang.String getRandomStr(int length) {
+    java.lang.String str = """";
+    for (int i = 0; i < length; i++) {
+        str += org.fczm.common.util.MathTool.getRandom(9);
+    }
+    return str;
+}",-2,-2
+4389,"@org.junit.Test
+public void testRepositoryUsernameFind() {
+    com.UniGamer.uguser.dao.UGUser u = ugUserRepository.findByUsernameIs(""unigamer"");
+    org.junit.Assert.assertNotNull(u);
+}","@org.junit.Test
+public void testRepositoryUsernameFind() {
+}",-2,-2
+28527,"@java.lang.Override
+public void onPause() {
+    super.onPause();
+    if ((mNotifyListener) != null)
+        mNotifyListener.showActionbar();
+    
+}","@java.lang.Override
+public void onPause() {
+    super.onPause();
+}",-2,-2
+6439,"public void setId(long id) {
+    this.myId = id;
+}","public void setId(final long id) {
+    if (id > 0) {
+        myId = id;
+    }
+}",2,2
+10719,"public void addCard(int _monster_id, int _card_id) {
+    if (_monster_id == (first_monster_id))
+        first_monster_cards.add(Card.find(_card_id));
+    else
+        second_monster_cards.add(Card.find(_card_id));
+    
+}","public void addCard(int _monster_id, int _card_id) {
+}",-2,-2
+39681,"@javax.persistence.Column(name = ""remote_target_id"")
+public java.lang.Integer getOutputDestination() {
+    if ((outputDestination) != null)
+        return outputDestination.getID();
+    
+    return outputDestinationID;
+}","@javax.persistence.Column(name = ""remote_target_id"")
+public java.lang.Integer getOutputDestination() {
+    return outputDestinationID;
+}",-2,-2
+6989,"@org.junit.Test
+public void testFullOverlap() {
+    test(10, 20, 5, 25);
+}","@org.junit.Test
+public void testFullOverlap() {
+    test(new double[]{ 10 , 20 }, new double[]{ 5 , 25 });
+}",-2,-2
+12719,"public java.lang.String[] getArguments() {
+    return this.arguments.split(""\\s+"");
+}","public java.lang.String[] getArguments() {
+    if (((this.arguments) == null) || (this.arguments.isEmpty()))
+        return new java.lang.String[0];
+    
+    return this.arguments.split(""\\s+"");
+}",1,2
+44543,"public audio.metadata.Metadata getMetadata(audio.metadata.MetadataType type) {
+    for (audio.metadata.Metadata metadata : mMetadata) {
+        if ((metadata.getMetadataType()) == type) {
+            return metadata;
+        }
+    }
+    return null;
+}","public audio.metadata.Metadata getMetadata(audio.metadata.MetadataType type) {
+    return mMetadata.get(type);
+}",-2,-2
+12604,"private ijfx.core.formats.Script getScript() {
+    return get(0);
+}","@java.lang.Override
+public boolean add(ijfx.core.formats.Script t) {
+    if ((size()) == 0) {
+        return super.add(t);
+    }else {
+        super.set(0, t);
+        return true;
+    }
+}",-2,-2
+16077,"@java.lang.Override
+public void onCreate() {
+    super.onCreate();
+    mMobvoiApiClient = new com.mobvoi.android.common.api.MobvoiApiClient.Builder(this).addApi(Wearable.API).build();
+    mMobvoiApiClient.connect();
+}","@java.lang.Override
+public void onCreate() {
+    super.onCreate();
+}",-2,-2
+34879,"public void fetchSubtitle(us.nineworlds.serenity.core.model.VideoContentInfo mpi) {
+    jobManager.addJobInBackground(new us.nineworlds.serenity.jobs.SubtitleJob((""/library/metadata/"" + (mpi.id()))));
+}","public void fetchSubtitle(us.nineworlds.serenity.core.model.VideoContentInfo mpi) {
+}",-2,-2
+43466,"public void setStroke(int size) {
+    java.awt.BasicStroke tmp = new java.awt.BasicStroke(size);
+    this.stroke = tmp;
+    this.strokeInt = size;
+}","public void setStroke(int size, int type) {
+    this.strokeInt[getType(type)] = size;
+}",-2,-2
+39821,"public double getZOffset() {
+    return (-(rad)) / 2;
+}","public double getZOffset() {
+    return 0;
+}",-2,-2
+45808,"public int getMaxAddedConstant() {
+    return ((myVar) == null) || ((myMaxConstant) == 0) ? 0 : (myConstant) + (myMaxConstant);
+}","public int getMaxAddedConstant() {
+    return (myConstant) + (myMaxConstant);
+}",-2,-2
+36610,"@java.lang.Override
+public int getTotalRows() throws com.salesforce.dataloader.dao.database.DataAccessObjectException {
+    if ((totalRows) == 0) {
+        totalRows = com.salesforce.dataloader.util.DAORowUtil.calculateTotalRows(this);
+    }
+    return totalRows;
+}","@java.lang.Override
+public int getTotalRows() throws com.salesforce.dataloader.dao.database.DataAccessObjectException {
+    return 0;
+}",-2,-2
+46398,"public Page.Obj obj(org.openqa.selenium.By by) {
+    return ((org.runwb.lib.selen.Selen.Page) (this)).new org.runwb.lib.selen.Obj(by);
+}","public Page.Obj obj(org.openqa.selenium.By by) {
+    return obj(null, by, null);
+}",-2,-2
+33378,"@java.lang.Override
+public void run() {
+    com.example.simon.battleships.GameManager.playSound(""boom"");
+    {
+        handler.postDelayed(new java.lang.Runnable() {
+            @java.lang.Override
+            public void run() {
+                com.example.simon.battleships.GameManager.playSound(""splash"");
+            }
+        }, 3000);
+    }
+}","@java.lang.Override
+public void run() {
+    com.example.simon.battleships.GameManager.playSound(""boom"");
+}",-2,-2
+46047,"@java.lang.Override
+public void resetBuffer() {
+    super.resetBuffer();
+    bufferedFacadServletOutputStream.resetBuffer();
+    bufferedFacadPrintWriter.resetBuffer();
+}","@java.lang.Override
+public void resetBuffer() {
+    if ((bufferedFacadServletOutputStream) != null) {
+        bufferedFacadServletOutputStream.resetBuffer();
+    }
+    if ((bufferedFacadPrintWriter) != null) {
+        bufferedFacadPrintWriter.resetBuffer();
+    }
+}",1,1
+9907,"@java.lang.Override
+public void onMergedCellClick(com.hzn.easytableview.EasyTableView.MergeInfo mergeInfo) {
+    if (null != (mergeInfo.texts))
+        android.widget.Toast.makeText(this, mergeInfo.texts[0], Toast.LENGTH_SHORT).show();
+    
+}","@java.lang.Override
+public void onMergedCellClick(com.hzn.easytableview.EasyTableView.MergeInfo mergeInfo) {
+}",-2,-2
+29445,"public void onClose(org.apache.tomcat.util.net.SocketWrapper<java.lang.Long> socketWrapper) {
+    org.apache.coyote.spdy.SpdyAprNpnHandler.SpdyFramerApr wrapper = lightProcessors.remove(socketWrapper);
+    if (wrapper != null) {
+        wrapper.onClose(socketWrapper);
+    }
+}","public void onClose(org.apache.tomcat.util.net.SocketWrapper<java.lang.Long> socketWrapper) {
+}",-2,-2
+27969,"@java.lang.Override
+public java.awt.Rectangle getBoundingBox() {
+    java.awt.Dimension dimension = new java.awt.Dimension();
+    dimension.setSize(this.drawable.getRenderingSize(), this.drawable.getRenderingSize());
+    return new java.awt.Rectangle(this.getPosition(), dimension);
+}","@java.lang.Override
+public java.awt.Rectangle getBoundingBox() {
+    return this.drawable.getBoundingBox();
+}",-2,-2
+45795,"public java.lang.String toString() {
+    if ((profileName) != null) {
+        return ((((profileName) + "" ("") + (profileStatus)) + "") "") + (profileFriends.toString());
+    }
+    return """";
+}","public java.lang.String toString() {
+    if ((profileName) != null) {
+        return profileName;
+    }
+    return """";
+}",-2,-2
+29265,"private int maxAdvertiseInstances() {
+    com.android.bluetooth.btservice.AdapterService adapter = com.android.bluetooth.btservice.AdapterService.getAdapterService();
+    int numOfAdvtInstances = adapter.getNumOfAdvertisementInstancesSupported();
+    return numOfAdvtInstances - 1;
+}","private int maxAdvertiseInstances() {
+    com.android.bluetooth.btservice.AdapterService adapter;
+    int numOfAdvtInstances = 0;
+    if (null != (adapter = com.android.bluetooth.btservice.AdapterService.getAdapterService())) {
+        numOfAdvtInstances = adapter.getNumOfAdvertisementInstancesSupported();
+        return numOfAdvtInstances - 1;
+    }
+    return numOfAdvtInstances;
+}",1,1

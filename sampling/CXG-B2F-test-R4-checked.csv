@@ -1,0 +1,126 @@
+,buggy_source_code,fixed_source_code,check1,check2
+353,"@java.lang.Override
+public byte[] innerToBytes() {
+    java.nio.ByteBuffer b;
+    byte[] ba = this.clientAddress.getAddress();
+    b = java.nio.ByteBuffer.allocate(ba.length);
+    b.put(ba);
+    return b.array();
+}","@java.lang.Override
+public byte[] innerToBytes() {
+    return null;
+}",-2,-2
+1625,"@java.lang.Override
+public int compareTo(final org.sosy_lab.cpachecker.util.VariableAndFieldRelevancyComputer.VariableOrField other) {
+    throw new java.lang.AssertionError(""Should not happen: comparison should always be called on an object of a subclass"");
+}","@java.lang.Override
+public abstract int compareTo(final org.sosy_lab.cpachecker.util.VariableAndFieldRelevancyComputer.VariableOrField other);",-2,-2
+2101,"@java.lang.Override
+public xyz.aornice.tofq.Cargo[] elements() {
+    xyz.aornice.tofq.Cargo[] cargos = extraction.readAll();
+    return cargos;
+}","@java.lang.Override
+public xyz.aornice.tofq.Cargo[] elements() {
+    return null;
+}",-2,-2
+1684,"public ontologizer.go.TermID[] getAlternatives() {
+    ontologizer.go.TermID[] alts = new ontologizer.go.TermID[alternatives.size()];
+    return alternatives.toArray(alts);
+}","public ontologizer.go.TermID[] getAlternatives() {
+    if ((alternatives) == null)
+        return null;
+    
+    ontologizer.go.TermID[] alts = new ontologizer.go.TermID[alternatives.size()];
+    return alternatives.toArray(alts);
+}",-2,-2
+1025,"public java.util.ArrayList<java.lang.Integer> getWinDiscs() {
+    return new java.util.ArrayList<java.lang.Integer>(winDiscs);
+}","public java.util.ArrayList<java.lang.Integer> getWinDiscs() {
+    if ((winDiscs) == null) {
+        return null;
+    }
+    return new java.util.ArrayList<java.lang.Integer>(winDiscs);
+}",-2,-2
+2280,"public java.util.Set<com.bloc.collections.Pastry> getPastriesForRating(int rating) {
+    return new java.util.HashSet<com.bloc.collections.Pastry>();
+}","public java.util.Collection<com.bloc.collections.Pastry> getPastriesForRating(int rating) {
+    return null;
+}",-2,-2
+5064,"public java.util.NavigableMap<com.frostwire.search.filter.FilterKey, com.frostwire.search.filter.SearchGroup> groups() {
+    return java.util.Collections.unmodifiableNavigableMap(groups);
+}","public java.util.NavigableMap<com.frostwire.search.filter.FilterKey, com.frostwire.search.filter.SearchGroup> groups() {
+    return null;
+}",-2,-2
+1998,"@java.lang.Override
+public java.util.Collection selectCurrencyPair(beans.CurrencyPair cp) throws java.rmi.RemoteException {
+    java.lang.String sql = ("" quoting_currency = '"" + (cp.getQuoting_currency())) + ""'"";
+    return dbSQL.CurrencyPairSQL.selectCurrencyPair(sql, dsSQL.getConn());
+}","@java.lang.Override
+public java.util.Collection selectCurrencyPair(beans.CurrencyPair cp) throws java.rmi.RemoteException {
+    java.lang.String sql = ("" quoting_currency = '"" + (cp.getQuoting_currency())) + ""'"";
+    return null;
+}",-2,-2
+954,"@java.lang.Override
+public java.util.Set<ua.kpi.nc.persistence.model.FormQuestion> getAll() {
+    return formQuestionDao.getAll();
+}","@java.lang.Override
+public java.util.Set<ua.kpi.nc.persistence.model.FormQuestion> getAll() {
+    return null;
+}",-2,-2
+5164,"@java.lang.Override
+public java.util.Collection getALLLecontacts() throws java.rmi.RemoteException {
+    return dbSQL.LeContactsSql.selectALL(dsSQL.getConn());
+}","@java.lang.Override
+public java.util.Collection getALLLecontacts() throws java.rmi.RemoteException {
+    return null;
+}",-2,-2
+461,"public java.util.List<org.openflexo.foundation.ontology.FlexoOntologyObjectImpl<TA>> getChildren(org.openflexo.foundation.ontology.IFlexoOntologyObject<TA> father) {
+    return structure.get(father);
+}","@org.openflexo.connie.annotations.NotificationUnsafe
+public java.util.List<org.openflexo.foundation.ontology.FlexoOntologyObjectImpl<TA>> getChildren(org.openflexo.foundation.ontology.IFlexoOntologyObject<TA> father) {
+    if (father == null) {
+        return null;
+    }
+    if ((structure) != null) {
+        return structure.get(father);
+    }
+    return null;
+}",-2,-2
+3203,"@java.lang.Override
+public java.util.Set<com.adrznej.nutcracker.model.CategoryModel> getUserCategories(java.lang.String userLogin) {
+    return this.getUserByLogin(userLogin).getUserCategories();
+}","@java.lang.Override
+public java.util.Set<com.adrznej.nutcracker.model.CategoryModel> getUserCategories(java.lang.String userLogin) {
+    return null;
+}",-2,-2
+2106,"public java.util.List<twitterBlue.entity.Tweet> listReTweets(java.lang.Long authorId) {
+    return em.createQuery(""SELECT t FROM Tweet t JOIN FETCH t.user u WHERE u.id=:pauthorId ORDER BY t.createdOn DESC"", twitterBlue.entity.Tweet.class).setParameter(""pauthorId"", authorId).setMaxResults(twitterBlue.service.TweetService.MaxTweetsPerPage).getResultList();
+}","public java.util.List<twitterBlue.entity.Tweet> listReTweets(java.lang.Long authorId) {
+    return null;
+}",-2,-2
+3578,"@org.springframework.jms.annotation.JmsListener(destination = ""${cmbc.most.mq.incomingQueue}"", containerFactory = ""DefaultJmsListenerContainerFactory"")
+public void onMessage(javax.jms.TextMessage message) throws javax.jms.JMSException {
+    log.info(""onMessage"");
+    log.info(""onMessage - Message: {}"", message);
+}","@org.springframework.jms.annotation.JmsListener(destination = ""${cmbc.most.mq.incomingQueue}"", containerFactory = ""DefaultJmsListenerContainerFactory"")
+public void onMessage(javax.jms.TextMessage message) throws javax.jms.JMSException {
+    log.info(""onMessage - Message: {}"", message.getText());
+}",-2,-2
+3429,"public java.util.List<java.lang.Integer> countSmaller(int[] nums) {
+}","public java.util.List<java.lang.Integer> countSmaller(int[] nums) {
+    return null;
+}",-2,-2
+2343,"@java.lang.Override
+public java.util.List<lv.freeradiusgui.domain.Device> readListFromFile() {
+    java.util.List<java.lang.String> listFromFile = readFile(appConfig.getPathToUsersFile());
+    listFromFile = removeComments(listFromFile);
+    return parseList(listFromFile);
+}","@java.lang.Override
+public java.util.List<lv.freeradiusgui.domain.Device> readListFromFile() {
+    java.util.List<java.lang.String> listFromFile = readFile(appConfig.getPathToUsersFile());
+    if (listFromFile == null)
+        return null;
+    
+    listFromFile = removeComments(listFromFile);
+    return parseList(listFromFile);
+}",-2,-2

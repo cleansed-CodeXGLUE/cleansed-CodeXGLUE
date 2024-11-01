@@ -1,0 +1,1784 @@
+id,buggy,fixed,buggy_source_code,fixed_source_code,operations,signature,check1,check2
+6488,"public void METHOD_1 ( TYPE_1 VAR_1 ) throws java.lang.Exception { VAR_2 . info ( VAR_1 . toString ( ) ) ; java.lang.System.out.println ( ( STRING_1 + ( VAR_1 . toString ( ) ) ) ) ; VAR_3 . METHOD_2 ( VAR_1 ) ; } 
+","public void METHOD_1 ( TYPE_1 VAR_1 ) throws java.lang.Exception { VAR_2 . info ( VAR_1 . toString ( ) ) ; VAR_2 . info ( ( STRING_1 + ( VAR_1 . toString ( ) ) ) ) ; VAR_3 . METHOD_2 ( VAR_1 ) ; } 
+","@org.springframework.web.bind.annotation.RequestMapping(value = ""/register"", method = org.springframework.web.bind.annotation.RequestMethod.POST)
+public void registProductPOST(web.portfolio.domain.ProductVO vo) throws java.lang.Exception {
+    web.portfolio.controller.MainController.logger.info(vo.toString());
+    java.lang.System.out.println((""vo.toString() : "" + (vo.toString())));
+    prod_service.createProduct(vo);
+}","@org.springframework.web.bind.annotation.RequestMapping(value = ""/register"", method = org.springframework.web.bind.annotation.RequestMethod.POST)
+public void registProductPOST(web.portfolio.domain.ProductVO vo) throws java.lang.Exception {
+    web.portfolio.controller.MainController.logger.info(vo.toString());
+    web.portfolio.controller.MainController.logger.info((""vo.toString() : "" + (vo.toString())));
+    prod_service.createProduct(vo);
+}","Update Invocation at Block
+Update FieldRead at Invocation
+Update TypeAccess at FieldRead
+","void registProductPOST(web.portfolio.domain.ProductVO)
+void registProductPOST(web.portfolio.domain.ProductVO)",-2,-2
+32839,"public void METHOD_1 ( ) { TYPE_1 VAR_1 = new TYPE_1 ( ) ; java.lang.String VAR_2 = VAR_1 . METHOD_2 ( ) ; assertEquals ( STRING_1 , STRING_2 , VAR_2 ) ; } 
+","public void METHOD_1 ( ) { VAR_2 = VAR_1 . METHOD_2 ( ) ; assertEquals ( STRING_1 , STRING_2 , VAR_2 ) ; } 
+","@jdk.nashorn.internal.ir.annotations.Ignore
+public void testTennisGame_Start() {
+    TennisGame game = new TennisGame();
+    java.lang.String score = game.getScore();
+    assertEquals(""Initial score incorrect"", ""love - love"", score);
+}","@org.junit.Test
+public void testTennisGame_Start() {
+    score = game.getScore();
+    assertEquals(""Initial score incorrect"", ""love - love"", score);
+}","Insert Assignment at Block
+Insert FieldWrite at Assignment
+Insert Invocation at Assignment
+Insert ThisAccess at Invocation
+Insert FieldRead at Invocation
+Insert ThisAccess at FieldWrite
+Insert FieldRead at Invocation
+Insert TypeAccess at ThisAccess
+Insert ThisAccess at FieldRead
+Insert TypeAccess at ThisAccess
+Insert ThisAccess at FieldRead
+Insert TypeAccess at ThisAccess
+Insert TypeAccess at ThisAccess
+Delete LocalVariable at Block
+Delete VariableRead at Invocation
+","void testTennisGame_Start()
+void testTennisGame_Start()",-2,-2
+3964,"public void METHOD_1 ( ) { this . VAR_1 . start ( ) ; this . METHOD_2 ( ( ( this ) == null ? ( this ) != null : null ) ) ; } 
+","public void METHOD_1 ( ) { this . VAR_1 . start ( ) ; this . METHOD_2 ( ( ( this ) == null ? ( this ) != null : ! ( ! ( ! true ) ) ) ) ; } 
+","public void runLoop() {
+    this.myStateManipulation.start();
+    this.loopLoop(((this) == null ? (this) != null : null));
+}","public void runLoop() {
+    this.myStateManipulation.start();
+    this.loopLoop(((this) == null ? (this) != null : !(!(!true))));
+}","Insert UnaryOperator at Conditional
+Insert UnaryOperator at UnaryOperator
+Insert UnaryOperator at UnaryOperator
+Insert Literal at UnaryOperator
+Delete Literal at Conditional
+","void runLoop()
+void runLoop()",-2,-2
+33043,"public static void METHOD_1 ( int [ ] VAR_1 , int [ ] VAR_2 ) { } 
+","public static int [ ] METHOD_1 ( int [ ] VAR_1 , int [ ] VAR_2 ) { return null ; } 
+","public static void compute(int[] A, int[] B) {
+}","public static int[] compute(int[] A, int[] B) {
+    return null;
+}","Insert Return at Block
+Insert Literal at Return
+","void compute(int[],int[])
+int[] compute(int[],int[])",-2,-2
+45078,"public java.util.List < TYPE_1 > METHOD_1 ( TYPE_1 VAR_1 ) throws TYPE_2 { return this . VAR_2 . METHOD_2 ( VAR_1 ) ; } 
+","public java.util.List < TYPE_1 > METHOD_1 ( TYPE_1 VAR_1 ) throws TYPE_2 { if ( ( VAR_2 ) == null ) { return null ; } return this . VAR_2 . METHOD_2 ( VAR_1 ) ; } 
+","public java.util.List<com.dianping.codereview.svn.Resource> getChildren(com.dianping.codereview.svn.Resource dir) throws org.tmatesoft.svn.core.SVNException {
+    return this.root.findChildren(dir);
+}","public java.util.List<com.dianping.codereview.svn.Resource> getChildren(com.dianping.codereview.svn.Resource dir) throws org.tmatesoft.svn.core.SVNException {
+    if ((root) == null) {
+        return null;
+    }
+    return this.root.findChildren(dir);
+}","Insert If at Block
+Insert BinaryOperator at If
+Insert Block at If
+Insert FieldRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert Return at Block
+Insert ThisAccess at FieldRead
+Insert Literal at Return
+Insert TypeAccess at ThisAccess
+","java.util.List getChildren(com.dianping.codereview.svn.Resource)
+java.util.List getChildren(com.dianping.codereview.svn.Resource)",-2,-2
+22672,"public java.util.List < TYPE_1 > METHOD_1 ( java.lang.String VAR_1 ) throws java.lang.Exception { return ( VAR_1 == null ) || ( VAR_1 . isEmpty ( ) ) ? VAR_2 : VAR_3 . METHOD_2 ( VAR_1 ) ; } 
+","public java.util.List < TYPE_1 > METHOD_1 ( java.lang.String VAR_1 ) throws java.lang.Exception { return null ; } 
+","@java.lang.Override
+public java.util.List<com.softserve.osbb.model.Contract> getAllContractsBySearchTerm(java.lang.String searchTerm) throws java.lang.Exception {
+    return (searchTerm == null) || (searchTerm.isEmpty()) ? com.softserve.osbb.service.impl.ContractServiceImpl.EMPTY_LIST : contractRepository.getAllContractsBySearchParam(searchTerm);
+}","@java.lang.Override
+public java.util.List<com.softserve.osbb.model.Contract> getAllContractsBySearchTerm(java.lang.String searchTerm) throws java.lang.Exception {
+    return null;
+}","Insert Literal at Return
+Delete VariableRead at BinaryOperator
+Delete Literal at BinaryOperator
+Delete BinaryOperator at BinaryOperator
+Delete VariableRead at Invocation
+Delete Invocation at BinaryOperator
+Delete BinaryOperator at Conditional
+Delete TypeAccess at FieldRead
+Delete FieldRead at Conditional
+Delete TypeAccess at ThisAccess
+Delete ThisAccess at FieldRead
+Delete FieldRead at Invocation
+Delete VariableRead at Invocation
+Delete Invocation at Conditional
+Delete Conditional at Return
+","java.util.List getAllContractsBySearchTerm(java.lang.String)
+java.util.List getAllContractsBySearchTerm(java.lang.String)",-2,-2
+30912,"public byte [ ] METHOD_1 ( ) { java.lang.String VAR_1 = VAR_2 . METHOD_2 ( VAR_3 ) ; return VAR_1 . METHOD_3 ( ) ; } 
+","public byte [ ] METHOD_1 ( ) { if ( VAR_3 . isEmpty ( ) ) { return null ; } java.lang.String VAR_1 = VAR_2 . METHOD_2 ( VAR_3 ) ; return VAR_1 . METHOD_3 ( ) ; } 
+","public byte[] toBytes() {
+    java.lang.String metadataString = org.apache.rya.api.domain.StatementMetadata.gson.toJson(metadataMap);
+    return metadataString.getBytes();
+}","public byte[] toBytes() {
+    if (metadataMap.isEmpty()) {
+        return null;
+    }
+    java.lang.String metadataString = org.apache.rya.api.domain.StatementMetadata.gson.toJson(metadataMap);
+    return metadataString.getBytes();
+}","Insert If at Block
+Insert Invocation at If
+Insert Block at If
+Insert FieldRead at Invocation
+Insert Return at Block
+Insert ThisAccess at FieldRead
+Insert Literal at Return
+Insert TypeAccess at ThisAccess
+","byte[] toBytes()
+byte[] toBytes()",-2,-2
+14163,"private static void METHOD_1 ( java.lang.String VAR_1 , java.lang.String fileName , int VAR_2 ) { try { } catch ( java.lang.Exception VAR_3 ) { java.lang.System.out.println ( STRING_1 ) ; VAR_3 . METHOD_2 ( ) ; } } 
+","private static byte [ ] METHOD_1 ( java.lang.String VAR_1 , java.lang.String fileName , int VAR_2 ) { try { } catch ( java.lang.Exception VAR_3 ) { java.lang.System.out.println ( STRING_1 ) ; VAR_3 . METHOD_2 ( ) ; } return null ; } 
+","private static void askForFilePiece(java.lang.String peerName, java.lang.String fileName, int piece) {
+    try {
+    } catch (java.lang.Exception e) {
+        java.lang.System.out.println(""Exception"");
+        e.printStackTrace();
+    }
+}","private static byte[] askForFilePiece(java.lang.String peerName, java.lang.String fileName, int piece) {
+    try {
+    } catch (java.lang.Exception e) {
+        java.lang.System.out.println(""Exception"");
+        e.printStackTrace();
+    }
+    return null;
+}","Insert Return at Block
+Insert Literal at Return
+","void askForFilePiece(java.lang.String,java.lang.String,int)
+byte[] askForFilePiece(java.lang.String,java.lang.String,int)",-2,-2
+41315,"public java.lang.String [ ] METHOD_1 ( java.lang.String VAR_1 , java.lang.String VAR_2 , java.lang.String VAR_3 , java.lang.String VAR_4 ) throws TYPE_1 { java.lang.String VAR_5 = TYPE_2 . METHOD_2 ( ) . METHOD_3 ( VAR_1 , VAR_2 , VAR_3 ) ; return VAR_6 . METHOD_1 ( VAR_5 , VAR_4 ) ; } 
+","public java.lang.String [ ] METHOD_1 ( java.lang.String VAR_1 , java.lang.String VAR_2 , java.lang.String VAR_3 , java.lang.String VAR_4 ) throws TYPE_1 { java.lang.String VAR_5 = TYPE_2 . METHOD_2 ( ) . METHOD_3 ( VAR_1 , VAR_2 , VAR_3 ) ; return null ; } 
+","public java.lang.String[] getTagNamesOfPersistedArtifacts(java.lang.String applicationId, java.lang.String version, java.lang.String revision, java.lang.String tenantDomain) throws org.wso2.carbon.appfactory.common.AppFactoryException {
+    java.lang.String jobName = org.wso2.carbon.appfactory.core.internal.ServiceHolder.getContinuousIntegrationSystemDriver().getJobName(applicationId, version, revision);
+    return connector.getTagNamesOfPersistedArtifacts(jobName, tenantDomain);
+}","public java.lang.String[] getTagNamesOfPersistedArtifacts(java.lang.String applicationId, java.lang.String version, java.lang.String revision, java.lang.String tenantDomain) throws org.wso2.carbon.appfactory.common.AppFactoryException {
+    java.lang.String jobName = org.wso2.carbon.appfactory.core.internal.ServiceHolder.getContinuousIntegrationSystemDriver().getJobName(applicationId, version, revision);
+    return null;
+}","Insert Literal at Return
+Delete TypeAccess at ThisAccess
+Delete ThisAccess at FieldRead
+Delete FieldRead at Invocation
+Delete VariableRead at Invocation
+Delete VariableRead at Invocation
+Delete Invocation at Return
+","java.lang.String[] getTagNamesOfPersistedArtifacts(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+java.lang.String[] getTagNamesOfPersistedArtifacts(java.lang.String,java.lang.String,java.lang.String,java.lang.String)",-2,-2
+26569,"public static java.util.List < TYPE_1 > METHOD_1 ( java.lang.String VAR_1 ) { return new TYPE_2 ( VAR_1 , new TYPE_3 ( ) ) . METHOD_2 ( ) ; } 
+","public static java.util.List < TYPE_1 > METHOD_1 ( java.lang.String VAR_1 ) { if ( VAR_1 == null ) { return null ; } return new TYPE_2 ( VAR_1 , new TYPE_3 ( ) ) . METHOD_2 ( ) ; } 
+","public static java.util.List<com.quollwriter.text.Word> getAsWords(java.lang.String l) {
+    return new com.quollwriter.text.Sentence(l, new com.quollwriter.text.DialogueInd()).getWords();
+}","public static java.util.List<com.quollwriter.text.Word> getAsWords(java.lang.String l) {
+    if (l == null) {
+        return null;
+    }
+    return new com.quollwriter.text.Sentence(l, new com.quollwriter.text.DialogueInd()).getWords();
+}","Insert If at Block
+Insert BinaryOperator at If
+Insert Block at If
+Insert VariableRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert Return at Block
+Insert Literal at Return
+","java.util.List getAsWords(java.lang.String)
+java.util.List getAsWords(java.lang.String)",-2,-2
+29568,"public static < TYPE_1 , TYPE_2 > TYPE_3 < TYPE_1 , TYPE_2 > METHOD_1 ( TYPE_1 VAR_1 , TYPE_2 element ) { VAR_2 = VAR_1 ; VAR_3 . element = element ; return VAR_3 ; } 
+","public static < TYPE_1 , TYPE_2 > TYPE_3 < TYPE_1 , TYPE_2 > METHOD_1 ( TYPE_1 VAR_1 , TYPE_2 element ) { return new TYPE_3 < > ( VAR_1 , element ) ; } 
+","@java.lang.SuppressWarnings(value = ""unchecked"")
+public static <G, E> edu.uci.ics.jung.graph.util.Context<G, E> getInstance(G graph, E element) {
+    edu.uci.ics.jung.graph.util.Context.instance.graph = graph;
+    edu.uci.ics.jung.graph.util.Context.instance.element = element;
+    return edu.uci.ics.jung.graph.util.Context.instance;
+}","@java.lang.SuppressWarnings(value = ""unchecked"")
+public static <G, E> edu.uci.ics.jung.graph.util.Context<G, E> getInstance(G graph, E element) {
+    return new edu.uci.ics.jung.graph.util.Context<>(graph, element);
+}","Insert Return at Block
+Insert ConstructorCall at Return
+Insert VariableRead at ConstructorCall
+Insert VariableRead at ConstructorCall
+Delete TypeAccess at FieldRead
+Delete FieldRead at FieldWrite
+Delete FieldWrite at Assignment
+Delete VariableRead at Assignment
+Delete Assignment at Block
+Delete TypeAccess at FieldRead
+Delete FieldRead at FieldWrite
+Delete FieldWrite at Assignment
+Delete VariableRead at Assignment
+Delete Assignment at Block
+Delete TypeAccess at FieldRead
+Delete FieldRead at Return
+Delete Return at Block
+","<G,E> edu.uci.ics.jung.graph.util.Context getInstance(G,E)
+<G,E> edu.uci.ics.jung.graph.util.Context getInstance(G,E)",-2,-2
+41822,"public boolean equals ( final java.lang.Object VAR_1 ) { throw new TYPE_1 ( STRING_1 ) ; } 
+","public abstract boolean equals ( final java.lang.Object VAR_1 ) ; 
+","@java.lang.Override
+public boolean equals(final java.lang.Object other) {
+    throw new java.lang.AssertionError(""Should not happen: equality should always be checked on an object of a subclass"");
+}","@java.lang.Override
+public abstract boolean equals(final java.lang.Object other);","Delete Literal at ConstructorCall
+Delete ConstructorCall at Throw
+Delete Throw at Block
+Delete Block at Method
+","boolean equals(java.lang.Object)
+boolean equals(java.lang.Object)",-2,-2
+30160,"public static double [ ] METHOD_1 ( java.util.List < java.lang.Double > values ) { return values . METHOD_2 ( ) . METHOD_3 ( java.lang.Double : : METHOD_4 ) . METHOD_5 ( ) ; } 
+","public static double [ ] METHOD_1 ( java.util.List < java.lang.Double > values ) { if ( values == null ) return null ; return values . METHOD_2 ( ) . METHOD_3 ( java.lang.Double : : METHOD_4 ) . METHOD_5 ( ) ; } 
+","public static double[] toPrimitives(java.util.List<java.lang.Double> values) {
+    return values.stream().mapToDouble(java.lang.Double::doubleValue).toArray();
+}","public static double[] toPrimitives(java.util.List<java.lang.Double> values) {
+    if (values == null)
+        return null;
+    
+    return values.stream().mapToDouble(java.lang.Double::doubleValue).toArray();
+}","Insert If at Block
+Insert BinaryOperator at If
+Insert Block at If
+Insert VariableRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert Return at Block
+Insert Literal at Return
+","double[] toPrimitives(java.util.List)
+double[] toPrimitives(java.util.List)",-2,-2
+13926,"private java.util.List < TYPE_1 > METHOD_1 ( android.content.Intent intent ) { java.util.ArrayList < TYPE_1 > VAR_1 = intent . METHOD_2 ( VAR_2 ) ; if ( METHOD_3 ( VAR_1 ) ) { return VAR_1 ; } else { return new java.util.ArrayList < TYPE_1 > ( ) ; } } 
+","private java.util.List < TYPE_1 > METHOD_1 ( android.content.Intent intent ) { java.util.ArrayList < TYPE_1 > VAR_1 = intent . METHOD_2 ( VAR_2 ) ; if ( METHOD_3 ( VAR_1 ) ) { return VAR_1 ; } else { return null ; } } 
+","private java.util.List<android.net.Uri> extractInputUrlsFromIntent(android.content.Intent intent) {
+    java.util.ArrayList<android.net.Uri> uris = intent.getParcelableArrayListExtra(vandy.mooc.assignments.assignment.activities.GalleryActivity.INTENT_EXTRA_URLS);
+    if (validateInput(uris)) {
+        return uris;
+    }else {
+        return new java.util.ArrayList<android.net.Uri>();
+    }
+}","private java.util.List<android.net.Uri> extractInputUrlsFromIntent(android.content.Intent intent) {
+    java.util.ArrayList<android.net.Uri> uris = intent.getParcelableArrayListExtra(vandy.mooc.assignments.assignment.activities.GalleryActivity.INTENT_EXTRA_URLS);
+    if (validateInput(uris)) {
+        return uris;
+    }else {
+        return null;
+    }
+}","Insert Literal at Return
+Delete ConstructorCall at Return
+","java.util.List extractInputUrlsFromIntent(android.content.Intent)
+java.util.List extractInputUrlsFromIntent(android.content.Intent)",-2,-2
+17293,"public java.util.List < TYPE_1 > METHOD_1 ( TYPE_2 VAR_1 ) { } 
+","public java.util.List < TYPE_1 > METHOD_1 ( TYPE_2 VAR_1 ) { return null ; } 
+","public java.util.List<Paper> batchRenaming(java.nio.file.Path papersFolder) {
+}","public java.util.List<Paper> batchRenaming(java.nio.file.Path papersFolder) {
+    return null;
+}","Insert Return at Block
+Insert Literal at Return
+","java.util.List batchRenaming(java.nio.file.Path)
+java.util.List batchRenaming(java.nio.file.Path)",-2,-2
+2940,"public java.util.List < TYPE_1 > METHOD_1 ( double VAR_1 ) { return VAR_2 . METHOD_2 ( VAR_1 ) . METHOD_3 ( ) . METHOD_4 ( TYPE_2 : : METHOD_5 ) . METHOD_6 ( TYPE_3 . METHOD_7 ( ) ) ; } 
+","public java.util.List < TYPE_1 > METHOD_1 ( double VAR_1 ) { return null ; } 
+","@java.lang.Override
+public java.util.List<bg.bc.tools.chronos.core.entities.DChangelog> getChangelogsForUpdateCounterLessThan(double lessThanModifierValue) {
+    return changelogRepo.findByUpdateCounterLessThan(lessThanModifierValue).stream().map(DbToDomainMapper::dbToDomainChangelog).collect(java.util.stream.Collectors.toList());
+}","@java.lang.Override
+public java.util.List<bg.bc.tools.chronos.core.entities.DChangelog> getChangelogsForUpdateCounterLessThan(double lessThanModifierValue) {
+    return null;
+}","Insert Literal at Return
+Delete TypeAccess at ThisAccess
+Delete ThisAccess at FieldRead
+Delete FieldRead at Invocation
+Delete VariableRead at Invocation
+Delete Invocation at Invocation
+Delete Invocation at Invocation
+Delete FieldRead at ExecutableReferenceExpression
+Delete ExecutableReferenceExpression at Invocation
+Delete Invocation at Invocation
+Delete TypeAccess at Invocation
+Delete Invocation at Invocation
+Delete Invocation at Return
+","java.util.List getChangelogsForUpdateCounterLessThan(double)
+java.util.List getChangelogsForUpdateCounterLessThan(double)",-2,-2
+621,"public static TYPE_1 METHOD_1 ( android.content.Context context ) { VAR_1 = context ; return VAR_2 ; } 
+","public static TYPE_1 METHOD_1 ( android.content.Context context ) { return new TYPE_1 ( context ) ; } 
+","public static com.xinyi.czbasedevtool.base.manager.ui_about.dialog.MaterialDialogFactory getInstance(android.content.Context context) {
+    com.xinyi.czbasedevtool.base.manager.ui_about.dialog.MaterialDialogFactory.mContext = context;
+    return com.xinyi.czbasedevtool.base.manager.ui_about.dialog.MaterialDialogFactory.mInstance;
+}","public static com.xinyi.czbasedevtool.base.manager.ui_about.dialog.MaterialDialogFactory getInstance(android.content.Context context) {
+    return new com.xinyi.czbasedevtool.base.manager.ui_about.dialog.MaterialDialogFactory(context);
+}","Move Parameter from Method to CtParameterImpl
+","com.xinyi.czbasedevtool.base.manager.ui_about.dialog.MaterialDialogFactory getInstance(android.content.Context)
+com.xinyi.czbasedevtool.base.manager.ui_about.dialog.MaterialDialogFactory getInstance(android.content.Context)",-2,-2
+34705,"protected synchronized java.lang.Long [ ] METHOD_1 ( TYPE_1 < java.lang.Integer , java.lang.String > VAR_1 ) { return METHOD_1 ( VAR_1 . METHOD_2 ( ) , VAR_1 . METHOD_3 ( ) ) ; } 
+","protected synchronized java.lang.Long [ ] METHOD_1 ( TYPE_1 < java.lang.Integer , java.lang.String > VAR_1 ) { if ( VAR_1 == null ) { return null ; } else { return METHOD_1 ( VAR_1 . METHOD_2 ( ) , VAR_1 . METHOD_3 ( ) ) ; } } 
+","protected synchronized java.lang.Long[] getLastPlayed(github.daneren2005.dsub.util.Pair<java.lang.Integer, java.lang.String> pair) {
+    return getLastPlayed(pair.getFirst(), pair.getSecond());
+}","protected synchronized java.lang.Long[] getLastPlayed(github.daneren2005.dsub.util.Pair<java.lang.Integer, java.lang.String> pair) {
+    if (pair == null) {
+        return null;
+    }else {
+        return getLastPlayed(pair.getFirst(), pair.getSecond());
+    }
+}","Insert Block at Method
+Insert If at Block
+Insert BinaryOperator at If
+Insert Block at If
+Move Block from Method to CtBlockImpl
+Insert VariableRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert Return at Block
+Insert Literal at Return
+","java.lang.Long[] getLastPlayed(github.daneren2005.dsub.util.Pair)
+java.lang.Long[] getLastPlayed(github.daneren2005.dsub.util.Pair)",-2,-2
+26318,"private java.util.List < TYPE_1 > METHOD_1 ( java.lang.Long VAR_1 ) { TYPE_2 data = new TYPE_2 ( ) ; java.util.List < TYPE_1 > VAR_2 = data . METHOD_2 ( VAR_1 ) ; return data . METHOD_2 ( VAR_1 ) ; } 
+","private java.util.List < TYPE_1 > METHOD_1 ( java.lang.Long VAR_1 ) { return null ; } 
+","private java.util.List<com.netcracker.cinema.model.Ticket> getTicketsByCode(java.lang.Long code) {
+    com.netcracker.cinema.web.cashier.TestData data = new com.netcracker.cinema.web.cashier.TestData();
+    java.util.List<com.netcracker.cinema.model.Ticket> tickets = data.getTicketListByCode(code);
+    return data.getTicketListByCode(code);
+}","private java.util.List<com.netcracker.cinema.model.Ticket> getTicketsByCode(java.lang.Long code) {
+    return null;
+}","Insert Literal at Return
+Delete ConstructorCall at LocalVariable
+Delete LocalVariable at Block
+Delete VariableRead at Invocation
+Delete VariableRead at Invocation
+Delete Invocation at LocalVariable
+Delete LocalVariable at Block
+Delete VariableRead at Invocation
+Delete VariableRead at Invocation
+Delete Invocation at Return
+","java.util.List getTicketsByCode(java.lang.Long)
+java.util.List getTicketsByCode(java.lang.Long)",-2,-2
+6532,"public static java.util.List < java.lang.String > METHOD_1 ( android.content.Context c , java.lang.String list , int VAR_1 ) { } 
+","public static java.util.List < java.lang.String > METHOD_1 ( android.content.Context c , java.lang.String list , int VAR_1 ) { return null ; } 
+","public static java.util.List<java.lang.String> filterWordList(android.content.Context c, java.lang.String list, int mastery) {
+}","public static java.util.List<java.lang.String> filterWordList(android.content.Context c, java.lang.String list, int mastery) {
+    return null;
+}","Insert Return at Block
+Insert Literal at Return
+","java.util.List filterWordList(android.content.Context,java.lang.String,int)
+java.util.List filterWordList(android.content.Context,java.lang.String,int)",-2,-2
+666,"public long METHOD_1 ( ) { return VAR_1 . METHOD_2 ( ) ; } 
+","public long METHOD_2 ( ) { return VAR_1 . METHOD_2 ( ) ; } 
+","public long getMileages() {
+    return _customer.get_mileages();
+}","public long get_mileages() {
+    return _customer.get_mileages();
+}","Update Method at Class
+","long getMileages()
+long get_mileages()",-2,-2
+28207,"public void METHOD_1 ( TYPE_1 error ) { TYPE_2 VAR_1 = ( ( TYPE_2 ) ( TYPE_3 . METHOD_2 ( error ) ) ) ; TYPE_4 . METHOD_3 ( this , TYPE_5 . get ( VAR_1 . METHOD_4 ( ) ) ) ; METHOD_5 ( ) ; } 
+","public void METHOD_1 ( TYPE_1 error ) { TYPE_4 . error ( this , error ) ; METHOD_5 ( ) ; } 
+","@java.lang.Override
+public void failure(retrofit.RetrofitError error) {
+    co.gov.inci.evaluon.backend.models.classes.exceptions.BoolException exception = ((co.gov.inci.evaluon.backend.models.classes.exceptions.BoolException) (co.gov.inci.evaluon.backend.models.converters.BoolExceptionConverter.parse(error)));
+    co.gov.inci.evaluon.backend.services.gui.ToastService.byResource(this, BoolException.ERROR_DICT.get(exception.getMessage()));
+    finish();
+}","@java.lang.Override
+public void failure(retrofit.RetrofitError error) {
+    co.gov.inci.evaluon.backend.services.gui.ToastService.error(this, error);
+    finish();
+}","Update Invocation at Block
+Update VariableRead at Invocation
+Move VariableRead from Invocation to CtVariableReadImpl
+Delete TypeAccess at Invocation
+Delete VariableRead at Invocation
+Delete Invocation at LocalVariable
+Delete LocalVariable at Block
+Delete TypeAccess at Invocation
+Delete Invocation at Invocation
+Delete Invocation at Invocation
+","void failure(retrofit.RetrofitError)
+void failure(retrofit.RetrofitError)",-2,-2
+13263,"public java.util.List < TYPE_1 > METHOD_1 ( ) { return super . METHOD_1 ( ) ; } 
+","public java.util.List < TYPE_1 > METHOD_1 ( ) { return null ; } 
+","@java.lang.Override
+public java.util.List<com.softserve.tc.diary.entity.Tag> getAll() {
+    return super.getAll();
+}","@java.lang.Override
+public java.util.List<com.softserve.tc.diary.entity.Tag> getAll() {
+    return null;
+}","Move Method from Class to CtMethodImpl
+Insert Literal at Return
+Delete SuperAccess at Invocation
+Delete Invocation at Return
+","java.util.List getAll()
+java.util.List getAll()",-2,-2
+16888,"public double [ ] METHOD_1 ( ) { } 
+","public double [ ] METHOD_1 ( ) { return null ; } 
+","public double[] getOutputs() {
+}","public double[] getOutputs() {
+    return null;
+}","Insert Return at Block
+Insert Literal at Return
+","double[] getOutputs()
+double[] getOutputs()",-2,-2
+24633,"public < TYPE_1 extends TYPE_2 > TYPE_3 < TYPE_1 > METHOD_1 ( TYPE_3 < TYPE_1 > VAR_1 ) { return null ; } 
+","public < TYPE_1 extends TYPE_2 > java.util.List < TYPE_1 > METHOD_1 ( TYPE_3 < TYPE_1 > VAR_1 ) { return null ; } 
+","@java.lang.Override
+public <S extends com.tawila.erpproject.model.Product> java.lang.Iterable<S> save(java.lang.Iterable<S> arg0) {
+    return null;
+}","@java.lang.Override
+public <S extends com.tawila.erpproject.model.Product> java.util.List<S> save(java.lang.Iterable<S> arg0) {
+    return null;
+}","Move Method from Class to CtMethodImpl
+","<S extends com.tawila.erpproject.model.Product> java.lang.Iterable save(java.lang.Iterable)
+<S extends com.tawila.erpproject.model.Product> java.util.List save(java.lang.Iterable)",-2,-2
+16024,"public java.lang.String [ ] METHOD_1 ( ) { return source . get ( ( ( VAR_1 ) ++ ) ) . METHOD_2 ( ) ; } 
+","public java.lang.String [ ] METHOD_1 ( ) { if ( ( VAR_1 ) < ( source . size ( ) ) ) return source . get ( ( ( VAR_1 ) ++ ) ) . METHOD_2 ( ) ; else return null ; } 
+","@java.lang.Override
+public java.lang.String[] read() {
+    return source.get(((readIndex)++)).getTokens();
+}","@java.lang.Override
+public java.lang.String[] read() {
+    if ((readIndex) < (source.size()))
+        return source.get(((readIndex)++)).getTokens();
+    else
+        return null;
+    
+}","Insert Block at Method
+Insert If at Block
+Insert BinaryOperator at If
+Move Block from Method to CtBlockImpl
+Insert Block at If
+Insert FieldRead at BinaryOperator
+Insert Invocation at BinaryOperator
+Insert Return at Block
+Insert ThisAccess at FieldRead
+Insert FieldRead at Invocation
+Insert Literal at Return
+Insert TypeAccess at ThisAccess
+Insert ThisAccess at FieldRead
+Insert TypeAccess at ThisAccess
+","java.lang.String[] read()
+java.lang.String[] read()",-2,-2
+31909,"public void METHOD_1 ( int VAR_1 ) throws java.lang.Exception { METHOD_2 ( INT_1 ) ; METHOD_2 ( INT_2 ) ; } 
+","public void METHOD_1 ( ) throws java.lang.Exception { METHOD_2 ( INT_1 ) ; METHOD_2 ( INT_2 ) ; } 
+","public void testLargeGapInData(int window) throws java.lang.Exception {
+    doTestLargeGapInData(128);
+    doTestLargeGapInData(500);
+}","@org.junit.Test
+public void testLargeGapInData() throws java.lang.Exception {
+    doTestLargeGapInData(128);
+    doTestLargeGapInData(500);
+}","Insert Annotation at Method
+Delete Parameter at Method
+","void testLargeGapInData(int)
+void testLargeGapInData()",-2,-2
+29870,"private float [ ] METHOD_1 ( int VAR_1 , TYPE_1 [ ] VAR_2 ) { if ( ( VAR_2 [ VAR_1 ] ) == null ) java.lang.System.out.println ( ( STRING_1 + VAR_1 ) ) ; return VAR_2 [ VAR_1 ] . VAR_3 ; } 
+","private float [ ] METHOD_1 ( int VAR_1 , TYPE_1 [ ] VAR_2 ) { if ( ( VAR_2 [ VAR_1 ] ) == null ) { java.lang.System.out.println ( ( STRING_1 + VAR_1 ) ) ; return null ; } return VAR_2 [ VAR_1 ] . VAR_3 ; } 
+","private float[] getAgentSpeed(int Id, com.mygdx.game.android.GameState.AgentInfo[] Status) {
+    if ((Status[Id]) == null)
+        java.lang.System.out.println((""Exception null Status Block : "" + Id));
+    
+    return Status[Id].speedVector;
+}","private float[] getAgentSpeed(int Id, com.mygdx.game.android.GameState.AgentInfo[] Status) {
+    if ((Status[Id]) == null) {
+        java.lang.System.out.println((""Exception null Status Block : "" + Id));
+        return null;
+    }
+    return Status[Id].speedVector;
+}","Move Return from Block to CtReturnImpl
+","float[] getAgentSpeed(int,com.mygdx.game.android.GameState$AgentInfo[])
+float[] getAgentSpeed(int,com.mygdx.game.android.GameState$AgentInfo[])",-2,-2
+23038,"public java.util.ArrayList < TYPE_1 > METHOD_1 ( java.lang.String VAR_1 , java.lang.String VAR_2 , TYPE_2 VAR_3 ) { TYPE_1 a = new TYPE_1 ( ) ; java.util.ArrayList < TYPE_1 > VAR_4 = new java.util.ArrayList < TYPE_1 > ( ) ; VAR_4 . add ( a ) ; return VAR_4 ; } 
+","public java.util.ArrayList < TYPE_1 > METHOD_1 ( java.lang.String VAR_1 , java.lang.String VAR_2 , TYPE_2 VAR_3 ) { return null ; } 
+","@javax.jws.WebMethod(operationName = ""getFlights"")
+public java.util.ArrayList<dk.dtu.FlightInfo> getFlights(java.lang.String origin, java.lang.String destination, javax.xml.datatype.XMLGregorianCalendar startDate) {
+    dk.dtu.FlightInfo a = new dk.dtu.FlightInfo();
+    java.util.ArrayList<dk.dtu.FlightInfo> strings = new java.util.ArrayList<dk.dtu.FlightInfo>();
+    strings.add(a);
+    return strings;
+}","@javax.jws.WebMethod(operationName = ""getFlights"")
+public java.util.ArrayList<dk.dtu.FlightInfo> getFlights(@javax.jws.WebParam(name = ""origin"")
+java.lang.String origin, @javax.jws.WebParam(name = ""destination"")
+java.lang.String destination, @javax.jws.WebParam(name = ""startDate"")
+javax.xml.datatype.XMLGregorianCalendar startDate) {
+    return null;
+}","Insert Annotation at Parameter
+Insert Annotation at Parameter
+Insert Annotation at Parameter
+Insert Literal at Annotation
+Insert Literal at Annotation
+Insert Literal at Annotation
+Insert Literal at Return
+Delete ConstructorCall at LocalVariable
+Delete LocalVariable at Block
+Delete ConstructorCall at LocalVariable
+Delete LocalVariable at Block
+Delete VariableRead at Invocation
+Delete VariableRead at Invocation
+Delete Invocation at Block
+Delete VariableRead at Return
+","java.util.ArrayList getFlights(java.lang.String,java.lang.String,javax.xml.datatype.XMLGregorianCalendar)
+java.util.ArrayList getFlights(java.lang.String,java.lang.String,javax.xml.datatype.XMLGregorianCalendar)",-2,-2
+38438,"private int METHOD_1 ( ) { java.util.Random VAR_1 = new java.util.Random ( ) ; while ( true ) { int i = ( VAR_1 . METHOD_2 ( INT_1 ) ) + 1 ; if ( i != 0 ) { return i ; } } } 
+","public int METHOD_1 ( ) { java.util.Random VAR_1 = new java.util.Random ( ) ; while ( true ) { int i = ( VAR_1 . METHOD_2 ( INT_1 ) ) + 1 ; return i ; } } 
+","private int rollDice() {
+    java.util.Random rand = new java.util.Random();
+    while (true) {
+        int i = (rand.nextInt(6)) + 1;
+        if (i != 0) {
+            return i;
+        }
+    } 
+}","public int rollDice() {
+    java.util.Random rand = new java.util.Random();
+    while (true) {
+        int i = (rand.nextInt(6)) + 1;
+        return i;
+    } 
+}","Update Method at Class
+Move Return from Block to CtReturnImpl
+Delete VariableRead at BinaryOperator
+Delete Literal at BinaryOperator
+Delete BinaryOperator at If
+Delete Block at If
+Delete If at Block
+","int rollDice()
+int rollDice()",-2,-2
+18372,"public static void METHOD_1 ( java.lang.String str , int VAR_1 , int VAR_2 , int VAR_3 ) { if ( VAR_4 ) TYPE_1 . METHOD_2 ( str ) ; } 
+","public static void METHOD_1 ( java.lang.String str , int VAR_1 , int VAR_2 , int VAR_3 ) { if ( VAR_4 ) TYPE_1 . METHOD_2 ( java.lang.String.format ( str , VAR_1 , VAR_2 , VAR_3 ) ) ; } 
+","public static void debugPrint(java.lang.String str, int p0, int p1, int p2) {
+    if (org.jcodec.codecs.h264.decode.MBlockDecoderUtils.debug)
+        org.jcodec.common.logging.Logger.debug(str);
+    
+}","public static void debugPrint(java.lang.String str, int p0, int p1, int p2) {
+    if (org.jcodec.codecs.h264.decode.MBlockDecoderUtils.debug)
+        org.jcodec.common.logging.Logger.debug(java.lang.String.format(str, p0, p1, p2));
+    
+}","Insert Invocation at Invocation
+Insert TypeAccess at Invocation
+Move VariableRead from Invocation to CtVariableReadImpl
+Insert VariableRead at Invocation
+Insert VariableRead at Invocation
+Insert VariableRead at Invocation
+","void debugPrint(java.lang.String,int,int,int)
+void debugPrint(java.lang.String,int,int,int)",-2,-2
+45009,"public java.util.ArrayList < java.lang.String > METHOD_1 ( java.lang.String name , TYPE_1 VAR_1 ) ; 
+","public static java.util.ArrayList < java.lang.String > METHOD_1 ( java.lang.String name , TYPE_1 VAR_1 ) { return null ; } 
+","public java.util.ArrayList<java.lang.String> next(java.lang.String name, algorithm.Dijkstra d);","public static java.util.ArrayList<java.lang.String> next(java.lang.String name, algorithm.Dijkstra d) {
+    return null;
+}","Insert Block at Method
+Insert Method at Interface
+Insert Method at Interface
+Insert Return at Block
+Insert Literal at Return
+","java.util.ArrayList next(java.lang.String,algorithm.Dijkstra)
+java.util.ArrayList next(java.lang.String,algorithm.Dijkstra)",-2,-2
+7822,"public void METHOD_1 ( final java.lang.String VAR_1 ) { } 
+","public abstract void METHOD_1 ( final java.lang.String VAR_1 ) ; 
+","@java.lang.Override
+public void setGuid(final java.lang.String guid) {
+}","@java.lang.Override
+public abstract void setGuid(final java.lang.String guid);","Delete Block at Method
+","void setGuid(java.lang.String)
+void setGuid(java.lang.String)",-2,-2
+12231,"public void METHOD_1 ( final java.lang.Throwable VAR_1 ) { this . METHOD_1 ( VAR_1 . METHOD_2 ( ) , VAR_1 ) ; } 
+","public void METHOD_1 ( final java.lang.Throwable VAR_1 ) { this . error ( VAR_1 . getClass ( ) . getName ( ) ) ; this . METHOD_1 ( VAR_1 . METHOD_2 ( ) , VAR_1 ) ; } 
+","@java.lang.Override
+public void stacktrace(final java.lang.Throwable throwable) {
+    this.stacktrace(throwable.getLocalizedMessage(), throwable);
+}","@java.lang.Override
+public void stacktrace(final java.lang.Throwable throwable) {
+    this.error(throwable.getClass().getName());
+    this.stacktrace(throwable.getLocalizedMessage(), throwable);
+}","Insert Invocation at Block
+Insert ThisAccess at Invocation
+Insert Invocation at Invocation
+Insert TypeAccess at ThisAccess
+Insert Invocation at Invocation
+Insert VariableRead at Invocation
+","void stacktrace(java.lang.Throwable)
+void stacktrace(java.lang.Throwable)",-2,-2
+4469,"public TYPE_1 METHOD_1 ( java.lang.String format , java.lang.Object ... args ) { TYPE_2 VAR_1 = VAR_2 . METHOD_2 ( ) ; VAR_1 . METHOD_3 ( ( STRING_1 + ( java.lang.String.format ( format , args ) ) ) ) ; return new TYPE_1 ( VAR_1 ) ; } 
+","public void info ( java.lang.String format , java.lang.Object ... args ) { info ( java.lang.String.format ( format , args ) ) ; } 
+","public java.io.PrintWriter warning(java.lang.String format, java.lang.Object... args) {
+    java.io.PrintStream logger = delegate.getLogger();
+    logger.println((""WARN: "" + (java.lang.String.format(format, args))));
+    return new java.io.PrintWriter(logger);
+}","public void info(java.lang.String format, java.lang.Object... args) {
+    info(java.lang.String.format(format, args));
+}","Move Parameter from Method to CtParameterImpl
+Move Parameter from Method to CtParameterImpl
+Update Invocation at Block
+Move Invocation from Block to CtInvocationImpl
+Insert ThisAccess at Invocation
+Move Invocation from BinaryOperator to CtInvocationImpl
+Insert TypeAccess at ThisAccess
+Delete VariableRead at Invocation
+Delete Literal at BinaryOperator
+Delete BinaryOperator at Invocation
+","java.io.PrintWriter warning(java.lang.String,java.lang.Object[])
+void info(java.lang.String,java.lang.Object[])",-2,-2
+17877,"public boolean METHOD_1 ( TYPE_1 VAR_1 ) { if ( ( this . getId ( ) . compareTo ( VAR_1 . getId ( ) ) ) == 0 ) return true ; else return false ; } 
+","public boolean equals ( TYPE_1 VAR_1 ) { if ( this . getId ( ) . equals ( VAR_1 . getId ( ) ) ) return true ; else return false ; } 
+","public boolean equalCheck(com.attender.Event ev) {
+    if ((this.getId().compareTo(ev.getId())) == 0)
+        return true;
+    else
+        return false;
+    
+}","public boolean equals(com.attender.Event ev) {
+    if (this.getId().equals(ev.getId()))
+        return true;
+    else
+        return false;
+    
+}","Update Method at Class
+Update Invocation at BinaryOperator
+Move Invocation from BinaryOperator to CtInvocationImpl
+Delete Literal at BinaryOperator
+Delete BinaryOperator at If
+","boolean equalCheck(com.attender.Event)
+boolean equals(com.attender.Event)",-2,-2
+36701,"public java.util.List < java.lang.String > METHOD_1 ( TYPE_1 VAR_1 ) { return VAR_1 . METHOD_2 ( ) ; } 
+","public java.util.List < java.lang.String > METHOD_1 ( TYPE_1 VAR_1 ) { if ( VAR_1 == null ) { return null ; } return VAR_1 . METHOD_2 ( ) ; } 
+","@java.lang.Override
+public java.util.List<java.lang.String> apply(org.apache.hadoop.hive.ql.metadata.Partition partition) {
+    return partition.getValues();
+}","@java.lang.Override
+public java.util.List<java.lang.String> apply(@javax.annotation.Nullable
+org.apache.hadoop.hive.ql.metadata.Partition partition) {
+    if (partition == null) {
+        return null;
+    }
+    return partition.getValues();
+}","Insert Block at Method
+Insert Annotation at Parameter
+Insert If at Block
+Move Return from Block to CtReturnImpl
+Insert BinaryOperator at If
+Insert Block at If
+Insert VariableRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert Return at Block
+Insert Literal at Return
+Delete Block at Method
+","java.util.List apply(org.apache.hadoop.hive.ql.metadata.Partition)
+java.util.List apply(org.apache.hadoop.hive.ql.metadata.Partition)",-2,-2
+15867,"public java.util.List < TYPE_1 > METHOD_1 ( ) { return new java.util.LinkedList ( this . VAR_1 ) ; } 
+","public java.util.List < TYPE_1 > METHOD_1 ( ) { return null ; } 
+","@java.lang.Override
+public java.util.List<de.fau.amos.virtualledger.android.model.Contact> getAll() {
+    return new java.util.LinkedList(this.allContacts);
+}","@java.lang.Override
+public java.util.List<de.fau.amos.virtualledger.android.model.Contact> getAll() {
+    return null;
+}","Insert Literal at Return
+Delete TypeAccess at ThisAccess
+Delete ThisAccess at FieldRead
+Delete FieldRead at ConstructorCall
+Delete ConstructorCall at Return
+","java.util.List getAll()
+java.util.List getAll()",-2,-2
+43401,"public void METHOD_1 ( ) { try { VAR_1 . METHOD_2 ( ) ; } catch ( java.lang.Exception VAR_2 ) { } } 
+","public void METHOD_1 ( ) { try { try { VAR_1 . METHOD_2 ( ) ; } catch ( java.lang.Exception VAR_2 ) { } } catch ( java.lang.Exception VAR_2 ) { } } 
+","@java.lang.Override
+public void run() {
+    try {
+        recorder.resumeRecording();
+    } catch (java.lang.Exception _ex) {
+    }
+}","@java.lang.Override
+public void run() {
+    try {
+        try {
+            recorder.resumeRecording();
+        } catch (java.lang.Exception _ex) {
+        }
+    } catch (java.lang.Exception _ex) {
+    }
+}","Insert Block at Method
+Insert Try at Block
+Move Block from Method to CtBlockImpl
+Insert Catch at Try
+Insert CatchVariable at Catch
+Insert Block at Catch
+","void run()
+void run()",-2,-2
+7761,"public TYPE_1 [ ] METHOD_1 ( java.lang.String VAR_1 , java.util.Map < java.lang.String , java.lang.String > parameters , java.lang.String VAR_2 ) throws TYPE_2 { java.util.List < java.lang.String > VAR_3 = VAR_4 . METHOD_2 ( VAR_1 , VAR_2 ) ; return METHOD_3 ( VAR_3 , VAR_2 ) ; } 
+","public TYPE_1 [ ] METHOD_1 ( java.lang.String VAR_1 , java.util.Map < java.lang.String , java.lang.String > parameters , java.lang.String VAR_2 ) throws TYPE_2 { return null ; } 
+","@java.lang.Override
+public org.wso2.carbon.appfactory.core.dto.Statistic[] getApplicationStatistics(java.lang.String applicationId, java.util.Map<java.lang.String, java.lang.String> parameters, java.lang.String tenantDomain) throws org.wso2.carbon.appfactory.common.AppFactoryException {
+    java.util.List<java.lang.String> jobsNames = connector.getJobNames(applicationId, tenantDomain);
+    return getBuildStatistics(jobsNames, tenantDomain);
+}","@java.lang.Override
+public org.wso2.carbon.appfactory.core.dto.Statistic[] getApplicationStatistics(java.lang.String applicationId, java.util.Map<java.lang.String, java.lang.String> parameters, java.lang.String tenantDomain) throws org.wso2.carbon.appfactory.common.AppFactoryException {
+    return null;
+}","Insert Literal at Return
+Delete TypeAccess at ThisAccess
+Delete ThisAccess at FieldRead
+Delete FieldRead at Invocation
+Delete VariableRead at Invocation
+Delete VariableRead at Invocation
+Delete Invocation at LocalVariable
+Delete LocalVariable at Block
+Delete TypeAccess at ThisAccess
+Delete ThisAccess at Invocation
+Delete VariableRead at Invocation
+Delete VariableRead at Invocation
+Delete Invocation at Return
+","org.wso2.carbon.appfactory.core.dto.Statistic[] getApplicationStatistics(java.lang.String,java.util.Map,java.lang.String)
+org.wso2.carbon.appfactory.core.dto.Statistic[] getApplicationStatistics(java.lang.String,java.util.Map,java.lang.String)",-2,-2
+12272,"public static java.util.Map < java.lang.String , java.lang.Object > METHOD_1 ( ) { return VAR_1 . METHOD_1 ( ) ; } 
+","public static java.util.Map < java.lang.String , java.lang.Object > METHOD_1 ( ) { if ( ( VAR_1 ) != null ) return VAR_1 . METHOD_1 ( ) ; else return null ; } 
+","public static java.util.Map<java.lang.String, java.lang.Object> getProperties() {
+    return org.breitling.dragon.framework.util.HibernateUtils.factory.getProperties();
+}","public static java.util.Map<java.lang.String, java.lang.Object> getProperties() {
+    if ((org.breitling.dragon.framework.util.HibernateUtils.factory) != null)
+        return org.breitling.dragon.framework.util.HibernateUtils.factory.getProperties();
+    else
+        return null;
+    
+}","Insert Block at Method
+Insert If at Block
+Insert BinaryOperator at If
+Move Block from Method to CtBlockImpl
+Insert Block at If
+Insert FieldRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert Return at Block
+Insert TypeAccess at FieldRead
+Insert Literal at Return
+","java.util.Map getProperties()
+java.util.Map getProperties()",-2,-2
+10892,"public static TYPE_1 METHOD_1 ( ) throws java.lang.ClassNotFoundException , TYPE_2 { if ( ( VAR_1 ) == null ) VAR_1 = new TYPE_1 ( ) ; return VAR_1 ; } 
+","public static TYPE_1 METHOD_1 ( ) throws java.lang.ClassNotFoundException , TYPE_2 { return new TYPE_1 ( ) ; } 
+","public static com.Mysql getInstance() throws java.lang.ClassNotFoundException, java.sql.SQLException {
+    if ((com.Mysql.mysql) == null)
+        com.Mysql.mysql = new com.Mysql();
+    
+    return com.Mysql.mysql;
+}","public static com.Mysql getInstance() throws java.lang.ClassNotFoundException, java.sql.SQLException {
+    return new com.Mysql();
+}","Insert Block at Method
+Insert Return at Block
+Insert ConstructorCall at Return
+Delete TypeAccess at FieldRead
+Delete FieldRead at BinaryOperator
+Delete Literal at BinaryOperator
+Delete BinaryOperator at If
+Delete TypeAccess at FieldWrite
+Delete FieldWrite at Assignment
+Delete ConstructorCall at Assignment
+Delete Assignment at Block
+Delete Block at If
+Delete If at Block
+Delete TypeAccess at FieldRead
+Delete FieldRead at Return
+Delete Return at Block
+Delete Block at Method
+","com.Mysql getInstance()
+com.Mysql getInstance()",-2,-2
+36250,"protected java.lang.String [ ] METHOD_1 ( java.lang.String ... params ) { return TYPE_1 . METHOD_2 ( getContext ( ) ) ; } 
+","protected java.lang.String [ ] METHOD_1 ( java.lang.String ... params ) { android.content.Context context = getContext ( ) ; if ( context == null ) { return null ; } return TYPE_1 . METHOD_2 ( context ) ; } 
+","@java.lang.Override
+protected java.lang.String[] doInBackground(java.lang.String... params) {
+    return me.xiaopan.sketch.util.SketchUtils.getAllAvailableSdcardPath(getContext());
+}","@java.lang.Override
+protected java.lang.String[] doInBackground(java.lang.String... params) {
+    android.content.Context context = getContext();
+    if (context == null) {
+        return null;
+    }
+    return me.xiaopan.sketch.util.SketchUtils.getAllAvailableSdcardPath(context);
+}","Insert LocalVariable at Block
+Insert If at Block
+Move Invocation from Invocation to CtInvocationImpl
+Insert BinaryOperator at If
+Insert Block at If
+Update Invocation at Return
+Insert VariableRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert Return at Block
+Insert VariableRead at Invocation
+Insert Literal at Return
+","java.lang.String[] doInBackground(java.lang.String[])
+java.lang.String[] doInBackground(java.lang.String[])",-2,-2
+33204,"private java.util.ArrayList < TYPE_1 > METHOD_1 ( ) { } 
+","private java.util.ArrayList < TYPE_1 > METHOD_1 ( ) { return null ; } 
+","private java.util.ArrayList<org.bukkit.craftbukkit.v1_8_R1.CraftChunk> getPlayerStructures() {
+}","private java.util.ArrayList<org.bukkit.craftbukkit.v1_8_R1.CraftChunk> getPlayerStructures() {
+    return null;
+}","Insert Return at Block
+Insert Literal at Return
+","java.util.ArrayList getPlayerStructures()
+java.util.ArrayList getPlayerStructures()",-2,-2
+6517,"public java.util.List < TYPE_1 > METHOD_1 ( ) { if ( ( VAR_1 ) == null ) { return TYPE_2 . METHOD_2 ( ) ; } return VAR_2 ; } 
+","public java.util.List < TYPE_1 > METHOD_1 ( ) { if ( ( VAR_1 ) == null ) return null ; return VAR_2 ; } 
+","public java.util.List<org.openhab.binding.zwave.internal.config.ZWaveDbProduct> GetProducts() {
+    if ((selManufacturer) == null) {
+        return java.util.Collections.emptyList();
+    }
+    return selManufacturer.Product;
+}","public java.util.List<org.openhab.binding.zwave.internal.config.ZWaveDbProduct> GetProducts() {
+    if ((selManufacturer) == null)
+        return null;
+    
+    return selManufacturer.Product;
+}","Insert Literal at Return
+Delete TypeAccess at Invocation
+Delete Invocation at Return
+","java.util.List GetProducts()
+java.util.List GetProducts()",-2,-2
+29396,"public java.util.Map < java.lang.String , java.lang.Object > METHOD_1 ( java.lang.String token , java.lang.Integer id ) { } 
+","public java.util.Map < java.lang.String , java.lang.Object > METHOD_1 ( java.lang.String token , java.lang.Integer id ) { return null ; } 
+","@org.springframework.web.bind.annotation.RequestMapping(value = ""/api/v1/billing/challenge/{token}/{userId}"", method = org.springframework.web.bind.annotation.RequestMethod.GET, produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
+public java.util.Map<java.lang.String, java.lang.Object> challengePayment(@org.springframework.web.bind.annotation.PathVariable
+java.lang.String token, @org.springframework.web.bind.annotation.PathVariable
+java.lang.Integer id) {
+}","@org.springframework.web.bind.annotation.RequestMapping(value = ""/api/v1/billing/challenge/{token}/{userId}"", method = org.springframework.web.bind.annotation.RequestMethod.GET, produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
+public java.util.Map<java.lang.String, java.lang.Object> challengePayment(@org.springframework.web.bind.annotation.PathVariable
+java.lang.String token, @org.springframework.web.bind.annotation.PathVariable
+java.lang.Integer id) {
+    return null;
+}","Insert Return at Block
+Insert Literal at Return
+","java.util.Map challengePayment(java.lang.String,java.lang.Integer)
+java.util.Map challengePayment(java.lang.String,java.lang.Integer)",-2,-2
+587,"public void METHOD_1 ( ) throws java.lang.Exception { TYPE_1 VAR_1 = new TYPE_1 ( ) ; TYPE_2 . assertTrue ( ( ( ( VAR_1 . METHOD_2 ( ) ) > 0 ) || ( ( VAR_1 . METHOD_2 ( ) ) < INT_1 ) ) ) ; } 
+","public void METHOD_1 ( ) throws java.lang.Exception { TYPE_1 VAR_1 = new TYPE_1 ( ) ; assertTrue ( ( ( ( VAR_1 . METHOD_2 ( ) ) > 0 ) || ( ( VAR_1 . METHOD_2 ( ) ) < INT_1 ) ) ) ; } 
+","@Objects.Test
+public void testRoll() throws java.lang.Exception {
+    Objects.Dice dice = new Objects.Dice();
+    org.junit.jupiter.api.Assertions.assertTrue((((dice.roll()) > 0) || ((dice.roll()) < 7)));
+}","@org.junit.Test
+public void testRoll() throws java.lang.Exception {
+    Objects.Dice dice = new Objects.Dice();
+    assertTrue((((dice.roll()) > 0) || ((dice.roll()) < 7)));
+}","Update Invocation at Block
+Insert ThisAccess at Invocation
+Insert TypeAccess at ThisAccess
+Delete TypeAccess at Invocation
+","void testRoll()
+void testRoll()",-2,-2
+23109,"private java.util.List < TYPE_1 > METHOD_1 ( final java.lang.String VAR_1 ) throws java.io.IOException , TYPE_2 , TYPE_3 { TYPE_4 VAR_2 = new TYPE_4 ( ) ; return VAR_2 . METHOD_1 ( VAR_1 ) ; } 
+","private java.util.List < TYPE_1 > METHOD_1 ( final java.lang.String VAR_1 ) throws java.io.IOException , TYPE_2 , TYPE_3 { TYPE_4 VAR_2 = new TYPE_4 ( ) ; return null ; } 
+","private java.util.List<org.impressivecode.depress.mr.googleaudit.GoogleAuditEntryMethodLevel> parseEntriesMethodLevel(final java.lang.String eclipsemetricsFilePath) throws java.io.IOException, javax.xml.parsers.ParserConfigurationException, org.xml.sax.SAXException {
+    org.impressivecode.depress.mr.googleaudit.GoogleAuditEntriesParser parser = new org.impressivecode.depress.mr.googleaudit.GoogleAuditEntriesParser();
+    return parser.parseEntriesMethodLevel(eclipsemetricsFilePath);
+}","private java.util.List<org.impressivecode.depress.mr.googleaudit.GoogleAuditEntryMethodLevel> parseEntriesMethodLevel(final java.lang.String eclipsemetricsFilePath) throws java.io.IOException, javax.xml.parsers.ParserConfigurationException, org.xml.sax.SAXException {
+    org.impressivecode.depress.mr.googleaudit.GoogleAuditEntriesParser parser = new org.impressivecode.depress.mr.googleaudit.GoogleAuditEntriesParser();
+    return null;
+}","Insert Literal at Return
+Delete VariableRead at Invocation
+Delete VariableRead at Invocation
+Delete Invocation at Return
+","java.util.List parseEntriesMethodLevel(java.lang.String)
+java.util.List parseEntriesMethodLevel(java.lang.String)",-2,-2
+16876,"public java.util.Map < java.lang.Integer , java.lang.Double > METHOD_1 ( int id ) { VAR_1 . METHOD_2 ( id ) ; return new java.util.HashMap ( VAR_1 . METHOD_3 ( ) ) ; } 
+","public java.util.Map < java.lang.Integer , java.lang.Double > METHOD_1 ( int id ) { if ( ! ( VAR_1 . METHOD_2 ( id ) ) ) return null ; return new java.util.HashMap ( VAR_1 . METHOD_3 ( ) ) ; } 
+","public java.util.Map<java.lang.Integer, java.lang.Double> getOutEdgeWeights(int id) {
+    graph.setCurrent(id);
+    return new java.util.HashMap(graph.getEdgeWeights());
+}","public java.util.Map<java.lang.Integer, java.lang.Double> getOutEdgeWeights(int id) {
+    if (!(graph.setCurrent(id)))
+        return null;
+    
+    return new java.util.HashMap(graph.getEdgeWeights());
+}","Insert Block at Method
+Insert If at Block
+Move Return from Block to CtReturnImpl
+Insert UnaryOperator at If
+Insert Block at If
+Insert Return at Block
+Insert Literal at Return
+Delete Block at Method
+","java.util.Map getOutEdgeWeights(int)
+java.util.Map getOutEdgeWeights(int)",-2,-2
+34416,"public static TYPE_1 METHOD_1 ( ) { if ( ( VAR_1 ) == null ) { VAR_1 = new TYPE_1 ( new TYPE_2 ( ) ) ; } return VAR_1 ; } 
+","public static TYPE_1 METHOD_1 ( java.lang.String type ) { return new TYPE_1 ( type , new TYPE_2 ( ) ) ; } 
+","public static com.github.xzwj87.todolist.schedule.observer.ScheduleDataObserver getInstance() {
+    if ((com.github.xzwj87.todolist.schedule.observer.ScheduleDataObserver.mInstance) == null) {
+        com.github.xzwj87.todolist.schedule.observer.ScheduleDataObserver.mInstance = new com.github.xzwj87.todolist.schedule.observer.ScheduleDataObserver(new android.os.Handler());
+    }
+    return com.github.xzwj87.todolist.schedule.observer.ScheduleDataObserver.mInstance;
+}","public static com.github.xzwj87.todolist.schedule.observer.ScheduleDataObserver getInstance(java.lang.String type) {
+    return new com.github.xzwj87.todolist.schedule.observer.ScheduleDataObserver(type, new android.os.Handler());
+}","Insert Parameter at Method
+Insert Block at Method
+Insert Return at Block
+Insert ConstructorCall at Return
+Insert VariableRead at ConstructorCall
+Move ConstructorCall from ConstructorCall to CtConstructorCallImpl
+Delete TypeAccess at FieldRead
+Delete FieldRead at BinaryOperator
+Delete Literal at BinaryOperator
+Delete BinaryOperator at If
+Delete TypeAccess at FieldWrite
+Delete FieldWrite at Assignment
+Delete ConstructorCall at Assignment
+Delete Assignment at Block
+Delete Block at If
+Delete If at Block
+Delete TypeAccess at FieldRead
+Delete FieldRead at Return
+Delete Return at Block
+Delete Block at Method
+","com.github.xzwj87.todolist.schedule.observer.ScheduleDataObserver getInstance()
+com.github.xzwj87.todolist.schedule.observer.ScheduleDataObserver getInstance(java.lang.String)",-2,-2
+33802,"public void METHOD_1 ( ) throws TYPE_1 { VAR_1 . METHOD_2 ( VAR_2 , VAR_3 ) ; METHOD_3 ( ) ; while ( METHOD_4 ( ) ) { VAR_1 . METHOD_5 ( VAR_2 , VAR_3 ) ; } } 
+","public void METHOD_1 ( ) throws TYPE_1 { VAR_1 . METHOD_2 ( VAR_2 , VAR_3 ) ; METHOD_3 ( ) ; while ( METHOD_4 ( ) ) { VAR_1 . METHOD_5 ( VAR_2 , VAR_3 ) ; break ; } } 
+","@java.lang.Override
+public void runOpMode() throws java.lang.InterruptedException {
+    magic.initium(hardwareMap, telemetry);
+    waitForStart();
+    while (opModeIsActive()) {
+        magic.vu_arbitrium(hardwareMap, telemetry);
+    } 
+}","@java.lang.Override
+public void runOpMode() throws java.lang.InterruptedException {
+    magic.initium(hardwareMap, telemetry);
+    waitForStart();
+    while (opModeIsActive()) {
+        magic.vu_arbitrium(hardwareMap, telemetry);
+        break;
+    } 
+}","Insert Break at Block
+","void runOpMode()
+void runOpMode()",-2,-2
+4066,"public TYPE_1 < TYPE_2 > METHOD_1 ( TYPE_1 < java.lang.Integer > VAR_1 ) { return null ; } 
+","public java.util.List < TYPE_2 > METHOD_1 ( TYPE_1 < java.lang.Integer > VAR_1 ) { return null ; } 
+","@java.lang.Override
+public java.lang.Iterable<com.tawila.erpproject.model.Product> findAll(java.lang.Iterable<java.lang.Integer> arg0) {
+    return null;
+}","@java.lang.Override
+public java.util.List<com.tawila.erpproject.model.Product> findAll(java.lang.Iterable<java.lang.Integer> arg0) {
+    return null;
+}","Move Method from Class to CtMethodImpl
+","java.lang.Iterable findAll(java.lang.Iterable)
+java.util.List findAll(java.lang.Iterable)",-2,-2
+24235,"public TYPE_1 [ ] METHOD_1 ( ) { if ( ( VAR_1 ) == null ) { return VAR_1 ; } else { return TYPE_2 . METHOD_2 ( VAR_1 , VAR_1 . length ) ; } } 
+","public TYPE_1 [ ] METHOD_1 ( ) { if ( ( VAR_1 ) == null ) { return null ; } else { return TYPE_2 . METHOD_2 ( VAR_1 , VAR_1 . length ) ; } } 
+","@java.lang.Override
+public com.puppycrawl.tools.checkstyle.api.DetailNode[] getChildren() {
+    if ((children) == null) {
+        return children;
+    }else {
+        return java.util.Arrays.copyOf(children, children.length);
+    }
+}","@java.lang.Override
+public com.puppycrawl.tools.checkstyle.api.DetailNode[] getChildren() {
+    if ((children) == null) {
+        return null;
+    }else {
+        return java.util.Arrays.copyOf(children, children.length);
+    }
+}","Insert Literal at Return
+Delete TypeAccess at ThisAccess
+Delete ThisAccess at FieldRead
+Delete FieldRead at Return
+","com.puppycrawl.tools.checkstyle.api.DetailNode[] getChildren()
+com.puppycrawl.tools.checkstyle.api.DetailNode[] getChildren()",-2,-2
+36061,"public java.util.ArrayList < TYPE_1 > METHOD_1 ( TYPE_2 VAR_1 ) { } 
+","public java.util.ArrayList < TYPE_1 > METHOD_1 ( TYPE_2 VAR_1 ) { return null ; } 
+","public java.util.ArrayList<Connection> fastestRouteTo(Place destination) {
+}","public java.util.ArrayList<Connection> fastestRouteTo(Place destination) {
+    return null;
+}","Insert Return at Block
+Insert Literal at Return
+","java.util.ArrayList fastestRouteTo(Place)
+java.util.ArrayList fastestRouteTo(Place)",-2,-2
+46520,"public void METHOD_1 ( final java.lang.Throwable VAR_1 ) { TYPE_1 . error ( STRING_1 , VAR_2 , VAR_1 ) ; } 
+","public void METHOD_1 ( final java.lang.Throwable VAR_1 ) { TYPE_1 . error ( STRING_1 , this . VAR_2 , VAR_1 ) ; } 
+","@java.lang.Override
+public void onFailure(final java.lang.Throwable throwable) {
+    org.opendaylight.protocol.bgp.benchmark.app.AppPeerBenchmark.LOG.error(""Failed to create Empty Structure for Application Peer Benchmark {}"", appRibId, throwable);
+}","@java.lang.Override
+public void onFailure(final java.lang.Throwable throwable) {
+    org.opendaylight.protocol.bgp.benchmark.app.AppPeerBenchmark.LOG.error(""Failed to create Empty Structure for Application Peer Benchmark {}"", this.appRibId, throwable);
+}","Insert FieldRead at Invocation
+Insert ThisAccess at FieldRead
+Insert TypeAccess at ThisAccess
+Delete VariableRead at Invocation
+","void onFailure(java.lang.Throwable)
+void onFailure(java.lang.Throwable)",-2,-2
+13426,"public static void METHOD_1 ( java.lang.String str , int VAR_1 , int VAR_2 , int VAR_3 , int VAR_4 ) { if ( VAR_5 ) TYPE_1 . METHOD_2 ( str ) ; } 
+","public static void METHOD_1 ( java.lang.String str , int VAR_1 , int VAR_2 , int VAR_3 , int VAR_4 ) { if ( VAR_5 ) TYPE_1 . METHOD_2 ( java.lang.String.format ( str , VAR_1 , VAR_2 , VAR_3 , VAR_4 ) ) ; } 
+","public static void debugPrint(java.lang.String str, int p0, int p1, int p2, int p3) {
+    if (org.jcodec.codecs.h264.decode.MBlockDecoderUtils.debug)
+        org.jcodec.common.logging.Logger.debug(str);
+    
+}","public static void debugPrint(java.lang.String str, int p0, int p1, int p2, int p3) {
+    if (org.jcodec.codecs.h264.decode.MBlockDecoderUtils.debug)
+        org.jcodec.common.logging.Logger.debug(java.lang.String.format(str, p0, p1, p2, p3));
+    
+}","Insert Invocation at Invocation
+Insert TypeAccess at Invocation
+Move VariableRead from Invocation to CtVariableReadImpl
+Insert VariableRead at Invocation
+Insert VariableRead at Invocation
+Insert VariableRead at Invocation
+Insert VariableRead at Invocation
+","void debugPrint(java.lang.String,int,int,int,int)
+void debugPrint(java.lang.String,int,int,int,int)",-2,-2
+26013,"public java.util.List < TYPE_1 > METHOD_1 ( ) { return ( ( java.util.List < TYPE_1 > ) ( ( ( java.util.ArrayList < TYPE_1 > ) ( VAR_1 ) ) . METHOD_2 ( ) ) ) ; } 
+","public java.util.List < TYPE_1 > METHOD_1 ( ) { if ( ( VAR_1 ) != null ) return ( ( java.util.List < TYPE_1 > ) ( ( ( java.util.ArrayList < TYPE_1 > ) ( VAR_1 ) ) . METHOD_2 ( ) ) ) ; else return null ; } 
+","public java.util.List<edu.umass.ckc.wo.content.Hint> getHints() {
+    return ((java.util.List<edu.umass.ckc.wo.content.Hint>) (((java.util.ArrayList<edu.umass.ckc.wo.content.Hint>) (allHints)).clone()));
+}","public java.util.List<edu.umass.ckc.wo.content.Hint> getHints() {
+    if ((allHints) != null)
+        return ((java.util.List<edu.umass.ckc.wo.content.Hint>) (((java.util.ArrayList<edu.umass.ckc.wo.content.Hint>) (allHints)).clone()));
+    else
+        return null;
+    
+}","Insert Block at Method
+Insert If at Block
+Insert BinaryOperator at If
+Move Block from Method to CtBlockImpl
+Insert Block at If
+Insert FieldRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert Return at Block
+Insert ThisAccess at FieldRead
+Insert Literal at Return
+Insert TypeAccess at ThisAccess
+","java.util.List getHints()
+java.util.List getHints()",-2,-2
+41170,"public java.util.ArrayList < TYPE_1 > METHOD_1 ( ) { } 
+","public java.util.ArrayList < TYPE_1 > METHOD_1 ( ) { return null ; } 
+","public java.util.ArrayList<api_service.models.Ride> notifications() {
+}","public java.util.ArrayList<api_service.models.Ride> notifications() {
+    return null;
+}","Insert Return at Block
+Insert Literal at Return
+","java.util.ArrayList notifications()
+java.util.ArrayList notifications()",-2,-2
+28998,"public java.util.Set < TYPE_1 > METHOD_1 ( java.lang.String VAR_1 ) { TYPE_2 VAR_2 = this . VAR_3 . get ( VAR_1 ) ; return this . METHOD_1 ( VAR_2 ) ; } 
+","public java.util.Set < TYPE_1 > METHOD_1 ( java.lang.String VAR_1 ) { TYPE_2 VAR_2 = this . VAR_3 . get ( VAR_1 ) ; if ( VAR_2 == null ) return null ; return this . METHOD_1 ( VAR_2 ) ; } 
+","public java.util.Set<net.tullco.tullutils.graphutils.Edge> getVertexEdges(java.lang.String identifier) {
+    net.tullco.tullutils.graphutils.Vertex v = this.vertices.get(identifier);
+    return this.getVertexEdges(v);
+}","public java.util.Set<net.tullco.tullutils.graphutils.Edge> getVertexEdges(java.lang.String identifier) {
+    net.tullco.tullutils.graphutils.Vertex v = this.vertices.get(identifier);
+    if (v == null)
+        return null;
+    
+    return this.getVertexEdges(v);
+}","Insert If at Block
+Insert BinaryOperator at If
+Insert Block at If
+Insert VariableRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert Return at Block
+Insert Literal at Return
+","java.util.Set getVertexEdges(java.lang.String)
+java.util.Set getVertexEdges(java.lang.String)",-2,-2
+45572,"public java.util.List < java.lang.String > METHOD_1 ( java.lang.String fileName , int VAR_1 ) { java.util.List < java.lang.String > VAR_2 = new java.util.ArrayList < java.lang.String > ( ) ; java.io.File file = new java.io.File ( fileName ) ; int count ; } 
+","public java.util.List < java.lang.String > METHOD_1 ( java.lang.String fileName , int VAR_1 ) { java.util.List < java.lang.String > VAR_2 = new java.util.ArrayList < java.lang.String > ( ) ; java.io.File file = new java.io.File ( fileName ) ; return null ; } 
+","public java.util.List<java.lang.String> splitBySize(java.lang.String fileName, int byteSize) {
+    java.util.List<java.lang.String> parts = new java.util.ArrayList<java.lang.String>();
+    java.io.File file = new java.io.File(fileName);
+    int count;
+}","public java.util.List<java.lang.String> splitBySize(java.lang.String fileName, int byteSize) {
+    java.util.List<java.lang.String> parts = new java.util.ArrayList<java.lang.String>();
+    java.io.File file = new java.io.File(fileName);
+    return null;
+}","Insert Return at Block
+Insert Literal at Return
+Delete LocalVariable at Block
+","java.util.List splitBySize(java.lang.String,int)
+java.util.List splitBySize(java.lang.String,int)",-2,-2
+32054,"public java.lang.String METHOD_1 ( ) { TYPE_1 . i ( STRING_1 , VAR_1 ) ; if ( ( VAR_1 ) == STRING_2 ) { return VAR_2 ; } return VAR_1 ; } 
+","public java.lang.String METHOD_1 ( ) { TYPE_1 . i ( STRING_1 , VAR_1 ) ; if ( ( VAR_1 . equals ( STRING_2 ) ) || ( VAR_1 . equals ( null ) ) ) { VAR_1 = VAR_2 ; } return VAR_1 ; } 
+","public java.lang.String getRoomDescription() {
+    android.util.Log.i(""teng DROOOfbdfbgr222"", roomDescript);
+    if ((roomDescript) == """") {
+        return backUpRoomDescription;
+    }
+    return roomDescript;
+}","public java.lang.String getRoomDescription() {
+    android.util.Log.i(""teng DROOOfbdfbgr222"", roomDescript);
+    if ((roomDescript.equals("""")) || (roomDescript.equals(null))) {
+        roomDescript = backUpRoomDescription;
+    }
+    return roomDescript;
+}","Update BinaryOperator at If
+Insert Invocation at BinaryOperator
+Insert Invocation at BinaryOperator
+Insert Assignment at Block
+Move FieldRead from BinaryOperator to CtFieldReadImpl
+Insert Literal at Invocation
+Insert FieldRead at Invocation
+Insert Literal at Invocation
+Insert FieldWrite at Assignment
+Move FieldRead from Return to CtFieldReadImpl
+Insert ThisAccess at FieldRead
+Insert ThisAccess at FieldWrite
+Insert TypeAccess at ThisAccess
+Insert TypeAccess at ThisAccess
+Delete Literal at BinaryOperator
+Delete Return at Block
+","java.lang.String getRoomDescription()
+java.lang.String getRoomDescription()",-2,-2
+7596,"public java.util.Set < java.lang.String > METHOD_1 ( ) { return VAR_1 . METHOD_2 ( ) ; } 
+","public java.util.Set < java.lang.String > METHOD_1 ( ) { if ( ( VAR_1 ) != null ) return VAR_1 . METHOD_2 ( ) ; return null ; } 
+","public java.util.Set<java.lang.String> getPropertyNames() {
+    return properties.keySet();
+}","public java.util.Set<java.lang.String> getPropertyNames() {
+    if ((properties) != null)
+        return properties.keySet();
+    
+    return null;
+}","Insert Block at Method
+Insert If at Block
+Insert Return at Block
+Insert BinaryOperator at If
+Move Block from Method to CtBlockImpl
+Insert Literal at Return
+Insert FieldRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert ThisAccess at FieldRead
+Insert TypeAccess at ThisAccess
+","java.util.Set getPropertyNames()
+java.util.Set getPropertyNames()",-2,-2
+36725,"private java.util.ArrayList < TYPE_1 > METHOD_1 ( ) { return METHOD_2 ( ) . METHOD_3 ( ) ; } 
+","private java.util.ArrayList < TYPE_1 > METHOD_1 ( ) { if ( ( METHOD_2 ( ) . METHOD_3 ( ) ) != null ) { return METHOD_2 ( ) . METHOD_3 ( ) ; } else { return null ; } } 
+","private java.util.ArrayList<com.shareyourproxy.api.domain.model.Group> getGroupData() {
+    return getLoggedInUser().groups();
+}","private java.util.ArrayList<com.shareyourproxy.api.domain.model.Group> getGroupData() {
+    if ((getLoggedInUser().groups()) != null) {
+        return getLoggedInUser().groups();
+    }else {
+        return null;
+    }
+}","Insert Block at Method
+Insert If at Block
+Insert BinaryOperator at If
+Move Block from Method to CtBlockImpl
+Insert Block at If
+Insert Invocation at BinaryOperator
+Insert Literal at BinaryOperator
+Insert Return at Block
+Insert Invocation at Invocation
+Insert Literal at Return
+Insert ThisAccess at Invocation
+Insert TypeAccess at ThisAccess
+","java.util.ArrayList getGroupData()
+java.util.ArrayList getGroupData()",-2,-2
+32055,"public java.util.LinkedList < java.lang.String > METHOD_1 ( int VAR_1 ) { } 
+","public java.util.LinkedList < java.lang.String > METHOD_1 ( int VAR_1 ) { return null ; } 
+","public java.util.LinkedList<java.lang.String> getTiles(int howManyTiles) {
+}","public java.util.LinkedList<java.lang.String> getTiles(int howManyTiles) {
+    return null;
+}","Insert Return at Block
+Insert Literal at Return
+","java.util.LinkedList getTiles(int)
+java.util.LinkedList getTiles(int)",-2,-2
+43157,"public byte [ ] METHOD_1 ( ) throws TYPE_1 { TYPE_2 obj = new TYPE_2 ( params ) ; return obj . toString ( ) . METHOD_2 ( ) ; } 
+","public byte [ ] METHOD_1 ( ) throws TYPE_1 { if ( ( params ) != null ) { TYPE_2 obj = new TYPE_2 ( params ) ; return obj . toString ( ) . METHOD_2 ( ) ; } else { return null ; } } 
+","@java.lang.Override
+public byte[] getBody() throws com.android.volley.AuthFailureError {
+    org.json.JSONObject obj = new org.json.JSONObject(params);
+    return obj.toString().getBytes();
+}","@java.lang.Override
+public byte[] getBody() throws com.android.volley.AuthFailureError {
+    if ((params) != null) {
+        org.json.JSONObject obj = new org.json.JSONObject(params);
+        return obj.toString().getBytes();
+    }else {
+        return null;
+    }
+}","Insert Block at Method
+Insert If at Block
+Insert BinaryOperator at If
+Move Block from Method to CtBlockImpl
+Insert Block at If
+Insert FieldRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert Return at Block
+Insert ThisAccess at FieldRead
+Insert Literal at Return
+Insert TypeAccess at ThisAccess
+","byte[] getBody()
+byte[] getBody()",-2,-2
+21122,"public java.lang.String [ ] METHOD_1 ( java.lang.String VAR_1 ) { return VAR_1 . substring ( 1 , ( ( VAR_1 . length ( ) ) - 1 ) ) . split ( STRING_1 ) ; } 
+","public java.lang.String [ ] METHOD_1 ( java.lang.String VAR_1 ) { if ( VAR_1 . isEmpty ( ) ) return null ; return VAR_1 . substring ( 1 , ( ( VAR_1 . length ( ) ) - 1 ) ) . split ( STRING_1 ) ; } 
+","@java.lang.Override
+public java.lang.String[] convertToEntityAttribute(java.lang.String jobDesc) {
+    return jobDesc.substring(1, ((jobDesc.length()) - 1)).split("", "");
+}","@java.lang.Override
+public java.lang.String[] convertToEntityAttribute(java.lang.String jobDesc) {
+    if (jobDesc.isEmpty())
+        return null;
+    
+    return jobDesc.substring(1, ((jobDesc.length()) - 1)).split("", "");
+}","Insert If at Block
+Insert Invocation at If
+Insert Block at If
+Insert VariableRead at Invocation
+Insert Return at Block
+Insert Literal at Return
+","java.lang.String[] convertToEntityAttribute(java.lang.String)
+java.lang.String[] convertToEntityAttribute(java.lang.String)",-2,-2
+15311,"public void METHOD_1 ( final java.lang.Void result ) { TYPE_1 . METHOD_2 ( STRING_1 , VAR_1 ) ; } 
+","public void METHOD_1 ( final java.lang.Void result ) { TYPE_1 . info ( STRING_1 , this . VAR_1 ) ; } 
+","@java.lang.Override
+public void onSuccess(final java.lang.Void result) {
+    org.opendaylight.protocol.bgp.benchmark.app.AppPeerBenchmark.LOG.trace(""Empty Structure created for Application Peer Benchmark {}"", appRibId);
+}","@java.lang.Override
+public void onSuccess(final java.lang.Void result) {
+    org.opendaylight.protocol.bgp.benchmark.app.AppPeerBenchmark.LOG.info(""Empty Structure created for Application Peer Benchmark {}"", this.appRibId);
+}","Update Invocation at Block
+Insert FieldRead at Invocation
+Insert ThisAccess at FieldRead
+Insert TypeAccess at ThisAccess
+Delete VariableRead at Invocation
+","void onSuccess(java.lang.Void)
+void onSuccess(java.lang.Void)",-2,-2
+490,"private void METHOD_1 ( java.lang.String name ) throws TYPE_1 { if ( ( name == null ) | ( name == STRING_1 ) ) { throw new TYPE_1 ( STRING_2 ) ; } } 
+","private void METHOD_1 ( java.lang.String name ) throws TYPE_1 { if ( ( name == null ) | ( name . isEmpty ( ) ) ) { throw new TYPE_1 ( STRING_2 ) ; } } 
+","private void validateName(java.lang.String name) throws logistics.utilities.exceptions.NullParameterException {
+    if ((name == null) | (name == """")) {
+        throw new logistics.utilities.exceptions.NullParameterException(""Facility Name cannot be Null or Empty"");
+    }
+}","private void validateName(java.lang.String name) throws logistics.utilities.exceptions.NullParameterException {
+    if ((name == null) | (name.isEmpty())) {
+        throw new logistics.utilities.exceptions.NullParameterException(""Facility Name cannot be Null or Empty"");
+    }
+}","Insert Invocation at BinaryOperator
+Insert VariableRead at Invocation
+Delete VariableRead at BinaryOperator
+Delete Literal at BinaryOperator
+Delete BinaryOperator at BinaryOperator
+","void validateName(java.lang.String)
+void validateName(java.lang.String)",-2,-2
+26521,"public static java.lang.String METHOD_1 ( TYPE_1 VAR_1 , java.lang.String ... keys ) { for ( java.lang.String key : keys ) { java.lang.String VAR_2 = VAR_1 . METHOD_1 ( key ) ; if ( TYPE_2 . METHOD_2 ( VAR_2 ) ) continue ; } return null ; } 
+","public static java.lang.String METHOD_1 ( TYPE_1 VAR_1 , java.lang.String ... keys ) { for ( java.lang.String key : keys ) { java.lang.String VAR_2 = VAR_1 . METHOD_1 ( key ) ; if ( TYPE_2 . METHOD_2 ( VAR_2 ) ) continue ; return VAR_2 ; } return null ; } 
+","public static java.lang.String getFirstValue(com.digitalpebble.stormcrawler.Metadata md, java.lang.String... keys) {
+    for (java.lang.String key : keys) {
+        java.lang.String val = md.getFirstValue(key);
+        if (org.apache.commons.lang.StringUtils.isBlank(val))
+            continue;
+        
+    }
+    return null;
+}","public static java.lang.String getFirstValue(com.digitalpebble.stormcrawler.Metadata md, java.lang.String... keys) {
+    for (java.lang.String key : keys) {
+        java.lang.String val = md.getFirstValue(key);
+        if (org.apache.commons.lang.StringUtils.isBlank(val))
+            continue;
+        
+        return val;
+    }
+    return null;
+}","Insert Return at Block
+Insert VariableRead at Return
+","java.lang.String getFirstValue(com.digitalpebble.stormcrawler.Metadata,java.lang.String[])
+java.lang.String getFirstValue(com.digitalpebble.stormcrawler.Metadata,java.lang.String[])",-2,-2
+6047,"protected void METHOD_1 ( final TYPE_1 target ) { METHOD_2 ( target ) ; } 
+","protected abstract void METHOD_1 ( final TYPE_1 target ) ; 
+","@java.lang.Override
+protected void respond(final org.apache.wicket.ajax.AjaxRequestTarget target) {
+    onCancel(target);
+}","@java.lang.Override
+protected abstract void respond(final org.apache.wicket.ajax.AjaxRequestTarget target);","Insert Parameter at Method
+Insert Method at Class
+Insert Method at Class
+Insert Parameter at Method
+Delete VariableRead at Invocation
+Delete Invocation at Block
+Delete Block at Method
+","void respond(org.apache.wicket.ajax.AjaxRequestTarget)
+void respond(org.apache.wicket.ajax.AjaxRequestTarget)",-2,-2
+36743,"public java.util.Collection < ? extends TYPE_1 > METHOD_1 ( ) { java.util.Set < TYPE_1 > VAR_1 = new java.util.HashSet < > ( ) ; VAR_1 . add ( position ) ; return VAR_1 ; } 
+","public java.util.Collection < ? extends TYPE_1 > METHOD_1 ( ) { return null ; } 
+","@java.lang.Override
+public java.util.Collection<? extends model.Position> tickToRemove() {
+    java.util.Set<model.Position> toRemove = new java.util.HashSet<>();
+    toRemove.add(position);
+    return toRemove;
+}","@java.lang.Override
+public java.util.Collection<? extends model.Position> tickToRemove() {
+    return null;
+}","Insert Literal at Return
+Delete ConstructorCall at LocalVariable
+Delete LocalVariable at Block
+Delete VariableRead at Invocation
+Delete FieldRead at Invocation
+Delete Invocation at Block
+Delete VariableRead at Return
+","java.util.Collection tickToRemove()
+java.util.Collection tickToRemove()",-2,-2
+36318,"public TYPE_1 METHOD_1 ( ) ; 
+","public TYPE_1 METHOD_1 ( final java.lang.String field ) ; 
+","@com.emc.storageos.svcs.errorhandling.annotations.DeclareServiceCode(value = ServiceCode.API_PARAMETER_INVALID)
+public com.emc.storageos.svcs.errorhandling.resources.BadRequestException schduleInfoNotMatchWithExecutionWindow();","@com.emc.storageos.svcs.errorhandling.annotations.DeclareServiceCode(value = ServiceCode.API_PARAMETER_INVALID)
+public com.emc.storageos.svcs.errorhandling.resources.BadRequestException schduleInfoNotMatchWithExecutionWindow(final java.lang.String field);","Insert Parameter at Method
+Insert Parameter at Method
+","com.emc.storageos.svcs.errorhandling.resources.BadRequestException schduleInfoNotMatchWithExecutionWindow()
+com.emc.storageos.svcs.errorhandling.resources.BadRequestException schduleInfoNotMatchWithExecutionWindow(java.lang.String)",-2,-2
+36043,"public static void METHOD_1 ( double p ) { double VAR_1 = VAR_2 ; java.lang.System.out.println ( ( STRING_1 + p ) ) ; java.lang.System.out.println ( ( STRING_2 + VAR_1 ) ) ; } 
+","public static void METHOD_1 ( int p , double VAR_2 ) { double VAR_1 = p * VAR_2 ; java.lang.System.out.println ( ( STRING_1 + p ) ) ; java.lang.System.out.println ( ( STRING_2 + VAR_1 ) ) ; } 
+","public static void tenPercentOff(double p) {
+    double newPrice = DISCOUNT_RATE;
+    java.lang.System.out.println((""Ten percent off "" + p));
+    java.lang.System.out.println((""  New price is "" + newPrice));
+}","public static void tenPercentOff(int p, double DISCOUNT_RATE) {
+    double newPrice = p * DISCOUNT_RATE;
+    java.lang.System.out.println((""Ten percent off "" + p));
+    java.lang.System.out.println((""  New price is "" + newPrice));
+}","Insert Parameter at Method
+Insert BinaryOperator at LocalVariable
+Insert VariableRead at BinaryOperator
+Insert VariableRead at BinaryOperator
+Delete FieldRead at LocalVariable
+","void tenPercentOff(double)
+void tenPercentOff(int,double)",-2,-2
+28729,"public TYPE_1 METHOD_1 ( java.lang.String format , java.lang.Object ... args ) { TYPE_2 VAR_1 = VAR_2 . METHOD_2 ( ) ; if ( VAR_3 ) { VAR_1 . METHOD_3 ( java.lang.String.format ( format , args ) ) ; } return new TYPE_1 ( VAR_1 ) ; } 
+","public void METHOD_1 ( java.lang.String format , java.lang.Object ... args ) { if ( VAR_3 ) { METHOD_1 ( java.lang.String.format ( format , args ) ) ; } } 
+","public java.io.PrintWriter debug(java.lang.String format, java.lang.Object... args) {
+    java.io.PrintStream logger = delegate.getLogger();
+    if (debug) {
+        logger.println(java.lang.String.format(format, args));
+    }
+    return new java.io.PrintWriter(logger);
+}","public void debug(java.lang.String format, java.lang.Object... args) {
+    if (debug) {
+        debug(java.lang.String.format(format, args));
+    }
+}","Update Invocation at Block
+Insert ThisAccess at Invocation
+Insert TypeAccess at ThisAccess
+Delete TypeAccess at ThisAccess
+Delete ThisAccess at FieldRead
+Delete FieldRead at Invocation
+Delete Invocation at LocalVariable
+Delete LocalVariable at Block
+Delete VariableRead at Invocation
+Delete VariableRead at ConstructorCall
+Delete ConstructorCall at Return
+Delete Return at Block
+","java.io.PrintWriter debug(java.lang.String,java.lang.Object[])
+void debug(java.lang.String,java.lang.Object[])",-2,-2
+32955,"public java.util.ArrayList < TYPE_1 > METHOD_1 ( TYPE_2 VAR_1 ) { if ( ( this . METHOD_2 ( ) ) != ( VAR_1 . METHOD_2 ( ) ) ) { } } 
+","public java.util.ArrayList < TYPE_1 > METHOD_1 ( TYPE_2 VAR_1 ) { if ( ( this . METHOD_2 ( ) ) != ( VAR_1 . METHOD_2 ( ) ) ) { } return null ; } 
+","public java.util.ArrayList<Connection> shortestRouteTo(Place destination) {
+    if ((this.getRealm()) != (destination.getRealm())) {
+    }
+}","public java.util.ArrayList<Connection> shortestRouteTo(Place destination) {
+    if ((this.getRealm()) != (destination.getRealm())) {
+    }
+    return null;
+}","Insert Return at Block
+Insert Literal at Return
+","java.util.ArrayList shortestRouteTo(Place)
+java.util.ArrayList shortestRouteTo(Place)",-2,-2
+37375,"public byte [ ] getValue ( ) { return VAR_1 . getValue ( ) ; } 
+","public byte [ ] getValue ( ) { if ( ( VAR_1 ) == null ) return null ; return VAR_1 . getValue ( ) ; } 
+","public byte[] getValue() {
+    return mCharacteristic.getValue();
+}","public byte[] getValue() {
+    if ((mCharacteristic) == null)
+        return null;
+    
+    return mCharacteristic.getValue();
+}","Insert Block at Method
+Insert If at Block
+Move Return from Block to CtReturnImpl
+Insert BinaryOperator at If
+Insert Block at If
+Insert FieldRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert Return at Block
+Insert ThisAccess at FieldRead
+Insert Literal at Return
+Insert TypeAccess at ThisAccess
+Delete Block at Method
+","byte[] getValue()
+byte[] getValue()",-2,-2
+28334,"public byte [ ] getValue ( ) { return value . METHOD_1 ( ) ; } 
+","public byte [ ] getValue ( ) { if ( ( value ) != null ) { return value . METHOD_1 ( ) ; } return null ; } 
+","public byte[] getValue() {
+    return value.clone();
+}","public byte[] getValue() {
+    if ((value) != null) {
+        return value.clone();
+    }
+    return null;
+}","Insert Block at Method
+Insert If at Block
+Insert Return at Block
+Insert BinaryOperator at If
+Move Block from Method to CtBlockImpl
+Insert Literal at Return
+Insert FieldRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert ThisAccess at FieldRead
+Insert TypeAccess at ThisAccess
+","byte[] getValue()
+byte[] getValue()",-2,-2
+41917,"public java.util.Collection METHOD_1 ( java.lang.String VAR_1 ) throws TYPE_1 { return TYPE_2 . METHOD_1 ( VAR_1 , VAR_2 . METHOD_2 ( ) ) ; } 
+","public java.util.Collection METHOD_1 ( java.lang.String VAR_1 ) throws TYPE_1 { return null ; } 
+","@java.lang.Override
+public java.util.Collection selectLEContactOnWhereClause(java.lang.String whereClause) throws java.rmi.RemoteException {
+    return dbSQL.LeContactsSql.selectLEContactOnWhereClause(whereClause, dsSQL.getConn());
+}","@java.lang.Override
+public java.util.Collection selectLEContactOnWhereClause(java.lang.String whereClause) throws java.rmi.RemoteException {
+    return null;
+}","Insert Literal at Return
+Delete TypeAccess at Invocation
+Delete VariableRead at Invocation
+Delete FieldRead at Invocation
+Delete Invocation at Invocation
+Delete Invocation at Return
+","java.util.Collection selectLEContactOnWhereClause(java.lang.String)
+java.util.Collection selectLEContactOnWhereClause(java.lang.String)",-2,-2
+16809,"public java.util.Map < java.lang.String , java.lang.String > METHOD_1 ( ) { java.util.Map < java.lang.String , java.lang.String > result = VAR_1 . METHOD_2 ( ) ; return result ; } 
+","public java.util.Map < java.lang.String , java.lang.String > METHOD_1 ( ) { return null ; } 
+","@org.springframework.web.bind.annotation.RequestMapping(value = ""/user"")
+@org.springframework.web.bind.annotation.ResponseBody
+public java.util.Map<java.lang.String, java.lang.String> json() {
+    java.util.Map<java.lang.String, java.lang.String> result = userService.getUserInfo();
+    return result;
+}","@org.springframework.web.bind.annotation.RequestMapping(value = ""/user"")
+@org.springframework.web.bind.annotation.ResponseBody
+public java.util.Map<java.lang.String, java.lang.String> json() {
+    return null;
+}","Insert Literal at Return
+Delete TypeAccess at ThisAccess
+Delete ThisAccess at FieldRead
+Delete FieldRead at Invocation
+Delete Invocation at LocalVariable
+Delete LocalVariable at Block
+Delete VariableRead at Return
+","java.util.Map json()
+java.util.Map json()",-2,-2
+14177,"public java.util.Collection < java.lang.String > METHOD_1 ( TYPE_1 VAR_1 , java.lang.String arg ) { return TYPE_2 . METHOD_2 ( ) ; } 
+","public java.util.Collection < java.lang.String > METHOD_1 ( TYPE_1 VAR_1 , java.lang.String arg ) { return null ; } 
+","@java.lang.Override
+public java.util.Collection<java.lang.String> getTabList(org.bukkit.command.CommandSender sender, java.lang.String arg) {
+    return java.util.Collections.emptyList();
+}","@java.lang.Override
+public java.util.Collection<java.lang.String> getTabList(org.bukkit.command.CommandSender sender, java.lang.String arg) {
+    return null;
+}","Move Parameter from Method to CtParameterImpl
+","java.util.Collection getTabList(org.bukkit.command.CommandSender,java.lang.String)
+java.util.Collection getTabList(org.bukkit.command.CommandSender,java.lang.String)",-2,-2
+33617,"public void METHOD_1 ( ) throws java.io.IOException { VAR_1 . METHOD_2 ( VAR_2 class , new TYPE_1 ( ) , null ) ; VAR_3 . METHOD_3 ( ) ; } 
+","public void METHOD_1 ( ) throws java.io.IOException { VAR_3 . METHOD_3 ( ) ; } 
+","public void waitForever() throws java.io.IOException {
+    bundleContext.registerService(org.ops4j.pax.wicket.samples.plain.simple.service.EchoService.class, new org.ops4j.pax.wicket.it.samples.karaf.SampleWebUiTestFull.EchoServiceImplementation(), null);
+    java.lang.System.in.read();
+}","@org.junit.Test
+public void waitForever() throws java.io.IOException {
+    java.lang.System.in.read();
+}","Insert Annotation at Method
+Delete TypeAccess at ThisAccess
+Delete ThisAccess at FieldRead
+Delete FieldRead at Invocation
+Delete TypeAccess at FieldRead
+Delete FieldRead at Invocation
+Delete ConstructorCall at Invocation
+Delete Literal at Invocation
+Delete Invocation at Block
+","void waitForever()
+void waitForever()",-2,-2
+36354,"public java.util.Set < java.lang.String > METHOD_1 ( java.lang.String VAR_1 ) { return new java.util.HashSet < java.lang.String > ( TYPE_1 . METHOD_2 ( VAR_1 ) ) ; } 
+","public java.util.Set < java.lang.String > METHOD_1 ( java.lang.String VAR_1 ) { if ( VAR_1 == null ) return null ; return new java.util.HashSet < java.lang.String > ( TYPE_1 . METHOD_2 ( VAR_1 ) ) ; } 
+","public java.util.Set<java.lang.String> parse(java.lang.String rawValue) {
+    return new java.util.HashSet<java.lang.String>(net.instant.util.Util.parseCommaList(rawValue));
+}","public java.util.Set<java.lang.String> parse(java.lang.String rawValue) {
+    if (rawValue == null)
+        return null;
+    
+    return new java.util.HashSet<java.lang.String>(net.instant.util.Util.parseCommaList(rawValue));
+}","Insert If at Block
+Insert BinaryOperator at If
+Insert Block at If
+Insert VariableRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert Return at Block
+Insert Literal at Return
+","java.util.Set parse(java.lang.String)
+java.util.Set parse(java.lang.String)",-2,-2
+16854,"public void METHOD_1 ( final TYPE_1 VAR_1 ) { this . VAR_1 = VAR_1 ; METHOD_2 ( ) ; } 
+","void METHOD_1 ( final TYPE_1 VAR_1 ) ; 
+","public void initialize(final de.tesis.dynaware.grapheditor.model.GModel model) {
+    this.model = model;
+    redraw();
+}",void initialize(final de.tesis.dynaware.grapheditor.model.GModel model);,"Move Parameter from Method to CtParameterImpl
+","void initialize(de.tesis.dynaware.grapheditor.model.GModel)
+void initialize(de.tesis.dynaware.grapheditor.model.GModel)",-2,-2
+46027,"public static java.util.List < TYPE_1 > METHOD_1 ( ) { } 
+","public static java.util.List < TYPE_1 > METHOD_1 ( ) { return null ; } 
+","public static java.util.List<Paper> handleOverlookedPapers() {
+}","public static java.util.List<Paper> handleOverlookedPapers() {
+    return null;
+}","Insert Return at Block
+Insert Literal at Return
+","java.util.List handleOverlookedPapers()
+java.util.List handleOverlookedPapers()",-2,-2
+895,"public java.util.Collection < java.lang.String > METHOD_1 ( TYPE_1 < ? > VAR_1 ) { java.util.List < java.lang.String > VAR_2 = new java.util.ArrayList < java.lang.String > ( ) ; for ( TYPE_2 VAR_3 : VAR_4 ) { VAR_2 . add ( VAR_5 ) ; } return VAR_2 ; } 
+","public java.util.Collection < java.lang.String > METHOD_1 ( TYPE_1 < ? > VAR_1 ) { return null ; } 
+","public java.util.Collection<java.lang.String> properties(unknow.orm.criteria.Entity<?> entity) {
+    java.util.List<java.lang.String> properties = new java.util.ArrayList<java.lang.String>();
+    for (unknow.orm.criteria.Entity.Entry e : entity.entries) {
+        properties.add(e.javaName);
+    }
+    return properties;
+}","public java.util.Collection<java.lang.String> properties(unknow.orm.criteria.Entity<?> entity) {
+    return null;
+}","Insert Literal at Return
+Delete ConstructorCall at LocalVariable
+Delete LocalVariable at Block
+Delete LocalVariable at ForEach
+Delete VariableRead at FieldRead
+Delete FieldRead at ForEach
+Delete VariableRead at Invocation
+Delete VariableRead at FieldRead
+Delete FieldRead at Invocation
+Delete Invocation at Block
+Delete Block at ForEach
+Delete ForEach at Block
+Delete VariableRead at Return
+","java.util.Collection properties(unknow.orm.criteria.Entity)
+java.util.Collection properties(unknow.orm.criteria.Entity)",-2,-2
+4859,"public TYPE_1 [ ] METHOD_1 ( ) { return this . VAR_1 . METHOD_2 ( this ) ; } 
+","public TYPE_1 [ ] METHOD_2 ( ) { return this . VAR_1 . METHOD_2 ( this ) ; } 
+","public core.Task[] performGANTTAnalysis() {
+    return this.ganttChart.GANTTAnalysis(this);
+}","public core.Task[] GANTTAnalysis() {
+    return this.ganttChart.GANTTAnalysis(this);
+}","Update Method at Class
+","core.Task[] performGANTTAnalysis()
+core.Task[] GANTTAnalysis()",-2,-2
+17702,"public java.util.Collection METHOD_1 ( int VAR_1 ) throws TYPE_1 { return TYPE_2 . METHOD_2 ( VAR_1 , VAR_2 . METHOD_3 ( ) ) ; } 
+","public java.util.Collection METHOD_1 ( int VAR_1 ) throws TYPE_1 { return null ; } 
+","@java.lang.Override
+public java.util.Collection selectLeContacts(int leid) throws java.rmi.RemoteException {
+    return dbSQL.LeContactsSql.selectContactsOnLe(leid, dsSQL.getConn());
+}","@java.lang.Override
+public java.util.Collection selectLeContacts(int leid) throws java.rmi.RemoteException {
+    return null;
+}","Insert Literal at Return
+Delete TypeAccess at Invocation
+Delete VariableRead at Invocation
+Delete FieldRead at Invocation
+Delete Invocation at Invocation
+Delete Invocation at Return
+","java.util.Collection selectLeContacts(int)
+java.util.Collection selectLeContacts(int)",-2,-2
+26875,"public java.util.List < TYPE_1 > METHOD_1 ( ) { java.util.List < TYPE_1 > VAR_1 = new java.util.ArrayList < > ( ) ; VAR_1 . add ( new TYPE_2 ( VAR_2 , VAR_3 ) ) ; return VAR_1 ; } 
+","public java.util.List < TYPE_1 > METHOD_1 ( ) { return null ; } 
+","public java.util.List<org.eyeseetea.malariacare.presentation.factory.monitor.MonitorRowBuilder> defineRows() {
+    java.util.List<org.eyeseetea.malariacare.presentation.factory.monitor.MonitorRowBuilder> rowBuilders = new java.util.ArrayList<>();
+    rowBuilders.add(new org.eyeseetea.malariacare.presentation.factory.monitor.rows.PeriodRowBuilder(mContext, R.string.consumption));
+    return rowBuilders;
+}","public java.util.List<org.eyeseetea.malariacare.presentation.factory.monitor.MonitorRowBuilder> defineRows() {
+    return null;
+}","Insert Literal at Return
+Delete ConstructorCall at LocalVariable
+Delete LocalVariable at Block
+Delete VariableRead at Invocation
+Delete TypeAccess at ThisAccess
+Delete ThisAccess at FieldRead
+Delete FieldRead at ConstructorCall
+Delete TypeAccess at FieldRead
+Delete FieldRead at ConstructorCall
+Delete ConstructorCall at Invocation
+Delete Invocation at Block
+Delete VariableRead at Return
+","java.util.List defineRows()
+java.util.List defineRows()",-2,-2
+19503,"public java.util.List < TYPE_1 > METHOD_1 ( ) { return TYPE_2 . METHOD_2 ( ) ; } 
+","public java.util.List < TYPE_1 > METHOD_1 ( ) { if ( ( TYPE_2 ) != null ) { return TYPE_2 . METHOD_2 ( ) ; } return null ; } 
+","public java.util.List<tonegod.gui.controls.menuing.MenuItem> getListItems() {
+    return DDList.getMenuItems();
+}","public java.util.List<tonegod.gui.controls.menuing.MenuItem> getListItems() {
+    if ((DDList) != null) {
+        return DDList.getMenuItems();
+    }
+    return null;
+}","Insert Block at Method
+Insert If at Block
+Insert Return at Block
+Insert BinaryOperator at If
+Move Block from Method to CtBlockImpl
+Insert Literal at Return
+Insert FieldRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert ThisAccess at FieldRead
+Insert TypeAccess at ThisAccess
+","java.util.List getListItems()
+java.util.List getListItems()",-2,-2
+1297,"public static void METHOD_1 ( ) { TYPE_1 response = VAR_1 . METHOD_2 ( STRING_1 ) . METHOD_3 ( ) . METHOD_4 ( ) . METHOD_5 ( ) ; TYPE_2 . assertEquals ( TYPE_3 . METHOD_6 ( ) , response . METHOD_7 ( ) ) ; } 
+","public void METHOD_1 ( ) { TYPE_1 response = VAR_1 . METHOD_2 ( STRING_1 ) . METHOD_3 ( ) . METHOD_4 ( ) . METHOD_5 ( ) ; TYPE_2 . assertEquals ( TYPE_3 . METHOD_6 ( ) , response . METHOD_7 ( ) ) ; } 
+","public static void TestGetProblems() {
+    javax.ws.rs.core.Response response = test.java.TestDirlididi.server.newRequest(""/problem"").request().buildGet().invoke();
+    org.junit.Assert.assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
+}","@org.junit.Test
+public void TestGetProblems() {
+    javax.ws.rs.core.Response response = test.java.TestDirlididi.server.newRequest(""/problem"").request().buildGet().invoke();
+    org.junit.Assert.assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
+}","Insert Annotation at Method
+","void TestGetProblems()
+void TestGetProblems()",-2,-2
+15848,"public int compareTo ( TYPE_1 VAR_1 ) { } 
+","public boolean equals ( TYPE_1 VAR_1 ) { return false ; } 
+","public int compareTo(MsgUser other) {
+}","public boolean equals(MsgUser other) {
+    return false;
+}","Update Method at Class
+Insert Return at Block
+Insert Literal at Return
+","int compareTo(MsgUser)
+boolean equals(MsgUser)",-2,-2
+31160,"public byte [ ] METHOD_1 ( ) { return VAR_1 . getData ( ) ; } 
+","public byte [ ] METHOD_1 ( ) { if ( ( VAR_1 ) == null ) { return null ; } return VAR_1 . getData ( ) ; } 
+","public byte[] getCAN() {
+    return mCAN.getData();
+}","public byte[] getCAN() {
+    if ((mCAN) == null) {
+        return null;
+    }
+    return mCAN.getData();
+}","Insert Block at Method
+Insert If at Block
+Move Return from Block to CtReturnImpl
+Insert BinaryOperator at If
+Insert Block at If
+Insert FieldRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert Return at Block
+Insert ThisAccess at FieldRead
+Insert Literal at Return
+Insert TypeAccess at ThisAccess
+Delete Block at Method
+","byte[] getCAN()
+byte[] getCAN()",-2,-2
+1200,"public java.util.List < TYPE_1 > METHOD_1 ( double VAR_1 , double VAR_2 ) { return VAR_3 . METHOD_2 ( VAR_1 , VAR_2 ) . METHOD_3 ( ) . METHOD_4 ( TYPE_2 : : METHOD_5 ) . METHOD_6 ( TYPE_3 . METHOD_7 ( ) ) ; } 
+","public java.util.List < TYPE_1 > METHOD_1 ( double VAR_1 , double VAR_2 ) { return null ; } 
+","@java.lang.Override
+public java.util.List<bg.bc.tools.chronos.core.entities.DChangelog> getChangelogsForUpdateCounterBetween(double lessThanUpdateCounter, double greaterThanUpdateCounter) {
+    return changelogRepo.findByUpdateCounterBetween(lessThanUpdateCounter, greaterThanUpdateCounter).stream().map(DbToDomainMapper::dbToDomainChangelog).collect(java.util.stream.Collectors.toList());
+}","@java.lang.Override
+public java.util.List<bg.bc.tools.chronos.core.entities.DChangelog> getChangelogsForUpdateCounterBetween(double lessThanUpdateCounter, double greaterThanUpdateCounter) {
+    return null;
+}","Insert Literal at Return
+Delete TypeAccess at ThisAccess
+Delete ThisAccess at FieldRead
+Delete FieldRead at Invocation
+Delete VariableRead at Invocation
+Delete VariableRead at Invocation
+Delete Invocation at Invocation
+Delete Invocation at Invocation
+Delete FieldRead at ExecutableReferenceExpression
+Delete ExecutableReferenceExpression at Invocation
+Delete Invocation at Invocation
+Delete TypeAccess at Invocation
+Delete Invocation at Invocation
+Delete Invocation at Return
+","java.util.List getChangelogsForUpdateCounterBetween(double,double)
+java.util.List getChangelogsForUpdateCounterBetween(double,double)",-2,-2
+5038,"public java.util.ArrayList < TYPE_1 > METHOD_1 ( java.lang.String VAR_1 ) { java.util.ArrayList < TYPE_1 > VAR_2 = null ; try { VAR_2 = TYPE_2 . METHOD_1 ( VAR_1 ) ; } catch ( java.lang.Exception VAR_3 ) { VAR_3 . METHOD_2 ( ) ; } return VAR_2 ; } 
+","public java.util.ArrayList < TYPE_1 > METHOD_1 ( java.lang.String VAR_1 ) { try { return TYPE_2 . METHOD_1 ( VAR_1 ) ; } catch ( java.lang.Exception VAR_3 ) { VAR_3 . METHOD_2 ( ) ; return null ; } } 
+","@javax.ws.rs.GET
+@javax.ws.rs.Path(value = ""/obtenerCasos"")
+@javax.ws.rs.Produces(value = javax.ws.rs.core.MediaType.APPLICATION_JSON)
+public java.util.ArrayList<logica.Caso> obtenerCasos(@javax.ws.rs.QueryParam(value = ""usrKey"")
+java.lang.String usuarioActual) {
+    java.util.ArrayList<logica.Caso> casos = null;
+    try {
+        casos = logica.ControladoraCaso.obtenerCasos(usuarioActual);
+    } catch (java.lang.Exception e) {
+        e.printStackTrace();
+    }
+    return casos;
+}","@javax.ws.rs.GET
+@javax.ws.rs.Path(value = ""/obtenerCasos"")
+@javax.ws.rs.Produces(value = javax.ws.rs.core.MediaType.APPLICATION_JSON)
+public java.util.ArrayList<logica.Caso> obtenerCasos(@javax.ws.rs.QueryParam(value = ""usrKey"")
+java.lang.String usuarioActual) {
+    try {
+        return logica.ControladoraCaso.obtenerCasos(usuarioActual);
+    } catch (java.lang.Exception e) {
+        e.printStackTrace();
+        return null;
+    }
+}","Insert Return at Block
+Move Invocation from Assignment to CtInvocationImpl
+Delete Literal at LocalVariable
+Delete LocalVariable at Block
+Delete VariableWrite at Assignment
+Delete Assignment at Block
+Delete VariableRead at Return
+Delete Return at Block
+","java.util.ArrayList obtenerCasos(java.lang.String)
+java.util.ArrayList obtenerCasos(java.lang.String)",-2,-2
+11334,"public java.util.List < TYPE_1 > METHOD_1 ( ) { } 
+","public java.util.List < TYPE_1 > METHOD_1 ( ) { return null ; } 
+","public java.util.List<bgu.spl.a2.sim.Product> getParts() {
+}","public java.util.List<bgu.spl.a2.sim.Product> getParts() {
+    return null;
+}","Insert Return at Block
+Insert Literal at Return
+","java.util.List getParts()
+java.util.List getParts()",-2,-2
+8373,"public void METHOD_1 ( ) { assertNotNull ( TYPE_1 ) ; assertTrue ( ( ( VAR_1 ) instanceof TYPE_1 ) ) ; } 
+","public void METHOD_1 ( ) { assertNotNull ( VAR_1 ) ; assertTrue ( ( ( VAR_1 ) instanceof TYPE_1 ) ) ; } 
+","public void testEntities() {
+    assertNotNull(Game.Die);
+    assertTrue(((die) instanceof Game.Die));
+}","@org.junit.Test
+public void testEntities() {
+    assertNotNull(die);
+    assertTrue(((die) instanceof Game.Die));
+}","Insert Annotation at Method
+Insert ThisAccess at Invocation
+Insert FieldRead at Invocation
+Insert TypeAccess at ThisAccess
+Move ThisAccess from Invocation to CtThisAccessImpl
+Delete TypeAccess at Invocation
+","void testEntities()
+void testEntities()",-2,-2
+23766,"public byte [ ] METHOD_1 ( ) { synchronized ( this . VAR_1 ) { return this . VAR_1 . METHOD_2 ( ) . METHOD_3 ( ) ; } } 
+","public byte [ ] METHOD_1 ( ) { synchronized ( this . VAR_1 ) { if ( this . VAR_1 . isEmpty ( ) ) { return null ; } return this . VAR_1 . METHOD_2 ( ) . METHOD_3 ( ) ; } } 
+","@java.lang.Override
+public byte[] receive() {
+    synchronized(this.receiveBuffer) {
+        return this.receiveBuffer.poll().getPacketData();
+    }
+}","@java.lang.Override
+public byte[] receive() {
+    synchronized(this.receiveBuffer) {
+        if (this.receiveBuffer.isEmpty()) {
+            return null;
+        }
+        return this.receiveBuffer.poll().getPacketData();
+    }
+}","Insert If at Block
+Insert Invocation at If
+Insert Block at If
+Insert FieldRead at Invocation
+Insert Return at Block
+Insert ThisAccess at FieldRead
+Insert Literal at Return
+Insert TypeAccess at ThisAccess
+","byte[] receive()
+byte[] receive()",-2,-2
+37364,"public static java.lang.String [ ] METHOD_1 ( java.lang.String str ) { java.lang.String [ ] VAR_1 = str . split ( VAR_2 ) ; return VAR_1 ; } 
+","public static java.lang.String [ ] METHOD_1 ( java.lang.String str ) { if ( ( str == null ) || ( str . isEmpty ( ) ) ) return null ; java.lang.String [ ] VAR_1 = str . split ( VAR_2 ) ; return VAR_1 ; } 
+","public static java.lang.String[] convertStringToArray(java.lang.String str) {
+    java.lang.String[] arr = str.split(com.studio08.ronen.Zivug.Model.ContactLab.separator);
+    return arr;
+}","public static java.lang.String[] convertStringToArray(java.lang.String str) {
+    if ((str == null) || (str.isEmpty()))
+        return null;
+    
+    java.lang.String[] arr = str.split(com.studio08.ronen.Zivug.Model.ContactLab.separator);
+    return arr;
+}","Insert If at Block
+Insert BinaryOperator at If
+Insert Block at If
+Insert BinaryOperator at BinaryOperator
+Insert Invocation at BinaryOperator
+Insert Return at Block
+Insert VariableRead at BinaryOperator
+Insert Literal at BinaryOperator
+Insert VariableRead at Invocation
+Insert Literal at Return
+","java.lang.String[] convertStringToArray(java.lang.String)
+java.lang.String[] convertStringToArray(java.lang.String)",-2,-2

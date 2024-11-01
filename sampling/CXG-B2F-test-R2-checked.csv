@@ -1,0 +1,827 @@
+,buggy_source_code,fixed_source_code,check1,check2
+2770,"@java.lang.Override
+protected int numShapes() {
+    return 1;
+}","@java.lang.Override
+protected int numShapes() {
+    return 0;
+}",-2,-2
+1635,"@java.lang.Override
+public void onError(com.facebook.FacebookException exception) {
+    mStatusTextView.setText(R.string.facebook_login_fail);
+}","@java.lang.Override
+public void onError(com.facebook.FacebookException exception) {
+}",-2,-2
+3761,"public final void uploadErrorListener(final javax.faces.event.ActionEvent e) {
+    this.form.enableButton();
+}","public final void uploadErrorListener(final javax.faces.event.ActionEvent e) {
+}",-2,-2
+4189,"private static native void _imaqGetFileInfo(long fileName, long calibrationUnit, long calibrationX, long calibrationY, long width, long height, long imageType);","private static void _imaqGetFileInfo(long fileName, long calibrationUnit, long calibrationX, long calibrationY, long width, long height, long imageType) {
+}",-2,-2
+2264,"@java.lang.Override
+public void placeInPortal(net.minecraft.entity.Entity entity, double x, double y, double z, float rotationYaw) {
+}","@java.lang.Override
+public void placeInPortal(net.minecraft.entity.Entity entity, double x, double y, double z, float rotationYaw) {
+    super.placeInPortal(entity, x, y, z, rotationYaw);
+}",-2,-2
+1569,"@java.lang.Override
+public void cacheLoading(java.util.List<org.wilson.world.model.FestivalData> old) {
+    this.festivals.clear();
+}","@java.lang.Override
+public void cacheLoading(java.util.List<org.wilson.world.model.FestivalData> old) {
+}",-2,-2
+1653,"public double getAge(java.util.Calendar compare) {
+    double age = ChronoUnit.MINUTES.between(delivered, compare);
+    age = age / 60;
+    return age;
+}","public double getAge(java.util.Calendar compare) {
+    return 0;
+}",-2,-2
+5055,"@java.lang.Override
+public void onFocusChange(android.view.View v, boolean hasFocus) {
+    android.widget.Toast.makeText(getBaseContext(), java.lang.String.valueOf(hasFocus), Toast.LENGTH_SHORT).show();
+}","@java.lang.Override
+public void onFocusChange(android.view.View v, boolean hasFocus) {
+}",-2,-2
+4721,"@org.junit.After
+public void tearDown() {
+    context.close();
+}","@org.junit.After
+public void tearDown() {
+}",-2,-2
+1896,"public TreeNode rotationSearch(int x) {
+}","public TreeNode rotationSearch(int x) {
+    return this;
+}",-2,-2
+2199,"public void setAngle(double angle) {
+    elevatorEncoder = $missing$;
+}","public void setAngle(double angle) {
+}",-2,-2
+64,"public void onSettingsMenuClick(android.view.MenuItem item) {
+    android.widget.TextView infoTextView = ((android.widget.TextView) (findViewById(R.id.textViewInfo)));
+    infoTextView.setText(""§£§í §Ó§í§Ò§â§Ñ§Ý§Ú §á§å§ß§Ü§ä Settings"");
+}","public void onSettingsMenuClick(android.view.MenuItem item) {
+}",-2,-2
+4356,"public void handleDownFailed(int downOpId) {
+    throw new java.lang.RuntimeException(""TODO"");
+}","public void handleDownFailed(int downOpId) {
+}",-2,-2
+5195,"@org.junit.Test
+public void testEndGame() {
+    assertEquals(1001, myGameStateDAO.endGame(1, 1).getUid());
+}","@org.junit.Test
+public void testEndGame() {
+}",-2,-2
+730,"@java.lang.Override
+public void onClick(android.view.View v) {
+    new com.pokemongostats.view.dialogs.AddPkmnDialog() {
+        @java.lang.Override
+        public void onPokemonAdded(final com.pokemongostats.model.bean.Pokemon addedPokemon) {
+            mCallback.onPokemonSelected(addedPokemon);
+        }
+    }.show(getFragmentManager(), com.pokemongostats.view.dialogs.AddTrainerDialog.class.getName());
+}","@java.lang.Override
+public void onClick(android.view.View v) {
+}",-2,-2
+2421,"public void onConnected(android.os.Bundle connectionHint) {
+    signInStatus = ""Sign Out Of Google"";
+}","public void onConnected(android.os.Bundle connectionHint) {
+}",-2,-2
+54,"@java.lang.Override
+public void onPeerDisconnected(com.mobvoi.android.wearable.Node node) {
+    android.util.Log.d(com.theteamgo.fancywatch.MainActivity.TAG, (""Node Disconnected"" + (node.getId())));
+}","@java.lang.Override
+public void onPeerDisconnected(com.mobvoi.android.wearable.Node node) {
+}",-2,-2
+1383,"@org.junit.Test
+public void testGetAbstractValueSignState() {
+    org.sosy_lab.cpachecker.cpa.sign.SignState signState = SignState.TOP.assignSignToVariable(""x"", SIGN.PLUSMINUS);
+}","@org.junit.Test
+public void testGetAbstractValueSignState() {
+}",-2,-2
+827,"@java.lang.Override
+public void dealWithCustomAction(android.content.Context context, com.umeng.message.entity.UMessage msg) {
+    android.widget.Toast.makeText(context, msg.custom, Toast.LENGTH_LONG).show();
+}","@java.lang.Override
+public void dealWithCustomAction(android.content.Context context, com.umeng.message.entity.UMessage msg) {
+}",-2,-2
+4058,"@java.lang.Override
+public void onFullLoaded(int position) {
+    layoutManager.smoothScrollToPosition(recyclerThreadList, null, position);
+}","@java.lang.Override
+public void onFullLoaded(int position) {
+}",-2,-2
+1254,"private void printNewPlan(CostModel.Plan newPlan) {
+    java.lang.System.out.println((""newPlan = "" + (newPlan.toString())));
+}","private void printNewPlan(CostModel.Plan newPlan) {
+}",-2,-2
+3781,"@java.lang.Override
+public void surfaceCreated(android.view.SurfaceHolder holder) {
+    try {
+        mCamera.setPreviewDisplay(holder);
+        mCamera.startPreview();
+    } catch (java.io.IOException e) {
+    }
+}","@java.lang.Override
+public void surfaceCreated(android.view.SurfaceHolder holder) {
+}",-2,-2
+667,"@org.junit.AfterClass
+public static void buh() throws java.lang.Exception {
+    java.lang.Thread.sleep(10000);
+}","@org.junit.AfterClass
+public static void buh() throws java.lang.Exception {
+}",-2,-2
+5358,"private static native void _IMAQdxWriteAttributes(int id, long filename);","private static void _IMAQdxWriteAttributes(int id, long filename) {
+}",-2,-2
+4917,"public int sumResults() {
+}","public int sumResults(java.util.ArrayList<java.lang.Integer> results) {
+    int sum = 0;
+    for (int x : results) {
+        sum += x;
+    }
+    return sum;
+}",-2,-2
+494,"private static native void _imaqLocalThreshold(long dest, long source, int windowWidth, int windowHeight, int method, double deviationWeight, int type, float replaceValue);","private static void _imaqLocalThreshold(long dest, long source, int windowWidth, int windowHeight, int method, double deviationWeight, int type, float replaceValue) {
+}",-2,-2
+5620,"public static org.apache.beam.sdk.io.parquet.ParquetSource<org.apache.avro.generic.GenericRecord> from(org.apache.hadoop.fs.Path path) {
+}","public static org.apache.beam.sdk.io.parquet.ParquetSource<org.apache.avro.generic.GenericRecord> from(org.apache.hadoop.fs.Path path) {
+    return null;
+}",-2,-2
+3227,"@javafx.fxml.FXML
+private void optionButtonAction() {
+    this.gsm.push(""saveGame"");
+}","@javafx.fxml.FXML
+private void optionButtonAction() {
+}",-2,-2
+840,"@org.junit.Test
+public void getClassDayLessons() throws java.lang.Exception {
+    java.util.List<ActionEntities.ScheduleClassLesson> lessonList = Services.Impl.ScheduleServiceTest.service.GetClassDayLessons(1, 0);
+    org.junit.Assert.assertNotNull(lessonList);
+    org.junit.Assert.assertTrue(((lessonList.size()) > 0));
+}","@org.junit.Test
+public void getClassDayLessons() throws java.lang.Exception {
+}",-2,-2
+1484,"public int nthSuperUglyNumber(int n, int[] primes) {
+}","public int nthSuperUglyNumber(int n, int[] primes) {
+    return n;
+}",-2,-2
+5477,"@java.lang.Override
+public void onClusterItemInfoWindowClick(com.bridge.soom.Model.ProviderBasic providerBasic) {
+    android.widget.Toast.makeText(this, ((providerBasic.getUserFirstName()) + "" Clicked""), Toast.LENGTH_SHORT).show();
+}","@java.lang.Override
+public void onClusterItemInfoWindowClick(com.bridge.soom.Model.ProviderBasic providerBasic) {
+}",-2,-2
+5723,"protected void loadCargo() {
+    java.lang.System.out.println((""Loading cargo in "" + (getVehicleType)));
+}","protected void loadCargo() {
+}",-2,-2
+4515,"public void onClick(android.content.DialogInterface dialog, int whichButton) {
+    legacyAddress.setLabel(legacyAddress.getAddress());
+    remoteSaveUnmatchedPrivateKey(legacyAddress);
+}","public void onClick(android.content.DialogInterface dialog, int whichButton) {
+}",-2,-2
+4562,"public static void main(java.lang.String[] args) {
+    acpc.MatchState m = new acpc.MatchState();
+    acpc.Game game = new acpc.KuhnGame();
+    m.initState(game, 0);
+    m.readMatchState(game, ""MATCHSTATE:0:9:c:As|"");
+}","public static void main(java.lang.String[] args) {
+}",-2,-2
+1510,"private static native void _imaqArrayToImage(long image, long array, int numCols, int numRows);","private static void _imaqArrayToImage(long image, long array, int numCols, int numRows) {
+}",-2,-2
+2878,"private static native long _imaqGetGeometricFeaturesFromCurves(long curves, int numCurves, long featureTypes, int numFeatureTypes, long numFeatures);","private static long _imaqGetGeometricFeaturesFromCurves(long curves, int numCurves, long featureTypes, int numFeatureTypes, long numFeatures) {
+    return 0;
+}",-2,-2
+5407,"@org.junit.Test
+public void testEvaluate() throws java.lang.Exception {
+    com.alphatrader.javagui.data.Company testCompany = new com.alphatrader.javagui.data.Company();
+}","@org.junit.Test
+public void testEvaluate() throws java.lang.Exception {
+}",-2,-2
+2774,"@java.lang.Override
+public void onUSBDataSending(java.lang.String data) {
+    mLog((""Sending: "" + data));
+}","@java.lang.Override
+public void onUSBDataSending(java.lang.String data) {
+}",-2,-2
+495,"public void beforeCompletion() {
+    this.cmdScopedEntityManager = ((org.drools.persistence.jpa.AbstractPersistenceContextManager) (this.service.tpm)).getCommandScopedEntityManager();
+}","public void beforeCompletion() {
+}",-2,-2
+2242,"@java.lang.Override
+public void surfaceChanged(android.view.SurfaceHolder holder, int format, int width, int height) {
+    mSurfaceWidth = width;
+    mSurfaceHeight = height;
+}","@java.lang.Override
+public void surfaceChanged(android.view.SurfaceHolder holder, int format, int width, int height) {
+}",-2,-2
+3344,"public void testGetLatestFileName() {
+    assertEquals(""hello_20141212_120108.png"", io.evercam.androidapp.photoview.SnapshotManager.getLatestFileName(ALL_FILES_ARRAY));
+}","public void testGetLatestFileName() {
+}",-2,-2
+2986,"@java.lang.Override
+public void onClick(int position) {
+    com.example.nguyennam.financialbook.utils.FileHelper.writeFile(context, filename, ("""" + (++position)));
+    ((com.example.nguyennam.financialbook.MainActivity) (context)).replaceFragment(new com.example.nguyennam.financialbook.accounttab.EditAccount(), true);
+}","@java.lang.Override
+public void onClick(int position) {
+}",-2,-2
+5341,"private void incr(int i) {
+    RectPoint.get(i).x = $missing$;
+}","private void incr(int i) {
+}",-2,-2
+1930,"<String>  getManagerPolicyIds() {
+}","java.util.Set<java.lang.String> getManagerPolicyIds() {
+}",-2,-2
+3120,"@java.lang.Override
+public void addTags(edu.unc.lib.dl.search.solr.model.BriefObjectMetadata record, edu.unc.lib.dl.acl.util.AccessGroupSet accessGroups) {
+    if (record.getContentStatus().contains(FacetConstants.CONTENT_IS_DEFAULT_OBJECT)) {
+        edu.unc.lib.dl.search.solr.model.Tag tag = new edu.unc.lib.dl.search.solr.model.Tag(""primary object"");
+        record.addTag(tag);
+    }
+}","@java.lang.Override
+@java.lang.Deprecated
+public void addTags(edu.unc.lib.dl.search.solr.model.BriefObjectMetadata record, edu.unc.lib.dl.acl.util.AccessGroupSet accessGroups) {
+}",-2,-2
+5006,"private void buildPoliticalTopicsList() {
+    politicalList = new java.util.ArrayList<java.lang.String>();
+    politicalList.add(""Democrat"");
+}","private void buildPoliticalTopicsList() {
+}",-2,-2
+101,"public void flush() {
+    dataset.commit();
+    dataset.close();
+}","public void flush() {
+}",-2,-2
+876,"@java.lang.Override
+public void onSensorChanged(android.hardware.SensorEvent sensorEvent) {
+    addSampleOnPlot(sensorEvent.values[0], sensorEvent.values[1], sensorEvent.values[2]);
+}","@java.lang.Override
+public void onSensorChanged(android.hardware.SensorEvent sensorEvent) {
+}",-2,-2
+4236,"@java.lang.Override
+public void render(org.newdawn.slick.GameContainer cont, org.newdawn.slick.Graphics g) throws org.newdawn.slick.SlickException {
+    field.render(g);
+    robot.render(cont, g);
+}","@java.lang.Override
+public void render(org.newdawn.slick.GameContainer cont, org.newdawn.slick.Graphics g) throws org.newdawn.slick.SlickException {
+}",-2,-2
+767,"public double isTable() {
+    return tableDetector.classify(block, features);
+}","public double isTable() {
+    return 0;
+}",-2,-2
+3245,"@java.lang.Override
+protected void end() {
+    Robot.ballHolder.set(0);
+}","@java.lang.Override
+protected void end() {
+}",-2,-2
+5031,"@java.lang.Override
+public void onClick(android.view.View v) {
+    android.content.Intent recordIntent = new android.content.Intent();
+    startActivity(recordIntent);
+}","@java.lang.Override
+public void onClick(android.view.View v) {
+}",-2,-2
+4556,"public void move(int columnFrom, int columnTo) {
+    if (not.columnHasCards(columnTo)) {
+        this.addCardToCol(columnTo, this.getTopCard(columnFrom));
+        this.removeCardFromCol(columnFrom);
+    }
+}","public void move(int columnFrom, int columnTo) {
+}",-2,-2
+1108,"@java.lang.Override
+public void keyTyped(java.awt.event.KeyEvent e) {
+    if ((e.getKeyCode()) == (java.awt.event.KeyEvent.VK_SPACE)) {
+        inGame = true;
+        java.lang.System.out.println(""str"");
+    }
+}","@java.lang.Override
+public void keyTyped(java.awt.event.KeyEvent e) {
+}",-2,-2
+1584,"public void del() {
+    frame.remove(pane);
+}","public void del() {
+}",-2,-2
+951,"private static native long _imaqReadMultipleGeometricPatternFile(long fileName, long description);","private static long _imaqReadMultipleGeometricPatternFile(long fileName, long description) {
+    return 0;
+}",-2,-2
+1446,"public static boolean compareSeeds() {
+}","public static boolean compareSeeds() {
+    return false;
+}",-2,-2
+2992,"@java.lang.Override
+public void onProgress(com.lcjian.lib.download.Download download, long downloadedBytes) {
+    java.lang.System.out.println((""downloadedBytes:"" + downloadedBytes));
+}","@java.lang.Override
+public void onProgress(com.lcjian.lib.download.Download download, long downloadedBytes) {
+}",-2,-2
+4457,"public static void init() {
+    com.ckurtz22.uhctracking.init.InitBlocks.registerBlocks(com.ckurtz22.uhctracking.init.InitBlocks.flag);
+}","public static void init() {
+}",-2,-2
+4572,"@java.lang.Override
+public void setXmlVersion(final java.lang.String xmlVersion) throws org.w3c.dom.DOMException {
+    throw unsupported();
+}","@java.lang.Override
+public void setXmlVersion(final java.lang.String xmlVersion) throws org.w3c.dom.DOMException {
+}",-2,-2
+5411,"@java.lang.Override
+public void close() {
+    try {
+        client.close();
+    } catch (java.io.IOException e) {
+        throw new javax.ws.rs.ProcessingException(org.glassfish.jersey.apache.connector.LocalizationMessages.FAILED_TO_STOP_CLIENT(), e);
+    }
+}","@java.lang.Override
+public void close() {
+}",-2,-2
+2397,"public static int hiresRead(int address) {
+    return 0;
+}","public static int hiresRead(int x, int y) {
+    return 0;
+}",-2,-2
+5123,"public synchronized void close() {
+    (de.danoeh.antennapod.core.storage.PodDBAdapter.counter)--;
+    if ((de.danoeh.antennapod.core.storage.PodDBAdapter.counter) == 0) {
+        android.util.Log.v(de.danoeh.antennapod.core.storage.PodDBAdapter.TAG, ""Closing DB"");
+        de.danoeh.antennapod.core.storage.PodDBAdapter.db.close();
+        de.danoeh.antennapod.core.storage.PodDBAdapter.db = null;
+    }
+}","public void close() {
+}",-2,-2
+3048,"protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws java.io.IOException, javax.servlet.ServletException {
+    java.lang.System.err.println(""in side working get"");
+}","protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws java.io.IOException, javax.servlet.ServletException {
+}",-2,-2
+5015,"@java.lang.Override
+public void onPageSelected(int position) {
+    int dialogResource = (position == 0) ? R.string.info_note_list_r : R.string.info_image_grid_r;
+    com.example.diegoinsua.uibestpracticesexample.fragment.InfoDialogFragment infoDialogFragment = com.example.diegoinsua.uibestpracticesexample.fragment.InfoDialogFragment.newInstance(dialogResource);
+    infoDialogFragment.show(getFragmentManager(), ""Info dialog"");
+}","@java.lang.Override
+public void onPageSelected(int position) {
+}",-2,-2
+4415,"@java.lang.Override
+public void count(final org.jowidgets.cap.common.api.execution.IResultCallback<java.lang.Integer> result, final java.util.List<? extends org.jowidgets.cap.common.api.bean.IBeanKey> parentBeanKeys, final org.jowidgets.cap.common.api.filter.IFilter filter, final java.lang.Void parameter, final org.jowidgets.cap.common.api.execution.IExecutionCallback executionCallback) {
+    setCountCallback(result);
+}","@java.lang.Override
+public void count(final org.jowidgets.cap.common.api.execution.IResultCallback<java.lang.Integer> result, final java.util.List<? extends org.jowidgets.cap.common.api.bean.IBeanKey> parentBeanKeys, final org.jowidgets.cap.common.api.filter.IFilter filter, final java.lang.Void parameter, final org.jowidgets.cap.common.api.execution.IExecutionCallback executionCallback) {
+}",-2,-2
+5075,"@java.lang.Override
+public void onError(com.google.android.gms.common.api.Status status) {
+    android.util.Log.i(""Advanced"", (""An error occurred: "" + status));
+}","@java.lang.Override
+public void onError(com.google.android.gms.common.api.Status status) {
+}",-2,-2
+3856,"public void end() {
+    renderer.destroyWorld();
+    renderer = null;
+}","public void end() {
+}",-2,-2
+2513,"public int getPixelsHeight() {
+    return ;
+}","public int getPixelsHeight() {
+    return 0;
+}",-2,-2
+3532,"private static native int _imaqGetContour(long roi, int index);","private static int _imaqGetContour(long roi, int index) {
+    return 0;
+}",-2,-2
+4652,"public static void initgvSIGWriteDrivers(java.lang.String driversPath) {
+    com.iver.cit.gvsig.fmap.layers.LayerFactory.setWritersPath(driversPath);
+    if ((com.iver.cit.gvsig.fmap.layers.LayerFactory.getWM().getWriterNames().length) < 1) {
+        throw new java.lang.RuntimeException((""Can't find writers in path: "" + driversPath));
+    }
+}","public static void initgvSIGWriteDrivers(java.lang.String driversPath) {
+}",-2,-2
+2267,"@java.lang.Override
+public void onChildAdded(com.google.firebase.database.DataSnapshot snapshot, java.lang.String previousChildKey) {
+    if ((snapshot.getChildrenCount()) >= 6) {
+        mTeamFull = true;
+    }
+}","@java.lang.Override
+public void onChildAdded(com.google.firebase.database.DataSnapshot snapshot, java.lang.String previousChildKey) {
+}",-2,-2
+4995,"@java.lang.Override
+public void onLongPress(android.view.MotionEvent e) {
+    android.widget.Toast.makeText(main.getApplicationContext(), ""press"", Toast.LENGTH_SHORT).show();
+}","@java.lang.Override
+public void onLongPress(android.view.MotionEvent e) {
+}",-2,-2
+3030,"private void removePublicRoomsListener() {
+    mRoomDirectoryRecyclerView.removeOnScrollListener(mPublicRoomScrollListener);
+}","private void removePublicRoomsListener() {
+}",-2,-2
+3214,"@java.lang.Override
+public int saveLeContacts(beans.LeContacts le) throws java.rmi.RemoteException {
+    return dbSQL.LeContactsSql.save(le, dsSQL.getConn());
+}","@java.lang.Override
+public int saveLeContacts(beans.LeContacts le) throws java.rmi.RemoteException {
+    return 0;
+}",-2,-2
+3875,"@java.lang.Override
+public void onClick(android.view.View v) {
+    playVideo(p);
+}","@java.lang.Override
+public void onClick(android.view.View v) {
+}",-2,-2
+403,"public void onTextChanged(java.lang.CharSequence c, int start, int before, int count) {
+    mTaskTitle = c.toString();
+    com.bignerdranch.android.done.AppData.User.get().getList(listId).getTask(taskId).setTaskName(mTaskTitle);
+}","public void onTextChanged(java.lang.CharSequence c, int start, int before, int count) {
+}",-2,-2
+60,"private void println(java.lang.String s) {
+    java.lang.System.out.println(((((self_id) + "" : "") + ""  |  "") + s));
+}","private void println(java.lang.String s) {
+}",-2,-2
+2355,"@java.lang.Override
+public void onMapLongClick(final com.google.android.gms.maps.model.LatLng point) {
+    android.widget.Toast.makeText(mContext, (""Long Press"" + (point.toString())), Toast.LENGTH_LONG).show();
+}","@java.lang.Override
+public void onMapLongClick(final com.google.android.gms.maps.model.LatLng point) {
+}",-2,-2
+5355,"@java.lang.Override
+public void windowActivated(java.awt.event.WindowEvent e) {
+    java.lang.System.out.print(""WindowListener method called: windowActivated."");
+}","@java.lang.Override
+public void windowActivated(java.awt.event.WindowEvent e) {
+}",-2,-2
+5547,"public static void main(java.lang.String[] args) {
+    java.lang.System.out.println(""Hello world!"");
+    org.zalgosircular.extempfiller2.research.Topic t = new org.zalgosircular.extempfiller2.research.Topic(""my topeka"");
+    org.zalgosircular.extempfiller2.messaging.InMessage m = new org.zalgosircular.extempfiller2.messaging.InMessage(InMessage.Type.DELETE, t);
+    java.lang.System.out.println(m.toString());
+}","public static void main(java.lang.String[] args) {
+}",-2,-2
+3941,"private static native void _IMAQdxOpenCamera(long name, int mode, long id);","private static void _IMAQdxOpenCamera(long name, int mode, long id) {
+}",-2,-2
+5245,"public void normal(float x, float y, float z) {
+    rend.normal(x, y, z);
+}","public void normal(float x, float y, float z) {
+}",-2,-2
+4410,"public void finishMove() {
+    colorSelected = originalColor;
+    selectedThickness = originalThickness;
+}","public void finishMove() {
+}",-2,-2
+3749,"public static void main(java.lang.String[] args) throws Structure.PageNotLoadedException, java.io.IOException, team_7adota.DBAppException {
+    Structure.Table t = Structure.Table.buildBuildedTable(""n"", 1);
+    Structure.Page p = t.getPageByNumber(1);
+    java.lang.System.out.println(p.toString());
+}","public static void main(java.lang.String[] args) throws Structure.PageNotLoadedException, java.io.IOException, team_7adota.DBAppException {
+}",-2,-2
+1805,"@java.lang.Override
+public void onClick(android.content.DialogInterface dialog, int id) {
+}","@java.lang.Override
+public void onClick(android.content.DialogInterface dialog, int id) {
+    first = true;
+}",-2,-2
+2502,"public static void main(java.lang.String[] arg) throws java.io.IOException {
+    netCrackerTestApp.Dao.History history = new netCrackerTestApp.Dao.History();
+    history.getSentimentResultByTopicAndDate(""0:0:0:0:0:0:0:1"", ""sd"", 1460386968930L);
+}","public static void main(java.lang.String[] arg) throws java.io.IOException {
+}",-2,-2
+3321,"@java.lang.Override
+public void onClick(android.content.DialogInterface dialog, int which) {
+    try {
+        de.mkrtchyan.recoverytools.FlashUtil.uninstallXZDual(mActivity.getShell());
+    } catch (org.sufficientlysecure.rootcommands.util.FailedExecuteCommand failedExecuteCommand) {
+        failedExecuteCommand.printStackTrace();
+    }
+}","@java.lang.Override
+public void onClick(android.content.DialogInterface dialog, int which) {
+}",-2,-2
+1937,"@java.lang.Override
+public void onProgressChanged(android.widget.SeekBar seekBar, int progress, boolean fromUser) {
+    if (fromUser && ((mProgressAnimator) != null)) {
+        mProgressAnimator.cancel();
+        mProgressAnimator = null;
+    }
+}","@java.lang.Override
+public void onProgressChanged(android.widget.SeekBar seekBar, int progress, boolean fromUser) {
+}",-2,-2
+1141,"public int add(int number1, int number2) {
+    return 0;
+}","public int add(int number1, int number2) {
+    return number1 + number2;
+}",-2,-2
+4316,"@java.lang.Override
+public void onSuccess(org.fusesource.restygwt.client.Method method, com.google.gwt.json.client.JSONValue response) {
+    saveParentyInfo();
+}","@java.lang.Override
+public void onSuccess(org.fusesource.restygwt.client.Method method, com.google.gwt.json.client.JSONValue response) {
+}",-2,-2
+5259,"public int inDegreeOf(java.lang.Long vertex) throws java.lang.NullPointerException {
+}",public int inDegreeOf(java.lang.Long vertex) throws java.lang.NullPointerException;,-2,-2
+4302,"public void addItem(cs414c.pizza.domain.Item i) {
+    menuItems.put(((currentId)++), i);
+}","public void addItem(cs414c.pizza.domain.Item i) {
+}",-2,-2
+5611,"@java.lang.Override
+protected void initDefaultCommand() {
+    setDefaultCommand(new org.usfirst.frc.team1719.robot.commands.SiloReject(this));
+}","@java.lang.Override
+protected void initDefaultCommand() {
+}",-2,-2
+3865,"public static void main(java.lang.String[] args) {
+    Parser.AST ast = Parser.SQLParserUntil.AssSQlASTgen(""INSERT INTO Persons (LastName, Address) VALUES ('Wilson', 'Champs-Elysees');"");
+    Utils.ASTTestUtils.ASTTestPrint(ast.getRoot_set().get(0));
+}","public static void main(java.lang.String[] args) {
+}",-2,-2
+1621,"@org.junit.Test
+public void testGetContacts() {
+    java.lang.System.out.println(""------------GETTING CONTACTS------------"");
+    int[] ids = new int[]{ 1235 , 1488 };
+    cm.getContacts(ids);
+}","@org.junit.Test
+public void testGetContacts() {
+}",-2,-2
+5104,"public void setData(org.json.simple.JSONObject data) {
+}","public void setData(org.json.simple.JSONObject data) {
+    this.data = data;
+}",-2,-2
+1289,"private void redraw() {
+    if ((currentStates) != null) {
+        drawStates(currentStates);
+    }
+}","private void redraw() {
+}",-2,-2
+1775,"private void startReboot() {
+    android.util.Log.v(com.general.mediaplayer.csr.services.CsrManagerService.TAG, ""==CsrManagerService==startReboot=="");
+    if (!(this.mRebootIsDo)) {
+        android.util.Log.v(com.general.mediaplayer.csr.services.CsrManagerService.TAG, ""==CsrManagerService==startReboot==do========="");
+        this.mRebootIsDo = true;
+    }
+}","private void startReboot() {
+}",-2,-2
+1920,"@java.lang.Override
+public java.util.Enumeration<java.lang.String> getInitParameterNames() {
+}","@java.lang.Override
+public java.util.Enumeration<java.lang.String> getInitParameterNames() {
+    return null;
+}",-2,-2
+842,"public static void main(java.lang.String[] args) {
+    boolean a = PartitionEqualSubsetSum.canPartition(new int[]{ 1 , 5 , 5 , 11 });
+    java.lang.System.out.println(a);
+}","public static void main(java.lang.String[] args) {
+}",-2,-2
+4156,"private void setUpMap() {
+    mMap.addMarker(new com.google.android.gms.maps.model.MarkerOptions().position(new com.google.android.gms.maps.model.LatLng(0, 0)).title(""Marker""));
+}","private void setUpMap() {
+}",-2,-2
+2690,"@java.lang.Override
+public void onLocationFound(android.location.Location location) {
+    android.widget.Toast.makeText(getApplicationContext(), (""Latitude - "" + (location.getLatitude())), Toast.LENGTH_SHORT).show();
+}","@java.lang.Override
+public void onLocationFound(android.location.Location location) {
+}",-2,-2
+3671,"@java.lang.Override
+public void onGlobalError(net.mindengine.galen.runner.GalenPageRunner pageRunner, java.lang.Exception e) {
+    this.hasFailures = true;
+}","@java.lang.Override
+public void onGlobalError(net.mindengine.galen.runner.GalenPageRunner pageRunner, java.lang.Exception e) {
+}",-2,-2
+5817,"public void setHealthCheckRegistry(com.codahale.metrics.health.HealthCheckRegistry healthCheckRegistry) {
+    if (healthCheckRegistry != null) {
+    }
+}","public void setHealthCheckRegistry(com.codahale.metrics.health.HealthCheckRegistry healthCheckRegistry) {
+}",-2,-2
+4742,"@java.lang.Override
+protected void interrupted() {
+    try {
+        this.out.close();
+    } catch (java.io.IOException e) {
+        e.printStackTrace();
+    }
+}","@java.lang.Override
+protected void interrupted() {
+}",-2,-2
+3249,"protected void defaultSettings() {
+    OGlobalConfiguration.TX_USE_LOG.setValue(true);
+    OGlobalConfiguration.TX_COMMIT_SYNCH.setValue(true);
+}","protected void defaultSettings() {
+}",-2,-2
+397,"@java.lang.Override
+public int compareTo(webeng.transferobjects.Product o) {
+    return 0;
+}","@java.lang.Override
+public int compareTo(webeng.transferobjects.Product o) {
+    return (this.id) - (o.id);
+}",-2,-2
+5309,"@java.lang.Override
+public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
+    android.util.Log.v(edu.uw.samueldc.assassin_manager.MainActivity.TAG, (""users: "" + (dataSnapshot.getValue())));
+}","@java.lang.Override
+public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
+}",-2,-2
+5236,"public void createTestEnvironment() {
+    nl.tue.the30daychallenge.data.LocalConnector.dropDatabase();
+    createCompletedChallenge();
+}","public void createTestEnvironment() {
+}",-2,-2
+1432,"public void onReady(net.dv8tion.jda.core.events.ReadyEvent event) {
+    for (net.dv8tion.jda.core.entities.Guild g : event.getJDA().getGuilds()) {
+        g.getTextChannels().get(1).sendMessage(""WyattMusicBot is ready."").queue();
+    }
+}","public void onReady(net.dv8tion.jda.core.events.ReadyEvent event) {
+}",-2,-2
+4444,"public static void clean() {
+    evaluate.RunSystemCommand.run(""rm data/corpus/*.tmp"");
+    evaluate.RunSystemCommand.run(""rm *.tmp"");
+}","public static void clean() {
+}",-2,-2
+1832,"public java.io.Writer getWriter() throws java.io.IOException {
+    return new java.io.StringWriter() {
+        @java.lang.Override
+        public void flush() {
+            com.cwctravel.hudson.plugins.multimoduletests.junit.io.StringReaderWriter.this.data = toString();
+        }
+
+        @java.lang.Override
+        public void close() {
+            com.cwctravel.hudson.plugins.multimoduletests.junit.io.StringReaderWriter.this.data = toString();
+        }
+    };
+}","@java.lang.Override
+public void flush() throws java.io.IOException {
+}",-2,-2
+1626,"@java.lang.Override
+public void onConnectionSuspended(int i) {
+    android.util.Log.d(""GeofencesScanner.onConnectionSuspended"", ""xxx"");
+}","@java.lang.Override
+public void onConnectionSuspended(int i) {
+}",-2,-2
+3189,"private static Paper manuallyRenameFile(java.lang.String fileName) {
+}","private static Paper manuallyRenameFile(java.lang.String fileName) {
+    return null;
+}",-2,-2
+2906,"public static void addSystemSlice(SystemSlice slice) {
+    VisualGUI.overallSeries1.add(((slice.getTime()) - (VisualGUI.programStartTime)), slice.getCpu());
+}","public static void addSystemSlice(SystemSlice slice) {
+}",-2,-2
+1830,"public static void recordAndAlignTask(android.webkit.WebView userWeb) {
+    com.sw551.fairfield.healthcheq.withings.WithingsAuthorization.bindingWeb = userWeb;
+}","public static void recordAndAlignTask() {
+}",-2,-2
+5807,"@java.lang.Override
+public void onSaveSuccessful(long recordId) {
+    android.widget.Toast.makeText(getActivity(), ""CaseRgisterFragment save successfully"", Toast.LENGTH_SHORT).show();
+}","@java.lang.Override
+public void onSaveSuccessful(long recordId) {
+}",-2,-2
+2103,"@java.lang.Override
+public void run() {
+    com.timekeeping.utils.Prefs.getInstance(App.Instance).setMigrated(true);
+}","@java.lang.Override
+public void run() {
+}",-2,-2
+1068,"public void onFlushFailure(com.feedzai.commons.sql.abstraction.batch.BatchEntry[] entries) {
+}",public abstract void onFlushFailure(com.feedzai.commons.sql.abstraction.batch.BatchEntry[] entries);,-2,-2
+2218,"public com.packt.model.Book read(java.lang.String id) {
+}",public abstract com.packt.model.Book read(java.lang.String id);,-2,-2
+3326,"@java.lang.Override
+public void onLongClick(android.view.View view, int position) {
+    android.widget.Toast.makeText(this, (""Long click, Position: "" + position), Toast.LENGTH_SHORT).show();
+}","@java.lang.Override
+public void onLongClick(android.view.View view, int position) {
+}",-2,-2
+3026,"@java.lang.Override
+public void onDismiss(android.content.DialogInterface dialog) {
+    exitIcon.setVisibility(View.GONE);
+    editIcon.setVisibility(View.GONE);
+}","@java.lang.Override
+public void onDismiss(android.content.DialogInterface dialog) {
+}",-2,-2
+3429,"public java.util.List<java.lang.Integer> countSmaller(int[] nums) {
+}","public java.util.List<java.lang.Integer> countSmaller(int[] nums) {
+    return null;
+}",-2,-2
+2232,"public void newConvert(java.lang.String src, java.lang.String dst) throws java.io.IOException {
+}","private void newConvert(java.lang.String src, java.lang.String dst) throws java.io.IOException {
+}",-2,-2
+714,"public void intersectLetters(int col, int row) {
+    if (squareContainsLetter(col, row)) {
+    }
+}","public void intersectLetters(int col, int row) {
+}",-2,-2
+1861,"public void onTick(long millisUntilFinished) {
+    remainingClickTime -= 50;
+    gameTimeAndScore.updateTimeBar(remainingClickTime);
+    if ((remainingClickTime) <= 0) {
+        gameover = true;
+    }
+    startedTimer = true;
+}","public void onTick(long millisUntilFinished) {
+}",-2,-2
+8,"public static void main(java.lang.String[] a) {
+    main.DAOTest.TestCineplexDAO();
+    main.DAOTest.TestCinemaDAO();
+    main.DAOTest.TestMovieDAO();
+    main.DAOTest.TestShowTimeDAO();
+    main.DAOTest.TestBookingDAO();
+}","public static void main(java.lang.String[] a) {
+}",-2,-2
+2825,"private static native void _imaqLearnGeometricPattern2(long image, long originOffset, double angleOffset, long curveOptions, long advancedLearnOptions, long mask);","private static void _imaqLearnGeometricPattern2(long image, long originOffset, double angleOffset, long curveOptions, long advancedLearnOptions, long mask) {
+}",-2,-2
+5734,"protected void initialize() {
+    org.usfirst.frc.team500.robot.subsystems.DrivetrainSubsystem.getInstance().setPathRightLeft(rightProfile, leftProfile);
+}","protected void initialize() {
+}",-2,-2
+2520,"public void cull(boolean cullToTop) {
+    for (int i = 0; i;);
+}","public void cull(boolean cullToTop) {
+}",-2,-2
+513,"public void updatePoint(float x, float y, java.lang.String u) {
+    POINTS.get(u).setXY(x, y);
+}","public void updatePoint(float x, float y, java.lang.String u) {
+}",-2,-2
+1037,"public void onRmsChanged(float rmsdB) {
+    android.util.Log.d(uk.co.tstableford.p_brain.MainActivity.TAG, ""onRmsChanged"");
+}","public void onRmsChanged(float rmsdB) {
+}",-2,-2
+512,"@java.lang.Override
+public void loadFromXmlElement(org.w3c.dom.Element e) throws cr0s.warpdrive.conf.InvalidXmlException {
+    cr0s.warpdrive.conf.filler.FillerFactory fact = new cr0s.warpdrive.conf.filler.FillerFactory();
+}","@java.lang.Override
+public void loadFromXmlElement(org.w3c.dom.Element e) throws cr0s.warpdrive.conf.InvalidXmlException {
+}",-2,-2
+523,"@java.lang.Override
+public void onClick(android.view.View v) {
+    android.content.Intent launchCheckout = new android.content.Intent(getContext(), com.application.melanieh.kk.ui.CheckoutActivity.class);
+    startActivity(launchCheckout);
+}","@java.lang.Override
+public void onClick(android.view.View v) {
+}",-2,-2
+3736,"public void init() {
+    com.DragonFerocity.expanded.handlers.BlockHandler.registerItems();
+    com.DragonFerocity.expanded.proxy.ClientProxy.registerTileEntitySpecialRenderer(com.DragonFerocity.expanded.entities.ModTileEntityChest.class);
+}","public void init() {
+}",-2,-2
+3042,"public void deleteOldContent(java.util.Date deleteFrom, int offset, int returnValue) {
+}","@java.lang.Override
+public void deleteOldContent(java.util.Date deleteFrom, int returnValue) {
+}",-2,-2
+3510,"public boolean search(java.lang.String value) {
+    if ((root) == null) {
+        return false;
+    }else {
+        return root.search(value);
+    }
+}","public void search() {
+}",-2,-2
+3302,"private void onResponseReceived(java.util.HashMap<java.lang.String, com.arbrettingen.charactersoficeandfire.ASOIAFCharacter> result, java.util.HashMap<java.lang.String, java.lang.String> result2) {
+}","public void onResponseReceived(java.util.HashMap<java.lang.String, com.arbrettingen.charactersoficeandfire.ASOIAFCharacter> result, java.util.HashMap<java.lang.String, java.lang.String> result2) {
+}",-2,-2
+3250,"@java.lang.Override
+protected void onPreExecute() {
+    showProgressDialog(""Wait..."");
+}","@java.lang.Override
+protected void onPreExecute() {
+}",-2,-2
+63,"public void onClick(android.content.DialogInterface arg0, int arg1) {
+    finish();
+}","public void onClick(android.content.DialogInterface arg0, int arg1) {
+}",-2,-2
+2569,"@java.lang.Override
+public long getItemId(int position) {
+    return 0;
+}","@java.lang.Override
+public long getItemId(int position) {
+    return position;
+}",-2,-2
+2665,"@java.lang.Override
+public void onStartSigning() {
+    android.widget.Toast.makeText(this, ""ÕýÔÚÊäÈë"", Toast.LENGTH_SHORT).show();
+}","@java.lang.Override
+public void onStartSigning() {
+}",-2,-2
+4999,"@java.lang.Override
+public void forceOutput() {
+    try {
+        fileChannel.force(false);
+    } catch (final java.io.IOException ioe) {
+        if (jcl.streams.FileStreamStruct.LOGGER.isWarnEnabled()) {
+            jcl.streams.FileStreamStruct.LOGGER.warn(""Could not force stream output."", ioe);
+        }
+    }
+}","@java.lang.Override
+public void forceOutput() {
+}",-2,-2
+14,"@java.lang.Override
+public void onConnectionFailed(@android.support.annotation.NonNull
+com.google.android.gms.common.ConnectionResult result) {
+    if ((mSignInProgress) != (com.texocoyotl.ptd2googlelogin.MainActivity.STATE_IN_PROGRESS)) {
+        mSignInIntent = result.getResolution();
+        if ((mSignInProgress) == (com.texocoyotl.ptd2googlelogin.MainActivity.STATE_SIGNING_IN)) {
+            resolveSignInError();
+        }
+    }
+    onSignedOut();
+}","@java.lang.Override
+public void onConnectionFailed(@android.support.annotation.NonNull
+com.google.android.gms.common.ConnectionResult result) {
+}",-2,-2
+2233,"private void onQwasiMessage(com.qwasi.sdk.QwasiMessage msg) {
+}","protected void onQwasiMessage(com.qwasi.sdk.QwasiMessage msg) {
+}",-2,-2

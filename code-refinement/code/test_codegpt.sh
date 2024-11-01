@@ -1,0 +1,2 @@
+#!/bin/sh
+python codegpt.py --do_eval --train_filename ../data/small/train.buggy-fixed.buggy,../data/small/train.buggy-fixed.fixed --dev_filename ../data/small/valid.buggy-fixed.buggy,../data/small/valid.buggy-fixed.fixed --max_source_length 256 --max_target_length 256 --train_batch_size 16 --learning_rate 5e-5 --train_steps 100000 --eval_steps 5000 --output_dir ./test --beam_size 5 --eval_batch_size 16 

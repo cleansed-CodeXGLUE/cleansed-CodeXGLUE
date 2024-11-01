@@ -1,0 +1,1628 @@
+,buggy_source_code,fixed_source_code,check1,check2
+5015,"@java.lang.Override
+public void onPageSelected(int position) {
+    int dialogResource = (position == 0) ? R.string.info_note_list_r : R.string.info_image_grid_r;
+    com.example.diegoinsua.uibestpracticesexample.fragment.InfoDialogFragment infoDialogFragment = com.example.diegoinsua.uibestpracticesexample.fragment.InfoDialogFragment.newInstance(dialogResource);
+    infoDialogFragment.show(getFragmentManager(), ""Info dialog"");
+}","@java.lang.Override
+public void onPageSelected(int position) {
+}",-2,-2
+720,"private void initGameFragment() {
+    init();
+    secret = createSecret();
+    android.util.Log.e(""GameFragment"", (""createSecret - "" + (secret.getValue())));
+    stan.bulls.cows.db.SQliteApi.clearGameTemp();
+}","private void initGameFragment() {
+    init();
+    stan.bulls.cows.db.SQliteApi.clearGameTemp();
+}",-2,-2
+2667,"@java.lang.Override
+public boolean hasNext() {
+    return ((consumed) < (limit)) && (iterator.hasNext());
+}","@java.lang.Override
+public boolean hasNext() {
+    return ((this.consumed) < (this.limit)) && (this.iterator.hasNext());
+}",2,2
+2563,"@java.lang.Override
+public boolean isActive() {
+    java.util.concurrent.locks.Lock l = this.hashlock.readLock();
+    l.lock();
+    try {
+        return this.active;
+    } finally {
+        l.unlock();
+    }
+}","@java.lang.Override
+public boolean isActive() {
+    synchronized(this) {
+        return this.active;
+    }
+}",-2,-2
+4978,"@java.lang.Override
+public void write(byte[] b) throws java.io.IOException {
+    out.write(new java.lang.String(b, this.charset));
+    flush();
+}","@java.lang.Override
+public void write(byte[] b) throws java.io.IOException {
+    write(b, 0, b.length);
+}",-2,-2
+101,"public void flush() {
+    dataset.commit();
+    dataset.close();
+}","public void flush() {
+}",-2,-2
+5265,"@java.lang.Override
+public void onCreate() {
+    final long identityToken = android.os.Binder.clearCallingIdentity();
+    data = getContentResolver().query(QuoteProvider.Quotes.CONTENT_URI, null, null, null, null);
+    android.os.Binder.restoreCallingIdentity(identityToken);
+}","@java.lang.Override
+public void onCreate() {
+}",-2,-2
+4217,"public int getDimension() {
+    if ((length) == 0)
+        throw new java.lang.RuntimeException(""Zero-dimensional parameter!"");
+    
+    return length;
+}","public int getDimension() {
+    return length;
+}",-2,-2
+3668,"private static void initializeData() {
+    asw.persistence.FillDatabase.initializeUsers();
+    asw.persistence.FillDatabase.initializeProposals();
+    asw.persistence.FillDatabase.initializeComments();
+}","private void initializeData() {
+    initializeUsers();
+    initializeProposals();
+    initializeComments();
+}",-2,-1
+3809,"public void addToUserList(com.example.austin.inthemood.User user) {
+    userList.add(user);
+    userCount += 1;
+}","public void addToUserList(com.example.austin.inthemood.User user) {
+    this.userList.add(user);
+    this.userCount += 1;
+}",1,2
+353,"@java.lang.Override
+public byte[] innerToBytes() {
+    java.nio.ByteBuffer b;
+    byte[] ba = this.clientAddress.getAddress();
+    b = java.nio.ByteBuffer.allocate(ba.length);
+    b.put(ba);
+    return b.array();
+}","@java.lang.Override
+public byte[] innerToBytes() {
+    return null;
+}",-2,-2
+2594,"public void act() {
+    getImage().setTransparency(0);
+}","public void act() {
+}",-2,-2
+2993,"private void syscallExit() {
+    sos.SOS.debugPrintln((((""Removing process with id "" + (m_currProcess.getProcessId())) + "" at "") + (m_CPU.getBASE())));
+    m_processes.remove(m_currProcess);
+    scheduleNewProcess();
+}","private void syscallExit() {
+    m_processes.remove(m_currProcess);
+    scheduleNewProcess();
+}",-2,-2
+60,"private void println(java.lang.String s) {
+    java.lang.System.out.println(((((self_id) + "" : "") + ""  |  "") + s));
+}","private void println(java.lang.String s) {
+}",-1,-2
+3934,"public boolean dateAnswer(com.rr.rgem.gem.models.ConversationNode.AnswerNode answer, java.lang.String response) {
+    getState().setState(JSONState.State.Correct);
+    getState().sendChallenges(activity, (""You gave the date: "" + response));
+    return true;
+}","public boolean dateAnswer(com.rr.rgem.gem.models.ConversationNode.AnswerNode answer, java.lang.String response) {
+    return true;
+}",-2,-2
+5415,"public void addMacrosForExpansion(java.lang.String name, de.fosd.typechef.featureexpr.FeatureExpr feature, de.fosd.typechef.lexer.MacroData m) throws de.fosd.typechef.lexer.LexerException {
+    addMacro(name, feature, m);
+    macrosForExpansion = macrosForExpansion.define(name, feature, m);
+}","private void addMacrosForExpansion(java.lang.String name, de.fosd.typechef.featureexpr.FeatureExpr feature, de.fosd.typechef.lexer.MacroData m) throws de.fosd.typechef.lexer.LexerException {
+    macrosForExpansion = addMacro(name, feature, m, macrosForExpansion);
+}",-1,-2
+5443,"public void clear() {
+    tweens.clear();
+    previousValue = currentValue = startValue = 0.0F;
+    currentElement = 0;
+    repeat = false;
+    enable = true;
+    currentTween = new libGame.tween.type.ValueTween(startValue);
+    tweens.add(currentTween);
+}","public void setValue(float f) {
+    previousValue = currentValue = f;
+}",-2,-2
+3131,"private static void stopTimer() {
+    i5.las2peer.webConnector.serviceManagement.ServiceRepositoryManager.timer.cancel();
+    i5.las2peer.webConnector.serviceManagement.ServiceRepositoryManager.timerRunning = false;
+}","private static void stopTimer() {
+    if ((i5.las2peer.webConnector.serviceManagement.ServiceRepositoryManager.timer) != null) {
+        i5.las2peer.webConnector.serviceManagement.ServiceRepositoryManager.timer.cancel();
+    }
+    i5.las2peer.webConnector.serviceManagement.ServiceRepositoryManager.timer = null;
+}",1,2
+4051,"public void toggle() {
+    checkBox.setChecked((!(checkBox.isChecked())));
+}","public boolean isChecked() {
+    return checkBox.isChecked();
+}",-2,-2
+1657,"@org.junit.Test
+public void testGetConvNodeId() throws java.lang.Exception {
+    conversionTable.addEntryNode(""NetworkId"", ""NodeId"", ""FederatedNetworkId"", ""NetworkId_NodeId"");
+    java.lang.String result = target.getConvNodeId(""NetworkId"", ""NodeId"");
+    org.junit.Assert.assertThat(result, org.hamcrest.CoreMatchers.is(""FederatedNetworkId::NetworkId_NodeId""));
+}","@org.junit.Test
+public void testGetConvNodeId() throws java.lang.Exception {
+}",-2,-2
+5723,"protected void loadCargo() {
+    java.lang.System.out.println((""Loading cargo in "" + (getVehicleType)));
+}","protected void loadCargo() {
+}",-2,-2
+14,"@java.lang.Override
+public void onConnectionFailed(@android.support.annotation.NonNull
+com.google.android.gms.common.ConnectionResult result) {
+    if ((mSignInProgress) != (com.texocoyotl.ptd2googlelogin.MainActivity.STATE_IN_PROGRESS)) {
+        mSignInIntent = result.getResolution();
+        if ((mSignInProgress) == (com.texocoyotl.ptd2googlelogin.MainActivity.STATE_SIGNING_IN)) {
+            resolveSignInError();
+        }
+    }
+    onSignedOut();
+}","@java.lang.Override
+public void onConnectionFailed(@android.support.annotation.NonNull
+com.google.android.gms.common.ConnectionResult result) {
+}",-2,-2
+268,"@java.lang.Override
+protected void onStop() {
+    com.app.game.quizee.backend.PlayerManager.getInstance().saveCurrentPlayer();
+    super.onStop();
+    stopService(new android.content.Intent(this, com.app.game.quizee.backend.MusicService.class));
+    com.app.game.quizee.backend.PlayerManager.getInstance().onStop();
+}","@java.lang.Override
+protected void onStop() {
+    com.app.game.quizee.backend.PlayerManager.getInstance().saveCurrentPlayer();
+    super.onStop();
+    com.app.game.quizee.backend.PlayerManager.getInstance().onStop();
+}",-2,-2
+21,"@java.lang.Override
+public boolean hasNext() {
+    return (index) < (length);
+}","@java.lang.Override
+public boolean hasNext() {
+    return (this.index) < (this.length);
+}",2,2
+1861,"public void onTick(long millisUntilFinished) {
+    remainingClickTime -= 50;
+    gameTimeAndScore.updateTimeBar(remainingClickTime);
+    if ((remainingClickTime) <= 0) {
+        gameover = true;
+    }
+    startedTimer = true;
+}","public void onTick(long millisUntilFinished) {
+}",-1,-2
+3962,"static void stop() {
+    sGui.stopThread();
+    com.ds2016.Main.Main.stopThread();
+    java.lang.System.out.println((((""stop(): sTotalThroughput: "" + (sTotalThroughput)) + "" sTotalSuccess: "") + (sTotalSuccess)));
+}","static void stop() {
+    sGui.stopThread();
+    com.ds2016.Main.Main.stopThread();
+}",-2,-2
+2571,"public void setFieldValue(rfid.service.RFIDService.getTransportInfo_args._Fields field, java.lang.Object value) {
+    switch (field) {
+        case APPLY_DOC_CODE :
+            if (value == null) {
+                unsetApplyDocCode();
+            }else {
+                setApplyDocCode(((java.lang.String) (value)));
+            }
+            break;
+    }
+}","public void setFieldValue(rfid.service.RFIDService.getTransportInfo_args._Fields field, java.lang.Object value) {
+    switch (field) {
+    }
+}",-2,-2
+5698,"public Ponto2D somaPonto(double dx, double dy) {
+    return new Ponto2D(((x) + dx), ((y) + dy));
+}","public Ponto2D somaPonto(double dx, double dy) {
+    return new Ponto2D((x += dx), (y += dy));
+}",2,2
+584,"@java.lang.Override
+public void onRefresh() {
+    android.widget.Toast.makeText(activity, ""refreshed!"", Toast.LENGTH_SHORT).show();
+    refreshPingList();
+}","@java.lang.Override
+public void onRefresh() {
+    refreshPingList();
+}",-2,-2
+4354,"void loginWithFacebook(java.lang.String firstname, java.lang.String lastname, java.lang.String email);",void loginWithFacebook();,-2,-2
+1830,"public static void recordAndAlignTask(android.webkit.WebView userWeb) {
+    com.sw551.fairfield.healthcheq.withings.WithingsAuthorization.bindingWeb = userWeb;
+}","public static void recordAndAlignTask() {
+}",-2,-2
+1707,"public long getElapsedTime() {
+    return (elapsedTime) + (stopWatch.getTime());
+}","public long getElapsedTime() {
+    return elapsedTime;
+}",-2,-1
+4408,"public static com.badlogic.gdx.math.Quaternion idt() {
+    return new com.badlogic.gdx.math.Quaternion(0, 0, 0, 1);
+}","public com.badlogic.gdx.math.Quaternion idt() {
+    this.set(0, 0, 0, 1);
+    return this;
+}",-2,-1
+3837,"@java.lang.Override
+public void createSketch() {
+    processing.core.PApplet sketch = new devel.android_everything_test.WallpaperSketch();
+    java.lang.System.out.println((""created sketch "" + sketch));
+    setSketch(sketch);
+}","@java.lang.Override
+public processing.core.PApplet createSketch() {
+    processing.core.PApplet sketch = new devel.android_everything_test.WallpaperSketch();
+    return sketch;
+}",-2,-2
+3172,"public void enterTicket(parkinggaragetwopointoh.Ticket t) {
+    java.lang.System.out.println(getTicketElapsedTime(t));
+    java.lang.System.out.println(getParkingCost(getTicketElapsedTime(t)));
+    java.lang.System.out.println(totalGrossed);
+}","public void enterTicket(parkinggaragetwopointoh.Ticket t) {
+    getParkingCost(getTicketElapsedTime(t));
+}",-2,-2
+4038,"private boolean IsContainSurface(java.util.List<java.lang.String> TargetList, java.lang.String SurfaceID) {
+    for (java.lang.String target : TargetList) {
+        if (SurfaceID.equals(target))
+            return true;
+        
+    }
+    return false;
+}","private boolean IsContainSurface(java.util.List<java.lang.String> TargetList, java.lang.String SurfaceID) {
+    return TargetList.contains(SurfaceID);
+}",-2,-2
+3050,"@java.lang.Override
+public void onStatusChanged(java.lang.String provider, int status, android.os.Bundle extras) {
+    android.widget.Toast t = android.widget.Toast.makeText(getApplicationContext(), java.lang.Integer.toString(status), Toast.LENGTH_SHORT);
+    t.show();
+}","@java.lang.Override
+public void onStatusChanged(java.lang.String provider, int status, android.os.Bundle extras) {
+}",-2,-2
+2665,"@java.lang.Override
+public void onStartSigning() {
+    android.widget.Toast.makeText(this, ""ÕýÔÚÊäÈë"", Toast.LENGTH_SHORT).show();
+}","@java.lang.Override
+public void onStartSigning() {
+}",-2,-2
+5726,"public boolean onQueryTextChange(java.lang.String newText) {
+    if (android.text.TextUtils.isEmpty(newText)) {
+        mListView.clearTextFilter();
+    }else {
+        mListView.setFilterText(newText.toString());
+    }
+    return true;
+}","public boolean onQueryTextChange(java.lang.String newText) {
+    return true;
+}",-2,-2
+253,"public java.util.List<java.nio.file.Path> readFilesFromDirectory(java.lang.String dir) {
+    java.util.List<java.nio.file.Path> result = new java.util.ArrayList<java.nio.file.Path>();
+    listFiles(dir, result);
+    return result;
+}","public java.util.List<java.nio.file.Path> readFilesFromDirectory(java.lang.String dir) {
+    return readFilesFromDirectory(dir, ""\t"");
+}",-2,-2
+3769,"private void monitorChildController(com.bluelinelabs.conductor.Controller controller) {
+    mChildBackstack.add(controller);
+    controller.addLifecycleListener(new com.bluelinelabs.conductor.Controller.LifecycleListener() {
+        @java.lang.Override
+        public void postDestroy(@android.support.annotation.NonNull
+        com.bluelinelabs.conductor.Controller controller) {
+            mChildBackstack.remove(controller);
+        }
+    });
+}","@java.lang.Override
+public void postDestroy(@android.support.annotation.NonNull
+com.bluelinelabs.conductor.Controller controller) {
+    mChildBackstack.remove(controller);
+}",-2,-2
+3374,"@org.junit.Test
+public void contextLoads() {
+    com.takeaway.model.user.User user = userRepo.findByUserNameAndPassword(""user"", ""123456"");
+    java.util.List<com.takeaway.model.user.Address> addresses = user.getAddressList();
+}","@org.junit.Test
+public void contextLoads() {
+}",-2,-2
+1522,"public java.lang.String ojTest(java.lang.String arg) {
+    oj.OJ.getData().getCells().getSelectedCell().getSelectedYtem().setIJRoi(ij.IJ.getImage().getRoi());
+    return null;
+}","public java.lang.String ojTest(java.lang.String arg) {
+    return null;
+}",-2,-2
+4849,"@java.lang.Override
+public boolean hasNext() {
+    return (first) != null;
+}","@java.lang.Override
+public boolean hasNext() {
+    return !(isEmpty());
+}",-2,-2
+2464,"void popEmpties() {
+    while (!(stack.empty())) {
+        if (!(stack.peek().hasNext())) {
+            stack.pop();
+        }else {
+            return ;
+        }
+    } 
+}","@java.lang.Override
+public boolean hasNext() {
+    popEmpties();
+    return !(stack.isEmpty());
+}",-2,-2
+5555,"private void startCamera() {
+    if ((camera) != null) {
+        stopCamera();
+    }
+    camera = android.hardware.Camera.open(cameraId);
+    startCameraPreview();
+}","private void startCamera() {
+}",-2,-2
+1165,"private void init() {
+    com.sina.weibo.sdk.WbSdk.install(this, new com.sina.weibo.sdk.auth.AuthInfo(this, com.weapon.joker.lib.middleware.utils.Constants.WEIBO_APP_KEY, com.weapon.joker.lib.middleware.utils.Constants.WEIBO_REDIRECT_URL, com.weapon.joker.lib.middleware.utils.Constants.WEIBO_SCOPE));
+}","private void init() {
+}",-2,-2
+2761,"public java.lang.String toString() {
+    return name().toLowerCase().replaceFirst(name().substring(0, 1).toLowerCase(), name().substring(0, 1).toUpperCase());
+}","public java.lang.String toString() {
+    return name();
+}",-2,-2
+3517,"@org.junit.Test
+public void testImportUnknownFormat() {
+    java.lang.String fileName = net.sf.jabref.importer.ImportFormatReaderTest.class.getResource(resourceName).getFile();
+    net.sf.jabref.importer.ImportFormatReader.UnknownFormatImport unknownFormat = reader.importUnknownFormat(fileName);
+    assertEquals(count, unknownFormat.parserResult.getDatabase().getEntryCount());
+}","@org.junit.Test
+public void testImportUnknownFormat() {
+    net.sf.jabref.importer.ImportFormatReader.UnknownFormatImport unknownFormat = reader.importUnknownFormat(fileName);
+    assertEquals(count, unknownFormat.parserResult.getDatabase().getEntryCount());
+}",-2,-2
+3559,"@org.springframework.context.annotation.Bean
+org.molgenis.data.semanticsearch.repository.TagRepository tagRepository() {
+    org.molgenis.data.Repository<org.molgenis.data.meta.model.Tag> repo = dataService.getRepository(org.molgenis.data.meta.model.TagMetaData.TAG, org.molgenis.data.meta.model.Tag.class);
+    return new org.molgenis.data.semanticsearch.repository.TagRepository(repo, idGenerator, tagFactory);
+}","@org.springframework.context.annotation.Bean
+org.molgenis.data.semanticsearch.repository.TagRepository tagRepository() {
+    return new org.molgenis.data.semanticsearch.repository.TagRepository(dataService, idGenerator, tagFactory);
+}",-2,-2
+3045,"@java.lang.Override
+public void post(final java.lang.Object event) {
+    synchronized(me.sniggle.android.utils.otto.ActivatorBus.LOCK) {
+        if (active) {
+            postEvent(event);
+        }else {
+            eventCache.add(event);
+        }
+    }
+}","@java.lang.Override
+public void post(final java.lang.Object event) {
+    synchronized(me.sniggle.android.utils.otto.ActivatorBus.LOCK) {
+        post(event, active);
+    }
+}",-2,-2
+1823,"@com.haalthy.service.RequestMapping(value = ""/list"", method = RequestMethod.GET, headers = ""Accept=application/json"", produces = { ""application/json"" })
+@com.haalthy.service.ResponseBody
+public java.util.Set getFoobarList() {
+    java.lang.String user = userMapper.getUserByUsername(""user1"");
+    java.lang.System.out.println(user);
+    return com.haalthy.service.EmployeeController.Employees;
+}","@com.haalthy.service.RequestMapping(value = ""/list"", method = RequestMethod.GET, headers = ""Accept=application/json"", produces = { ""application/json"" })
+@com.haalthy.service.ResponseBody
+public java.util.Set getFoobarList() {
+    return com.haalthy.service.EmployeeController.Employees;
+}",-2,-2
+3590,"org.apache.ignite.internal.processors.cache.GridCacheEntryEx entryEx() {
+    org.apache.ignite.internal.processors.cache.IgniteCacheOffheapManagerImpl.DataRow dr = new org.apache.ignite.internal.processors.cache.IgniteCacheOffheapManagerImpl.DataRow(0, link);
+    dr.initData();
+    return cctx.cache().entryEx(dr.key());
+}","org.apache.ignite.internal.processors.cache.GridCacheEntryEx entryEx() {
+    assert (key) != null;
+    return cctx.cache().entryEx(key);
+}",-2,-1
+3702,"@java.lang.Override
+public boolean equals(java.lang.Object obj) {
+    if ((this) == obj) {
+        return true;
+    }
+    if (obj == null) {
+        return false;
+    }
+    return kalang.core.Types.getRootType().equals(obj);
+}","@java.lang.Override
+public boolean equals(java.lang.Object obj) {
+    return (this) == obj;
+}",-2,-2
+1653,"public double getAge(java.util.Calendar compare) {
+    double age = ChronoUnit.MINUTES.between(delivered, compare);
+    age = age / 60;
+    return age;
+}","public double getAge(java.util.Calendar compare) {
+    return 0;
+}",-2,-2
+4749,"public int indexOf(int elem) {
+    for (int i = 0; i < (mySize); i++) {
+        if (elem == (myData[i]))
+            return i;
+        
+    }
+    return -1;
+}","public int indexOf(int elem) {
+    return indexOf(elem, 0, mySize);
+}",-2,-2
+4031,"@com.xtremelabs.robolectric.internal.Implementation
+@java.lang.Override
+public boolean moveToPosition(int pos) {
+    try {
+        resultSet.absolute((pos + 1));
+    } catch (java.sql.SQLException e) {
+        throw new java.lang.RuntimeException(""SQL exception in moveToPosition"", e);
+    }
+    return super.moveToPosition(pos);
+}","@com.xtremelabs.robolectric.internal.Implementation
+@java.lang.Override
+public boolean moveToPosition(int pos) {
+    return super.moveToPosition(pos);
+}",-2,-2
+4607,"public java.lang.String lastName() {
+    java.util.List<java.lang.String> lastNames = lastNames();
+    return lastNames.get(new java.util.Random().nextInt(lastNames.size()));
+}","public java.lang.String lastName() {
+    return lastNames(1).get(0);
+}",-2,-2
+2103,"@java.lang.Override
+public void run() {
+    com.timekeeping.utils.Prefs.getInstance(App.Instance).setMigrated(true);
+}","@java.lang.Override
+public void run() {
+}",-2,-2
+1928,"private void setCylinderCount(int value) {
+    if ((value < 1) || (value > 12)) {
+        throw new java.lang.IllegalArgumentException(""Illegal cylinder count"");
+    }
+    cylinderCount = value;
+}","public void setCylinderCount(int cylinderCount) {
+    this.cylinderCount = cylinderCount;
+}",-2,-2
+1845,"@java.lang.Override
+public void run() {
+    java.lang.System.out.println(""Deleting initialized!"");
+    long i = 0;
+    boolean flag;
+    while (true) {
+        flag = executeCleaning();
+        if (flag == false) {
+            i++;
+        }
+    } 
+}","@org.springframework.scheduling.annotation.Scheduled(fixedRate = 5000)
+public void run() {
+    executeCleaning();
+}",-2,-2
+3004,"private int bound(int n) {
+    n = n % (org.ag.ants_utils.Variables.DIM);
+    while (n < 0) {
+        n += n;
+    } 
+    return n;
+}","private int bound(int n) {
+    if (n < 0) {
+        n += org.ag.ants_utils.Variables.DIM;
+    }else
+        if (n > ((org.ag.ants_utils.Variables.DIM) - 1)) {
+            n -= org.ag.ants_utils.Variables.DIM;
+        }
+    
+    return n;
+}",-2,1
+1495,"public int isLocked() {
+    if (isLocked) {
+        return 1;
+    }else {
+        return 0;
+    }
+}","public int isLocked() {
+    return isLocked;
+}",-2,-2
+3856,"public void end() {
+    renderer.destroyWorld();
+    renderer = null;
+}","public void end() {
+}",-2,-2
+2196,"@java.lang.Override
+public java.lang.String toString() {
+    return ((""\"""" + (this.name)) + ""\"" : "") + (this.attributes.toString());
+}","@java.lang.Override
+public java.lang.String toString() {
+    return ((""\"""" + (name)) + ""\"" : "") + (attributes.toString());
+}",2,1
+2367,"java.lang.String getAndLogTokenHandlerProperty(java.lang.String property) {
+    java.lang.String value = org.apache.commons.lang3.StringUtils.trim(tokenHandlerProp.getProperty(property));
+    return value;
+}","java.lang.String getAndLogTokenHandlerProperty(java.lang.String property) {
+    if (property == null) {
+        return null;
+    }
+    if ((tokenHandlerProp.getProperty(property)) == null) {
+        return null;
+    }
+    return tokenHandlerProp.getProperty(property).trim();
+}",-2,1
+2906,"public static void addSystemSlice(SystemSlice slice) {
+    VisualGUI.overallSeries1.add(((slice.getTime()) - (VisualGUI.programStartTime)), slice.getCpu());
+}","public static void addSystemSlice(SystemSlice slice) {
+}",-2,-2
+3506,"public java.lang.String getSelectedStratgey() {
+    stratgeyService.findStratgeyById(clientBean.getSelectedStrategyId()).getValue();
+    return selectedStratgey;
+}","public java.lang.String getSelectedStratgey() {
+    return selectedStratgey;
+}",-2,-2
+1012,"@java.lang.Override
+public void onPause() {
+    super.onPause();
+    ((com.quartzodev.buddybook.MainActivity) (getActivity())).hideTab();
+}","@java.lang.Override
+public void onPause() {
+    super.onPause();
+}",-2,-2
+5055,"@java.lang.Override
+public void onFocusChange(android.view.View v, boolean hasFocus) {
+    android.widget.Toast.makeText(getBaseContext(), java.lang.String.valueOf(hasFocus), Toast.LENGTH_SHORT).show();
+}","@java.lang.Override
+public void onFocusChange(android.view.View v, boolean hasFocus) {
+}",-2,-2
+3026,"@java.lang.Override
+public void onDismiss(android.content.DialogInterface dialog) {
+    exitIcon.setVisibility(View.GONE);
+    editIcon.setVisibility(View.GONE);
+}","@java.lang.Override
+public void onDismiss(android.content.DialogInterface dialog) {
+}",-2,-2
+2710,"public java.lang.String getOversamp() {
+    if ((oversamp) == null) {
+        return ""n"";
+    }
+    return oversamp;
+}","public java.lang.String getOversamp() {
+    if (((this.oversamp) == null) || (this.oversamp.trim().isEmpty())) {
+        return ""n"";
+    }
+    return this.oversamp;
+}",1,1
+5357,"@java.lang.Override
+public java.lang.String toModelImport(java.lang.String name) {
+    if ("""".equals(modelPackage())) {
+        return name;
+    }else {
+        return ((modelPackage()) + ""."") + name;
+    }
+}","@java.lang.Override
+public java.lang.String toModelImport(java.lang.String name) {
+    return name;
+}",-2,-2
+4623,"@java.lang.Override
+public void onClick(android.content.DialogInterface dialog, int which) {
+    android.content.Intent intent = new android.content.Intent();
+    intent.putExtra(""data_return"", word);
+    setResult(com.example.a99460.smartnote.RESULT_OK, intent);
+    finish();
+}","@java.lang.Override
+public void onClick(android.content.DialogInterface dialog, int which) {
+    finish();
+}",-2,-2
+3527,"@java.lang.Override
+public void run() {
+    if (checkNIDBLEFilter(device.getName()))
+        addDevice(getBtDeviceSpec(device, false, rssi));
+    
+}","@java.lang.Override
+public void run() {
+    addDevice(getBtDeviceSpec(device, name, false, rssi));
+}",-2,-2
+3643,"public void CiktiHesapla(int sira) {
+    if (sira != 57) {
+        araKatmanCiktiHesapla((sira + 1));
+        cikisKatmaniCiktiHesapla((sira + 1));
+    }
+}","public void CiktiHesapla(int sira) {
+    araKatmanCiktiHesapla(sira);
+    cikisKatmaniCiktiHesapla(sira);
+}",-2,-2
+5327,"@java.lang.Override
+protected void onDestroy() {
+    super.onDestroy();
+    try {
+        con.disconnect();
+    } catch (java.io.IOException e) {
+        android.util.Log.e(""ERROR"", (""Read this: "" + (e.getMessage())));
+    }
+}","@java.lang.Override
+protected void onDestroy() {
+    super.onDestroy();
+}",-2,-2
+1731,"@org.springframework.web.bind.annotation.PostMapping(value = ""/"")
+public java.lang.String post(@javax.validation.Valid
+rohan.validator.web.model.Registration registration, org.springframework.validation.BindingResult bindingResult) {
+    if (bindingResult.hasErrors()) {
+        rohan.validator.web.controllers.BasicController.LOGGER.error(bindingResult.getAllErrors().toString());
+    }
+    return rohan.validator.web.controllers.BasicController.BASIC_VIEW;
+}","@org.springframework.web.bind.annotation.PostMapping(value = ""/"")
+public java.lang.String post(@rohan.validator.web.validators.CheckRegistration
+rohan.validator.web.model.Registration registration) {
+    return rohan.validator.web.controllers.BasicController.BASIC_VIEW;
+}",-2,-2
+3957,"private void printResult(boolean testResult) {
+    if (testResult) {
+        java.lang.System.out.printf(""%d\n"", 0);
+    }else {
+        java.lang.System.out.printf(""%d\n"", 1);
+    }
+}","private void printResult(boolean testResult) {
+    if (testResult) {
+        java.lang.System.out.println(0);
+    }else {
+        java.lang.System.out.println(1);
+    }
+}",-1,-1
+3120,"@java.lang.Override
+public void addTags(edu.unc.lib.dl.search.solr.model.BriefObjectMetadata record, edu.unc.lib.dl.acl.util.AccessGroupSet accessGroups) {
+    if (record.getContentStatus().contains(FacetConstants.CONTENT_IS_DEFAULT_OBJECT)) {
+        edu.unc.lib.dl.search.solr.model.Tag tag = new edu.unc.lib.dl.search.solr.model.Tag(""primary object"");
+        record.addTag(tag);
+    }
+}","@java.lang.Override
+@java.lang.Deprecated
+public void addTags(edu.unc.lib.dl.search.solr.model.BriefObjectMetadata record, edu.unc.lib.dl.acl.util.AccessGroupSet accessGroups) {
+}",-2,-2
+3179,"public double getLatitude() {
+    if ((locationGPS) != null)
+        latitude = locationGPS.getLatitude();
+    else
+        if ((locationNetwork) != null)
+            latitude = locationNetwork.getLatitude();
+        
+    
+    return latitude;
+}","public double getLatitude() {
+    return latitude;
+}",-2,-2
+2690,"@java.lang.Override
+public void onLocationFound(android.location.Location location) {
+    android.widget.Toast.makeText(getApplicationContext(), (""Latitude - "" + (location.getLatitude())), Toast.LENGTH_SHORT).show();
+}","@java.lang.Override
+public void onLocationFound(android.location.Location location) {
+}",-2,-2
+5195,"@org.junit.Test
+public void testEndGame() {
+    assertEquals(1001, myGameStateDAO.endGame(1, 1).getUid());
+}","@org.junit.Test
+public void testEndGame() {
+}",-2,-2
+4627,"public int getNumberOfIntervals() {
+    return (numberOfIntervals) + (running ? 1 : 0);
+}","public int getNumberOfIntervals() {
+    return numberOfIntervals;
+}",-2,-2
+1540,"@java.lang.Override
+public void onClick(android.view.View v) {
+    android.widget.Toast.makeText(this, (""Note "" + (v.getId())), Toast.LENGTH_SHORT).show();
+}","@java.lang.Override
+public void onClick(android.view.View v) {
+}",-2,-2
+4995,"@java.lang.Override
+public void onLongPress(android.view.MotionEvent e) {
+    android.widget.Toast.makeText(main.getApplicationContext(), ""press"", Toast.LENGTH_SHORT).show();
+}","@java.lang.Override
+public void onLongPress(android.view.MotionEvent e) {
+}",-2,-2
+64,"public void onSettingsMenuClick(android.view.MenuItem item) {
+    android.widget.TextView infoTextView = ((android.widget.TextView) (findViewById(R.id.textViewInfo)));
+    infoTextView.setText(""§£§í §Ó§í§Ò§â§Ñ§Ý§Ú §á§å§ß§Ü§ä Settings"");
+}","public void onSettingsMenuClick(android.view.MenuItem item) {
+}",-2,-2
+1487,"public static void throwException(int domain, int code) throws com.couchbase.cbforest.ForestException {
+    com.couchbase.cbforest.ForestException x = new com.couchbase.cbforest.ForestException();
+    x.domain = domain;
+    x.code = code;
+    throw x;
+}","public static void throwException(int domain, int code, java.lang.String msg) throws com.couchbase.cbforest.ForestException {
+    throw new com.couchbase.cbforest.ForestException(domain, code, msg);
+}",-2,-2
+4196,"@org.springframework.context.annotation.Bean(name = ""configLoader"", initMethod = ""load"")
+public com.pleuvoir.loader.ConfigLoader getConfigLoader() {
+    com.pleuvoir.loader.ConfigLoader loader = new com.pleuvoir.loader.XmlConfigLoader();
+    loader.setLocation(""classpath:config.xml"");
+    loader.setTargetClass(com.pleuvoir.config.XmlConfig.class);
+    return loader;
+}","@org.springframework.context.annotation.Bean(name = ""configLoader"", initMethod = ""load"")
+public com.pleuvoir.loader.ConfigLoader getConfigLoader() {
+    com.pleuvoir.loader.ConfigLoader loader = new com.pleuvoir.loader.XmlConfigLoader();
+    loader.setLocation(""classpath:config.xml"");
+    return loader;
+}",-2,-2
+3051,"public void setInput(java.util.List<java.lang.Double> input) {
+}","public void setInput(java.util.List<java.lang.Double> input) {
+    if ((input.size()) == (this.input.size()))
+        this.input = input;
+    
+}",-2,-1
+1200,"@java.lang.Override
+public void onClick(android.view.View v) {
+    com.facebook.Session s = com.facebook.Session.getActiveSession();
+    if (!(session.isClosed())) {
+        session.closeAndClearTokenInformation();
+    }
+    com.kii.cloud.storage.KiiUser.logOut();
+}","@java.lang.Override
+public void onClick(android.view.View v) {
+    com.kii.cloud.storage.KiiUser.logOut();
+}",-2,-2
+4690,"public javax.jms.Connection createConnection() throws javax.jms.JMSException {
+    return createConnection(properties.getUser(), properties.getPassword());
+}","public javax.jms.Connection createConnection() throws javax.jms.JMSException {
+    return createConnection(this.properties.getUser(), this.properties.getPassword());
+}",2,2
+3574,"public Personnage getTempPersoSelec() {
+    if ((tempPersoSelectionne) != null) {
+        return tempPersoSelectionne;
+    }
+    return new Personnage(""pas de temp"", true, 0, new Position((-1), (-1)), (-1));
+}","public Personnage getTempPersoSelec() {
+    if ((tempPersoSelectionne) != null) {
+        return tempPersoSelectionne;
+    }
+    return null;
+}",-2,-2
+2104,"@java.lang.Override
+protected void onDestroy() {
+    super.onDestroy();
+    if ((nbmWebRTCPeer) != null) {
+        nbmWebRTCPeer.close();
+    }
+}","@java.lang.Override
+protected void onDestroy() {
+    super.onDestroy();
+}",-2,-2
+381,"@java.lang.Override
+public void close() throws java.lang.Exception {
+    try {
+        pool.clear(java.lang.Thread.currentThread());
+    } catch (java.lang.Exception e) {
+        throw new java.lang.RuntimeException(""Unable to close analyzer for current thread."", e);
+    }
+}","@java.lang.Override
+public void close() throws java.lang.Exception {
+    pool.remove();
+}",-2,-2
+1775,"private void startReboot() {
+    android.util.Log.v(com.general.mediaplayer.csr.services.CsrManagerService.TAG, ""==CsrManagerService==startReboot=="");
+    if (!(this.mRebootIsDo)) {
+        android.util.Log.v(com.general.mediaplayer.csr.services.CsrManagerService.TAG, ""==CsrManagerService==startReboot==do========="");
+        this.mRebootIsDo = true;
+    }
+}","private void startReboot() {
+}",-2,-2
+2997,"public static java.util.Calendar getCurrentCalendar() {
+    java.util.Calendar calendar = java.util.Calendar.getInstance();
+    calendar.set(java.util.Calendar.YEAR, 2017);
+    calendar.set(java.util.Calendar.MONTH, 0);
+    calendar.set(java.util.Calendar.DAY_OF_MONTH, 1);
+    return calendar;
+}","private static java.util.Calendar getCurrentCalendar() {
+    return java.util.Calendar.getInstance();
+}",-2,-2
+557,"@org.junit.Test(expected = org.graylog2.plugin.alarms.callbacks.AlarmCallbackException.class)
+public void graylogBaseUrlRetrievalInvalidUri() throws org.graylog2.plugin.alarms.callbacks.AlarmCallbackException {
+    org.graylog2.alarmcallbacks.hipchat.HipChatAlarmCallback.getGraylogBaseUrl(new org.graylog2.plugin.configuration.Configuration(com.google.common.collect.ImmutableMap.<java.lang.String, java.lang.Object>of(""api_token"", ""TEST_api_token"", ""room"", ""TEST_room"", ""color"", ""INVALID"", ""graylog_base_url"", ""invalid URI"")));
+}","@org.junit.Test(expected = org.graylog2.plugin.alarms.callbacks.AlarmCallbackException.class)
+public void graylogBaseUrlRetrievalInvalidUri() throws org.graylog2.plugin.alarms.callbacks.AlarmCallbackException {
+    org.graylog2.alarmcallbacks.hipchat.HipChatAlarmCallback.getGraylogBaseUrl(""invalid URI"");
+}",-2,-2
+985,"public void setRestrictionList(java.util.Map<java.lang.String, br.uff.ic.utility.AttributeErrorMargin> list) {
+    attributeList.clear();
+    attributeList.putAll(list);
+}","public void setRestrictionList(java.util.Map<java.lang.String, br.uff.ic.utility.AttributeErrorMargin> list) {
+    attributeList = new java.util.HashMap<java.lang.String, br.uff.ic.utility.AttributeErrorMargin>(list);
+}",-2,-2
+4733,"public java.lang.Integer numGamesPlayed() {
+    return models.Game.find(""(one.email = ? or two.email = ?) and winner is not null"", email, email).fetch().size();
+}","public java.lang.String toString() {
+    return name;
+}",-2,-2
+2193,"@java.lang.Override
+public java.util.Collection<T> models() {
+    java.util.Set<T> models = new java.util.HashSet<>();
+    org.mongodb.morphia.query.QueryResults<T> results = io.minecloud.db.mongo.AbstractMongoRepository.find();
+    models.addAll(results.asList());
+    return models;
+}","@java.lang.Override
+public java.util.Collection<T> models() {
+    return io.minecloud.db.mongo.AbstractMongoRepository.find().asList();
+}",-2,-2
+5472,"public void setDateOfBirth(java.lang.String dateOfBirth) {
+    try {
+        this.dateOfBirth = new java.text.SimpleDateFormat(""yyyy-MM-dd"").parse(dateOfBirth);
+    } catch (java.text.ParseException e) {
+        e.printStackTrace();
+    }
+}","public void setDateOfBirth(java.util.Date dateOfBirth) {
+    this.dateOfBirth = dateOfBirth;
+}",-2,-2
+5683,"public static void changeProductInformation(java.lang.String name, java.lang.String msrp) {
+    project.Product.name = name;
+    project.Product.msrp = msrp;
+}","public void changeProductInformation(java.lang.String name, java.lang.String msrp) {
+    this.name = name;
+    this.msrp = msrp;
+}",2,2
+4759,"@java.lang.Override
+public void onNavigationDrawerItemSelected(int position) {
+    android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+    fragmentManager.beginTransaction().replace(R.id.container, com.boolong.hangrywaits.Home.HomeFragment.newInstance((position + 1))).commit();
+}","@java.lang.Override
+public void onNavigationDrawerItemSelected(int position) {
+}",-2,-2
+3138,"@java.lang.Override
+public void setSubmitDate(java.util.Date d) {
+    this.submitDate = d;
+}","@java.lang.Override
+public void setSubmitDate(java.util.Date d) {
+    if (d == null) {
+        this.submitDate = null;
+    }else {
+        this.submitDate = new java.util.Date(d.getTime());
+    }
+}",1,1
+3723,"@java.lang.Override
+public java.lang.String toString() {
+    org.zenframework.z8.server.types.bool.loadResources();
+    return m_value ? org.zenframework.z8.server.types.bool.trueString : org.zenframework.z8.server.types.bool.falseString;
+}","@java.lang.Override
+public java.lang.String toString() {
+    return java.lang.Boolean.toString(m_value);
+}",-2,-2
+5651,"@java.lang.Override
+public int getBlueValueInt() {
+    return this.color.getBlue();
+}","@java.lang.Override
+public int getBlueValueInt() {
+    return this.b;
+}",-2,-2
+2684,"public void freeConnection(java.sql.Connection conn) {
+    if (conn != null) {
+        try {
+            conn.close();
+        } catch (java.lang.Exception e) {
+            dbaware.DbConnector.logger.error(""freeConnection exception"", e);
+        }
+        conn = null;
+    }
+}","public void freeConnection(java.sql.Connection conn) {
+    return ;
+}",-2,-2
+3764,"private se.ade.minecraft.adeplugin.warpstone.WarpStoneSignature getWarpSignature(org.bukkit.block.Block block) {
+    org.bukkit.block.Block[] adjacent = getAdjacentBlocks(block);
+    if (se.ade.minecraft.adeplugin.warpstone.WarpStoneSignature.validateMaterials(adjacent)) {
+        return new se.ade.minecraft.adeplugin.warpstone.WarpStoneSignature(adjacent);
+    }else {
+        return null;
+    }
+}","private se.ade.minecraft.adeplugin.warpstone.WarpStoneSignature getWarpSignature(org.bukkit.block.Block block) {
+    return getWarpSignature(block, null);
+}",-2,-2
+3227,"@javafx.fxml.FXML
+private void optionButtonAction() {
+    this.gsm.push(""saveGame"");
+}","@javafx.fxml.FXML
+private void optionButtonAction() {
+}",-2,-2
+5787,"public void tellMeWhatsTheTimeIn(java.util.List<java.lang.String> locations) {
+    locations.stream().map(( location) -> {
+        java.lang.String time = timeRetriever.timeFor(location);
+        return timeOutputRenderer.renderReport(location, time);
+    });
+}","public void tellMeWhatsTheTimeIn(java.util.List<java.lang.String> locations) {
+    for (java.lang.String location : locations) {
+        java.lang.String time = timeRetriever.timeFor(location);
+        timeOutputRenderer.renderReport(location, time);
+    }
+}",1,1
+4744,public void function(T object);,public void function(java.lang.Object... args);,-2,-2
+2245,"@java.lang.Override
+public void onFail(int failCode) {
+    com.bumptech.glide.Glide.with(getActivity().getApplicationContext()).load(getResources().getDrawable(R.drawable.beans)).into(popupImageView);
+    completionHandler.onComplete();
+}","@java.lang.Override
+public void onFail(int failCode) {
+    completionHandler.onComplete();
+}",-2,-2
+0,"public java.util.List<com.googlecode.mp4parser.authoring.Sample> getSamples() {
+    java.util.ArrayList<com.googlecode.mp4parser.authoring.Sample> lists = new java.util.ArrayList<com.googlecode.mp4parser.authoring.Sample>();
+    for (com.googlecode.mp4parser.authoring.Track track : tracks) {
+        lists.addAll(track.getSamples());
+    }
+    return lists;
+}","public java.util.List<com.googlecode.mp4parser.authoring.Sample> getSamples() {
+    return lists;
+}",-2,-2
+3437,"public com.nnpcgroup.comd.cosm.entitlement.entity.JvForecastProduction getCurrentProduction() {
+    com.nnpcgroup.comd.cosm.entitlement.controller.JvProductionController.log.log(java.util.logging.Level.INFO, ""ProductionController::getCurrentProduction returning..."", currentProduction);
+    if ((currentProduction) == null) {
+        currentProduction = productionBean.createInstance();
+    }
+    return currentProduction;
+}","public com.nnpcgroup.comd.cosm.entitlement.entity.JvForecastProduction getCurrentProduction() {
+    return currentProduction;
+}",-2,-2
+2986,"@java.lang.Override
+public void onClick(int position) {
+    com.example.nguyennam.financialbook.utils.FileHelper.writeFile(context, filename, ("""" + (++position)));
+    ((com.example.nguyennam.financialbook.MainActivity) (context)).replaceFragment(new com.example.nguyennam.financialbook.accounttab.EditAccount(), true);
+}","@java.lang.Override
+public void onClick(int position) {
+}",-2,-2
+4387,"void addAllRuns() {
+    addContinuousLineRuns(java.lang.Math.min(charStart, skipStart), java.lang.Math.max(charEnd, skipEnd), this);
+}","void addAllRuns() {
+    addContinuousLineRuns(charStart, charEnd, this);
+}",1,1
+3871,"private java.lang.String pathForCreateGhost(com.pm.server.datatype.Coordinate location) {
+    return ((((com.pm.server.controller.GhostControllerTest.BASE_MAPPING) + ""/"") + (location.getLatitude())) + ""/"") + (location.getLongitude());
+}","private java.lang.String pathForCreateGhost() {
+    return com.pm.server.controller.GhostControllerTest.BASE_MAPPING;
+}",-2,-2
+5295,"@java.lang.Override
+public boolean equals(java.lang.Object o) {
+    return ((this) == o) || ((o instanceof org.logicng.solvers.datastructures.MSClause) && (org.logicng.solvers.datastructures.MSClause.dataEquals(this.data, ((org.logicng.solvers.datastructures.MSClause) (o)).data)));
+}","@java.lang.Override
+public boolean equals(java.lang.Object o) {
+    return (this) == o;
+}",-2,-2
+2293,"public java.sql.ResultSet getSchemas() throws java.sql.SQLException {
+    if ((getSchemas) == null) {
+        getSchemas = conn.prepareStatement(""select null as TABLE_SCHEM, null as TABLE_CATALOG limit 0;"");
+    }
+    return getSchemas.executeQuery();
+}","public java.sql.ResultSet getSchemas() throws java.sql.SQLException {
+    return execute(""select null as TABLE_SCHEM, null as TABLE_CATALOG limit 0;"");
+}",-2,-2
+403,"public void onTextChanged(java.lang.CharSequence c, int start, int before, int count) {
+    mTaskTitle = c.toString();
+    com.bignerdranch.android.done.AppData.User.get().getList(listId).getTask(taskId).setTaskName(mTaskTitle);
+}","public void onTextChanged(java.lang.CharSequence c, int start, int before, int count) {
+}",-2,-2
+3232,"@java.lang.Override
+protected void onPostExecute(java.lang.Void ignore) {
+    try {
+        new com.ilyarudyak.android.portfel.ui.StockDetailActivity.FetchNewsFeed().execute(com.ilyarudyak.android.portfel.api.Config.getCompanyNewsUrl(mSymbol));
+    } catch (java.net.MalformedURLException e) {
+        e.printStackTrace();
+    }
+}","@java.lang.Override
+protected void onPostExecute(java.lang.Void ignore) {
+}",-2,-2
+3678,"public void removeNecessaryAchievement(data.Achievement achievement) {
+    if ((necessaryAchievements) == null) {
+        necessaryAchievements = new java.util.ArrayList<data.Achievement>();
+    }
+    if (necessaryAchievements.contains(achievement)) {
+        necessaryAchievements.remove(achievement);
+    }else {
+    }
+}","public void removeNecessaryAchievement(data.Achievement achievement) {
+    necessaryAchievements.remove(achievement);
+}",-2,-2
+917,"public java.lang.String getEmail() {
+    return phoneAndEmail.getText().split(""\\s+"")[1].trim();
+}","public java.lang.String getEmail() {
+    java.lang.String[] split = phoneAndEmail.getText().trim().split(""\\s+"");
+    return split[((split.length) - 1)].trim();
+}",-1,-1
+2961,"@java.lang.Override
+protected void saveToModel() {
+    super.saveToModel();
+    if (camera.isDirty()) {
+        camera.setDeviceIndex(camera.getDeviceIndex());
+    }
+}","@java.lang.Override
+protected void saveToModel() {
+    super.saveToModel();
+}",-2,-2
+4826,"@cpw.mods.fml.common.eventhandler.SubscribeEvent(priority = cpw.mods.fml.common.eventhandler.EventPriority.LOW)
+public void playerInteractEvent(net.minecraftforge.event.entity.player.PlayerInteractEvent event) {
+    if (((event.entityPlayer.getCurrentEquippedItem()) != null) && ((event.entityPlayer.getCurrentEquippedItem().getItem()) instanceof de.yotsuba.mahouka.item.ItemCad)) {
+        event.useBlock = cpw.mods.fml.common.eventhandler.Event.Result.DENY;
+    }
+}","@cpw.mods.fml.common.eventhandler.SubscribeEvent(priority = cpw.mods.fml.common.eventhandler.EventPriority.LOW)
+public void playerInteractEvent(net.minecraftforge.event.entity.player.PlayerInteractEvent event) {
+}",-2,-2
+5006,"private void buildPoliticalTopicsList() {
+    politicalList = new java.util.ArrayList<java.lang.String>();
+    politicalList.add(""Democrat"");
+}","private void buildPoliticalTopicsList() {
+}",-2,-2
+4091,"@java.lang.Override
+public void onCreate() {
+    super.onCreate();
+    try {
+        java.security.Security.insertProviderAt(new org.spongycastle.jce.provider.BouncyCastleProvider(), 1);
+    } catch (java.lang.NoClassDefFoundError e) {
+        android.util.Log.w(com.tananaev.passportreader.MainApplication.class.getSimpleName(), e);
+    }
+}","@java.lang.Override
+public void onCreate() {
+    super.onCreate();
+    java.security.Security.insertProviderAt(new org.spongycastle.jce.provider.BouncyCastleProvider(), 1);
+}",-2,-2
+5471,"@java.lang.Override
+public void onStop() {
+    super.onStop();
+    cz.vspj.schrek.im.activity.MainActivity mainActivity = ((cz.vspj.schrek.im.activity.MainActivity) (getActivity()));
+    mainActivity.showMenuIcon(true);
+    android.support.v7.app.ActionBar actionBar = mainActivity.getSupportActionBar();
+    actionBar.setDisplayShowTitleEnabled(true);
+}","@java.lang.Override
+public void onStop() {
+    super.onStop();
+}",-2,-2
+229,"protected java.lang.String getUserIdForAccessOutcome(org.restlet.Response response) {
+    java.lang.String userId = org.forgerock.openam.audit.context.AuditRequestContext.getProperty(org.forgerock.openam.rest.audit.USER_ID);
+    return userId == null ? """" : userId;
+}","protected java.lang.String getUserIdForAccessOutcome(org.restlet.Response response) {
+    return null;
+}",-2,-2
+3646,"public void printRecSubtotal(long amount) throws java.lang.Exception {
+    checkTotal(getSubtotal(), amount);
+    addTextItem(formatStrings(getParams().subtotalText, (""="" + (com.shtrih.util.StringUtils.amountToString(getSubtotal())))));
+}","public void printRecSubtotal(long amount) throws java.lang.Exception {
+    checkTotal(getSubtotal(), amount);
+}",-2,-2
+3117,"private void checkAckNackCondition() {
+    if (((java.lang.System.currentTimeMillis()) - (lastAckNackTimestamp)) > 3)
+        sendAckNackResponse();
+    
+}","private void checkAckNackCondition() {
+    sendAckNackResponse();
+}",-2,-2
+5649,"@java.lang.Override
+public void run() {
+    if (Clock.Stopwatch.stoptimer) {
+        java.lang.System.out.println(((""The stopwatch finished at: "" + (elapsedmilliseconds)) + ""milliseconds""));
+        timer.cancel();
+    }
+}","@java.lang.Override
+public void run() {
+    (elapsedmilliseconds)++;
+}",-2,-2
+792,"public java.lang.Short getShort(java.lang.String key) {
+    return ((java.lang.Short) (map.get(key)));
+}","public java.lang.String getString(java.lang.String key) {
+    if ((map.get(key)) != null) {
+        return map.get(key).toString();
+    }
+    return null;
+}",-2,-2
+1937,"@java.lang.Override
+public void onProgressChanged(android.widget.SeekBar seekBar, int progress, boolean fromUser) {
+    if (fromUser && ((mProgressAnimator) != null)) {
+        mProgressAnimator.cancel();
+        mProgressAnimator = null;
+    }
+}","@java.lang.Override
+public void onProgressChanged(android.widget.SeekBar seekBar, int progress, boolean fromUser) {
+}",-2,-2
+1254,"private void printNewPlan(CostModel.Plan newPlan) {
+    java.lang.System.out.println((""newPlan = "" + (newPlan.toString())));
+}","private void printNewPlan(CostModel.Plan newPlan) {
+}",-2,-2
+3344,"public void testGetLatestFileName() {
+    assertEquals(""hello_20141212_120108.png"", io.evercam.androidapp.photoview.SnapshotManager.getLatestFileName(ALL_FILES_ARRAY));
+}","public void testGetLatestFileName() {
+}",-2,-2
+1930,"<String>  getManagerPolicyIds() {
+}","java.util.Set<java.lang.String> getManagerPolicyIds() {
+}",-2,-2
+8,"public static void main(java.lang.String[] a) {
+    main.DAOTest.TestCineplexDAO();
+    main.DAOTest.TestCinemaDAO();
+    main.DAOTest.TestMovieDAO();
+    main.DAOTest.TestShowTimeDAO();
+    main.DAOTest.TestBookingDAO();
+}","public static void main(java.lang.String[] a) {
+}",-2,-2
+5276,"@java.lang.Override
+public void onClick(android.view.View v) {
+    setNewValues();
+    com.codepath.qzineat.fragments.ProfileFragment profileFragment = new com.codepath.qzineat.fragments.ProfileFragment();
+    android.support.v4.app.FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+    fragmentTransaction.replace(R.id.flContent, profileFragment);
+    fragmentTransaction.commit();
+}","@java.lang.Override
+public void onClick(android.view.View v) {
+    setNewValues();
+}",-2,-2
+2095,"@java.lang.Override
+public int removeByMinecraft(final int minecraftID) {
+    final int k = this.mirror.remove(minecraftID);
+    if (k == (-1)) {
+        return -1;
+    }
+    this.pattern.remove(k);
+    return k;
+}","@java.lang.Override
+public int size() {
+    return this.pattern.size();
+}",-2,-1
+5518,"@java.lang.Override
+public int getChildrenCount(int groupPosition) {
+    return this.list_child.get(this.list_parent.get(groupPosition).getOrderId()).size();
+}","@java.lang.Override
+public int getChildrenCount(int groupPosition) {
+    return 1;
+}",-2,-2
+69,"public void teleopPeriodic() {
+    edu.wpi.first.wpilibj.command.Scheduler.getInstance().run();
+    edu.wpi.first.wpilibj.smartdashboard.SmartDashboard.putNumber(""gyro angle"", org.usfirst.frc.team5700.robot.Robot.drivetrain.getGyroAngle());
+    edu.wpi.first.wpilibj.smartdashboard.SmartDashboard.putData(""reset gyro angle"", new org.usfirst.frc.team5700.robot.ResetGyroAngle());
+}","public void teleopPeriodic() {
+    edu.wpi.first.wpilibj.command.Scheduler.getInstance().run();
+}",-2,-2
+3510,"public boolean search(java.lang.String value) {
+    if ((root) == null) {
+        return false;
+    }else {
+        return root.search(value);
+    }
+}","public void search() {
+}",-2,-2
+2192,"@java.lang.Override
+protected void configureInbound(org.springframework.security.config.annotation.web.messaging.MessageSecurityMetadataSourceRegistry messages) {
+    messages.nullDestMatcher().authenticated().simpDestMatchers(""/topic/**"").authenticated().simpTypeMatchers(SimpMessageType.MESSAGE, SimpMessageType.SUBSCRIBE).denyAll().anyMessage().denyAll();
+}","@java.lang.Override
+protected void configureInbound(org.springframework.security.config.annotation.web.messaging.MessageSecurityMetadataSourceRegistry messages) {
+}",-2,-2
+764,"@java.lang.Override
+protected void onPreExecute() {
+    requestArgs = getRequestArgs();
+    if (closedSwitch.isChecked()) {
+        requestArgs.clear();
+        requestArgs.put(""visible"", false);
+    }
+    showProgress();
+}","@java.lang.Override
+protected void onPreExecute() {
+    requestArgs = getRequestArgs();
+    showProgress();
+}",-2,-2
+3360,"@java.lang.Override
+protected void onNfcStateChange(boolean enabled) {
+    if (enabled) {
+        toast(getString(org.ndeftools.boilerplate.R.string.nfcAvailableEnabled));
+    }else {
+        toast(getString(org.ndeftools.boilerplate.R.string.nfcAvailableDisabled));
+    }
+}","@java.lang.Override
+protected void onNfcStateChange(boolean enabled) {
+    if (enabled) {
+    }else {
+    }
+}",-2,-2
+4497,"public static void init() {
+    Main.In.br = new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.System.in));
+    try {
+        Main.In.br = new java.io.BufferedReader(new java.io.FileReader(""/home/ubuntu/workspace/data.txt""));
+    } catch (java.lang.Exception e) {
+        e.printStackTrace();
+    }
+}","public static void init() {
+    Main.In.br = new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.System.in));
+}",-2,-2
+3455,"public java.lang.StringBuilder getMessage() {
+    message.append((((""Your user name is "" + (username)) + "" and your password is "") + (password)));
+    return message;
+}","public java.lang.StringBuilder getMessage() {
+    message = new java.lang.StringBuilder();
+    message.append(""Your user name is "");
+    message.append(username);
+    message.append("" and your password is "");
+    message.append(password);
+    return message;
+}",-2,-2
+2434,"@java.lang.Override
+public void onLocationChanged(android.location.Location location) {
+    java.lang.System.out.println((((""Longitude: "" + (location.getLongitude())) + "" Latitude: "") + (location.getLatitude())));
+    userLocation = location;
+    loadUpvoteData();
+}","@java.lang.Override
+public void onLocationChanged(android.location.Location location) {
+    userLocation = location;
+    loadUpvoteData();
+}",-2,-2
+4582,"private void getCurWifiInfo() {
+    if (!(isWifiContect())) {
+        com.umarbhutta.xlightcompanion.Tools.ToastUtil.showToast(this, getString(R.string.please_open_wifi));
+        return ;
+    }
+    getWifiList();
+}","private void getCurWifiInfo() {
+    getWifiList();
+}",-2,-2
+3133,"@java.lang.Override
+protected void onResume() {
+    super.onResume();
+    setUpMapIfNeeded();
+    android.util.Log.i(com.intersog.androidcourse.rimma.googlemaphw19.MapsActivity.TAG, (""onResume "" + (mGoogleApiClient.isConnected())));
+}","@java.lang.Override
+protected void onResume() {
+    super.onResume();
+    setUpMapIfNeeded();
+}",-2,-2
+1564,"public void print(java.io.PrintStream out) throws java.io.IOException {
+    out.print(this.word);
+    out.print(this.separator);
+    out.print(this.tag);
+    out.print(' ');
+}","@java.lang.Override
+public java.lang.String toString() {
+    return ((this.word) + (this.separator)) + (this.tag);
+}",-2,-2
+1877,"public static int size() {
+    int i = 0;
+    for (at.sbc.firework.entities.EnumParts p : at.sbc.firework.entities.EnumParts.values()) {
+        i++;
+    }
+    return i;
+}","public static int size() {
+    return at.sbc.firework.entities.EnumParts.values().length;
+}",-2,-2
+1477,"public java.lang.String getCurrentServer() {
+    if (null == (currentServer))
+        throw new java.lang.IllegalArgumentException(""Current server name not set!"");
+    
+    return currentServer;
+}","public java.lang.String getCurrentServer() {
+    return currentServer;
+}",-2,-2
+920,"@java.lang.Override
+public void run() {
+    com.jrdcom.systrace.service.AtraceService.sAtraceRunning = false;
+    freezeIcon(false);
+    if (!isOK) {
+        showToast(failToast);
+    }else {
+        showLongToast((((pathToast) + (com.jrdcom.systrace.service.AtraceService.sDesiredStoragePath)) + ""/""));
+    }
+}","@java.lang.Override
+public void run() {
+    freezeIcon(true, true);
+}",-2,-2
+5031,"@java.lang.Override
+public void onClick(android.view.View v) {
+    android.content.Intent recordIntent = new android.content.Intent();
+    startActivity(recordIntent);
+}","@java.lang.Override
+public void onClick(android.view.View v) {
+}",-2,-2
+5088,"private static void reopenIfClosed() {
+    try {
+        if (edu.cis232.gwasos.resources.DatabaseHandler.con.isClosed()) {
+            edu.cis232.gwasos.resources.DatabaseHandler.openConnection();
+        }
+    } catch (java.sql.SQLException ex) {
+        java.lang.System.out.println(ex.getMessage());
+    }
+}","private static void reopenIfClosed() {
+    edu.cis232.gwasos.resources.DatabaseHandler.openConnection();
+}",-2,-2
+2621,"@java.lang.Override
+public void run() throws java.lang.Exception {
+    misc.Log.log((""Acq event slice index "" + (event.sliceIndex_)));
+    misc.Log.log((""Acq event z position "" + (event.zPosition_)));
+    acq.MagellanEngine.core_.setPosition(zStage, event.zPosition_);
+}","@java.lang.Override
+public void run() throws java.lang.Exception {
+    acq.MagellanEngine.core_.setPosition(zStage, event.zPosition_);
+}",-2,-2
+3014,"public void notifyOnBoaredPassenger(java.lang.String passengerPhoneNumber) {
+    com.dev.irsg.busassister.AppLogic.getInstance().setPassengerState(passengerPhoneNumber, PassengerData.PassengerState.ON_BOARDED);
+    mAdapter.notifyDataSetChanged();
+}","public void notifyDataSetChanged() {
+    mAdapter.notifyDataSetChanged();
+}",-2,-2
+140,"protected android.view.ActionMode.Callback getWindowCallback() {
+    if ((com.mesmotronic.plugins.FullScreenPlugin._windowCallback) == null) {
+        com.mesmotronic.plugins.FullScreenPlugin._windowCallback = window.getCallback();
+    }
+    return com.mesmotronic.plugins.FullScreenPlugin._windowCallback;
+}","protected android.view.ActionMode.Callback getWindowCallback() {
+    return window.getCallback();
+}",-2,-2
+5533,"private void loadTables() {
+    vocabletrainer.heinecke.aron.vocabletrainer.lib.Database db = new vocabletrainer.heinecke.aron.vocabletrainer.lib.Database(this.getBaseContext());
+    java.util.List<vocabletrainer.heinecke.aron.vocabletrainer.lib.Storage.Table> tables = db.getTables();
+    adapter.addAllUpdated(tables);
+}","private void loadTables() {
+    tables = db.getTables();
+    adapter.addAllUpdated(tables);
+}",-2,-2
+3683,"@java.lang.Override
+public java.lang.Object javaObjectValue() {
+    if (((value) <= (java.lang.Integer.MAX_VALUE)) && ((value) >= (java.lang.Integer.MIN_VALUE))) {
+        int res = ((int) (value));
+        return res;
+    }
+    return value;
+}","@java.lang.Override
+public java.lang.Object javaObjectValue() {
+    return value;
+}",-2,-2
+454,"@java.lang.Override
+public void run() {
+    final android.app.AlertDialog.Builder dialogBuilder = new android.app.AlertDialog.Builder(getApplicationContext());
+    dialogBuilder.show();
+}","@java.lang.Override
+public void run() {
+}",-2,-2
+2727,"@java.lang.Override
+public java.lang.Boolean getItem(int position) {
+    return myList.get(position).isAvailable().equals(""true"");
+}","@java.lang.Override
+public java.lang.Boolean getItem(int position) {
+    return true;
+}",-2,-2
+1383,"@org.junit.Test
+public void testGetAbstractValueSignState() {
+    org.sosy_lab.cpachecker.cpa.sign.SignState signState = SignState.TOP.assignSignToVariable(""x"", SIGN.PLUSMINUS);
+}","@org.junit.Test
+public void testGetAbstractValueSignState() {
+}",-2,-2
+3321,"@java.lang.Override
+public void onClick(android.content.DialogInterface dialog, int which) {
+    try {
+        de.mkrtchyan.recoverytools.FlashUtil.uninstallXZDual(mActivity.getShell());
+    } catch (org.sufficientlysecure.rootcommands.util.FailedExecuteCommand failedExecuteCommand) {
+        failedExecuteCommand.printStackTrace();
+    }
+}","@java.lang.Override
+public void onClick(android.content.DialogInterface dialog, int which) {
+}",-2,-2
+3284,"@java.lang.Override
+public void onPause() {
+    super.onPause();
+    ((it.uniba.di.ivu.sms16.gruppo3.fasterfood.HomeActivity) (getActivity())).setIsLoginFragmentAttached(false);
+}","@java.lang.Override
+public void onPause() {
+    super.onPause();
+}",-2,-2
+4336,"@java.lang.Override
+public void setFactForUnknown(org.experts.bayes.guesser.bayes.Fact fact) {
+    net.clearEvidence(fact.getNodeId());
+    net.updateBeliefs();
+}","@java.lang.Override
+public void setFactForUnknown(org.experts.bayes.guesser.bayes.Fact fact) {
+}",-2,-2
+1681,"private io.yawp.plugin.devserver.appengine.AppengineUserRealm createAppengineUserRealm() {
+    io.yawp.plugin.devserver.appengine.AppengineWebAppContext appengineWebApp = ((io.yawp.plugin.devserver.appengine.AppengineWebAppContext) (webapp));
+    return new io.yawp.plugin.devserver.appengine.AppengineUserRealm(appengineWebApp.getHelper());
+}","private io.yawp.plugin.devserver.appengine.AppengineUserRealm createAppengineUserRealm() {
+    return new io.yawp.plugin.devserver.appengine.AppengineUserRealm();
+}",-2,-2
+114,"@java.lang.Override
+public void call(com.limegroup.gnutella.gui.search.SearchManagerSignal s) {
+    if (s instanceof com.limegroup.gnutella.gui.search.SearchManagerSignal.Results) {
+        onResults(s.token, ((com.limegroup.gnutella.gui.search.SearchManagerSignal.Results) (s)).elements);
+    }else {
+        onFinished(s.token);
+    }
+}","@java.lang.Override
+public void onFinished(long token) {
+    this.onFinished(token);
+}",-2,-2
+495,"public void beforeCompletion() {
+    this.cmdScopedEntityManager = ((org.drools.persistence.jpa.AbstractPersistenceContextManager) (this.service.tpm)).getCommandScopedEntityManager();
+}","public void beforeCompletion() {
+}",-2,-2
+4355,"@com.xtremelabs.robolectric.internal.Implementation
+@java.lang.Override
+public boolean moveToNext() {
+    try {
+        resultSet.next();
+    } catch (java.sql.SQLException e) {
+        throw new java.lang.RuntimeException(""SQL exception in moveToNext"", e);
+    }
+    return super.moveToNext();
+}","@com.xtremelabs.robolectric.internal.Implementation
+@java.lang.Override
+public boolean moveToNext() {
+    return super.moveToNext();
+}",-2,-2
+4645,"public static void load() {
+    com.github.bot.curiosone.app.chat.helpers.AssetLoader.skin = new com.badlogic.gdx.scenes.scene2d.ui.Skin();
+    com.github.bot.curiosone.app.chat.helpers.AssetLoader.send = new com.badlogic.gdx.graphics.Texture(Gdx.files.internal(""chat-asset/send.png""));
+    com.github.bot.curiosone.app.chat.helpers.AssetLoader.skin.add(""send"", com.github.bot.curiosone.app.chat.helpers.AssetLoader.send);
+}","public static void load() {
+    com.github.bot.curiosone.app.chat.helpers.AssetLoader.skin = new com.badlogic.gdx.scenes.scene2d.ui.Skin();
+}",-2,-2
+3183,"public void actionPerformed(java.awt.event.ActionEvent e) {
+    (currentTick)++;
+    if (((currentTick) % 1) == 0)
+        spaceinvaders.GUI.move();
+    
+    spaceinvaders.GameLogic.getShip();
+}","public void actionPerformed(java.awt.event.ActionEvent e) {
+    (currentTick)++;
+}",-2,-2
+1108,"@java.lang.Override
+public void keyTyped(java.awt.event.KeyEvent e) {
+    if ((e.getKeyCode()) == (java.awt.event.KeyEvent.VK_SPACE)) {
+        inGame = true;
+        java.lang.System.out.println(""str"");
+    }
+}","@java.lang.Override
+public void keyTyped(java.awt.event.KeyEvent e) {
+}",-2,-2
+2792,"public void update(T obj) {
+    javax.persistence.EntityTransaction tx = entitymanager.getTransaction();
+    tx.begin();
+    try {
+        entitymanager.merge(obj);
+    } finally {
+        tx.commit();
+    }
+}","public void update(T obj) {
+    entitymanager.merge(obj);
+}",-2,-2
+54,"@java.lang.Override
+public void onPeerDisconnected(com.mobvoi.android.wearable.Node node) {
+    android.util.Log.d(com.theteamgo.fancywatch.MainActivity.TAG, (""Node Disconnected"" + (node.getId())));
+}","@java.lang.Override
+public void onPeerDisconnected(com.mobvoi.android.wearable.Node node) {
+}",-2,-2
+876,"@java.lang.Override
+public void onSensorChanged(android.hardware.SensorEvent sensorEvent) {
+    addSampleOnPlot(sensorEvent.values[0], sensorEvent.values[1], sensorEvent.values[2]);
+}","@java.lang.Override
+public void onSensorChanged(android.hardware.SensorEvent sensorEvent) {
+}",-2,-2
+4405,"@java.lang.Override
+protected void generate() {
+    super.generate();
+    bitmap(bitmap);
+    filter(fModeMin, fModeMax);
+    wrap(wModeH, wModeV);
+}","@java.lang.Override
+protected void generate() {
+    super.generate();
+    bitmap(bitmap);
+    super.filter(fModeMin, fModeMax);
+    super.wrap(wModeH, wModeV);
+}",1,1
+4121,"@java.lang.Override
+public void onCreate(android.os.Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    java.util.List<org.mixare.sectionedlist.Item> list;
+    list = createList();
+    sectionedListAdapter = new org.mixare.SectionedListAdapter(this.getActivity(), this.getActivity(), 0, list);
+}","@java.lang.Override
+public void onCreate(android.os.Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+}",-2,-2
+5611,"@java.lang.Override
+protected void initDefaultCommand() {
+    setDefaultCommand(new org.usfirst.frc.team1719.robot.commands.SiloReject(this));
+}","@java.lang.Override
+protected void initDefaultCommand() {
+}",-2,-2
+5229,"@java.lang.Override
+public void onResume() {
+    super.onResume();
+    if (co.smartreceipts.android.BuildConfig.DEBUG) {
+        android.util.Log.d(co.smartreceipts.android.fragments.ReceiptsFragment.TAG, ""onResume"");
+    }
+}","@java.lang.Override
+public void onResume() {
+    super.onResume();
+}",-2,-2
+4008,"@java.lang.Override
+public void onConfigured(@android.support.annotation.NonNull
+android.hardware.camera2.CameraCaptureSession session) {
+    onCaptureSessionConfigured(session, CameraDevice.TEMPLATE_PREVIEW);
+    if ((mVideoRecorderStopped) != null) {
+        mCurrentlyRecording = false;
+        android.util.Log.d(com.dylankpowers.timelapse.TimeLapseCapture.TAG, ""Video recorder stopped."");
+        mVideoRecorderStopped.onEvent();
+        mVideoRecorderStopped = null;
+    }
+}","@java.lang.Override
+public void onConfigured(@android.support.annotation.NonNull
+android.hardware.camera2.CameraCaptureSession session) {
+    onCaptureSessionConfigured(session, CameraDevice.TEMPLATE_PREVIEW);
+}",-2,-2
+907,"@java.lang.Override
+public int getColumnCount() {
+    gov.ornl.eden.DataTableModel.log.debug((""column count is "" + (dataModel.getColumnCount())));
+    return dataModel.getColumnCount();
+}","@java.lang.Override
+public int getColumnCount() {
+    return dataModel.getColumnCount();
+}",-2,-2
+900,"private void setInit() {
+    android.graphics.drawable.Drawable drawable = rbBintang.getProgressDrawable();
+    drawable.setColorFilter(android.graphics.Color.parseColor(""#f7961f""), PorterDuff.Mode.SRC_ATOP);
+}","private void setInit() {
+}",-2,-2
+3485,"public java.util.Date next() {
+    if (dayOfWeekField.isSkipWeek()) {
+        return getNextRunTimeWithJumpWeekLimit();
+    }else {
+        return getNext();
+    }
+}","public java.util.Date next() {
+    return next(null);
+}",-2,-2
+3324,"boolean equalPhoneNumber(TestOverload object) {
+    return ((name) == (object.name)) && ((phoneNumber) == (object.phoneNumber));
+}","boolean equalPhoneNumber(TestOverload object) {
+    return (name.equals(object.name)) && (phoneNumber.equals(object.phoneNumber));
+}",1,2
+3664,"public boolean checkBounds(int index) {
+    return ((this.start) <= index) && ((this.end) > index);
+}","public boolean checkBounds(int index) {
+    return (0 <= index) && ((this.count()) > index);
+}",1,1
+22,"@java.lang.Override
+public void actionPerformed(java.awt.event.ActionEvent e) {
+    editDraftBeer(draftBeerMasterSortedList.get(bottledBeerMasterListJTable.getSelectedRow()));
+    draftBeerMasterSortedList.remove(bottledBeerMasterListJTable.getSelectedRow());
+}","@java.lang.Override
+public void actionPerformed(java.awt.event.ActionEvent e) {
+}",-2,-2
+3249,"protected void defaultSettings() {
+    OGlobalConfiguration.TX_USE_LOG.setValue(true);
+    OGlobalConfiguration.TX_COMMIT_SYNCH.setValue(true);
+}","protected void defaultSettings() {
+}",-2,-2
+3538,"public static void fetchNotifications(com.frederic_rouffineau.singvibes.MainActivity a) {
+    com.frederic_rouffineau.singvibes.logic.network.queries.news.NotificationsQuery q = new com.frederic_rouffineau.singvibes.logic.network.queries.news.NotificationsQuery();
+    q.prepare(a);
+    q.execute();
+}","public static void fetchNotifications(com.frederic_rouffineau.singvibes.MainActivity a) {
+    new com.frederic_rouffineau.singvibes.logic.network.queries.news.NotificationsQuery(a).execute();
+}",-2,-2
+1516,"private java.lang.String getHash(final jd.plugins.DownloadLink dl) {
+    java.lang.String hash = dl.getStringProperty(""plain_id"", null);
+    if (hash == null) {
+        hash = dl.getStringProperty(""hash_main"", null);
+    }
+    return hash;
+}","private java.lang.String getHash(final jd.plugins.DownloadLink dl) {
+    final java.lang.String hash = dl.getStringProperty(""hash_main"", null);
+    return hash;
+}",-2,-2
+1766,"public static void main(java.lang.String[] args) {
+    clientSide.Client client;
+    clientSide.Login login;
+    client = new clientSide.Client(""127.0.0.1"");
+    client.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
+    client.startRunning();
+}","public static void main(java.lang.String[] args) {
+    clientSide.Login login;
+    login = new clientSide.Login();
+}",-2,-2
+3603,"public java.lang.String message() {
+    if ((this.message) != null) {
+        return this.message;
+    }else {
+        return this.errorCode.message();
+    }
+}","public java.lang.String message() {
+    return this.message;
+}",-2,-2
