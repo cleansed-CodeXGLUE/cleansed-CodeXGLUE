@@ -7,7 +7,7 @@ This is the official repository for the paper **Are We Building on Unreliable Gr
 - [500 carefully annotated bug-fix pairs & manual sampling inspection](#500-samples-and-manual-inspection).
 - [All the experimental code of this case study](#our-filters);
 
-![alt text](overview-v3_00.png)
+![alt text](./cleaner/repo_src/overview-v3_00.png)
 
 Learning-based code repair models rely heavily on benchmark datasets for both training and evaluation.
 CodeXGLUE, one of the most widely used benchmarks in the field, serves as the standard for evaluating many
